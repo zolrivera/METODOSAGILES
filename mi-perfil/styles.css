@@ -12,6 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 40px 100px 40px 100px;
+  background-color: antiquewhite;
 }
 
 .titulo {
