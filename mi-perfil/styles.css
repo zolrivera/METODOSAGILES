@@ -1,3 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 100px 40px 100px;
+}
+
+.titulo {
+  font-size: 40px;
+}
+
+footer {
+  background-color: #f8f9fa;
+  color: white;
+  text-align: center;
+}
+
 .account-settings-links .list-group-item.active {
   font-weight: bold !important;
 }
