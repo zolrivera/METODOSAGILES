@@ -1,0 +1,15 @@
+.component {
+  padding: 50px 30px;
+  background-color: burlywood;
+}
+
+.component .button {
+  padding: 20px 10px;
+}
+
+.component .figure {
+  background-color: aquamarine;
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
