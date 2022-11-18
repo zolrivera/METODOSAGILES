@@ -5,12 +5,20 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="registro_usuario_styles.css">
+	<!-- font awesome v5.5.0 free version -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+	<!-- bootstrap version v4.0.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		rel="stylesheet">
+
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
+
 	<title>Earthbnb</title>
 </head>
 
@@ -48,7 +56,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="registro_usuario.html">
+						<a class="nav-link" href="#modalRegistroUsuario" data-toggle="modal">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 								class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
 								<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -151,9 +159,107 @@
 		</div>
 	</nav>
 	<!-- Fin Menu ::: Luis Romero ::: No tocar -->
+
 	<div class="container">
-		<!-- TODOCODIGO AQUI -->
-		<h3>Registro de usuarios</h3>
+		<!-- register modal 2 -->
+		<div id="modalRegistroUsuario" class="modal-style-2 modal">
+			<div class="modal-dialog modal-signup">
+				<div class="modal-content">
+					<div class="modal-header p-0">
+						<h4 class="modal-title">Registrate</h4>
+						<button id="closeModal" type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&times;</button>
+					</div>
+					<div class="modal-body">
+						<form action="" method="post" class="mt-3">
+
+							<!-- Tu Ubicacion -->
+							<div class="form-group select">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-globe"></i></span>
+									<select class="form-select">
+										<option selected>Peru</option>
+										<option value="1">Brazil</option>
+										<option value="2">Argentina</option>
+										<option value="3">Chile</option>
+									</select>
+								</div>
+							</div>
+
+
+							<!-- Celular/Correo -->
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="text" class="form-control" name="email" placeholder="Celular/Correo"
+										required="required">
+								</div>
+							</div>
+
+							<!-- Fecha de Nacimiento -->
+							<div class="form-group">
+								<div class="input-group" style="align-items: flex-start;">
+									<span class="input-group-addon"><i class="fa fa-calendar-times"></i></span>
+									<input type="text" class="form-control" name="fecha_nacimiento"
+										placeholder="Fecha de Nacimiento" required="required">
+								</div>
+							</div>
+
+							<!-- Password -->
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
+									<input type="password" class="form-control" name="password_confirmation"
+										placeholder="Contraseña" required="required" autocomplete="on">
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
+									<input type="password" class="form-control" name="password_confirmation"
+										placeholder="Confirmar Contraseña" required="required" autocomplete="on">
+								</div>
+							</div>
+
+							<div class="form-group text-center">
+								<button id="signup-button" type="submit" class="btn btn-primary btn-sm"
+									onclick="window.location.href='index.html'">Registrarse</button>
+							</div>
+
+						</form>
+					</div>
+					<!-- social icons -->
+					<p class="hint-text">Acceso rápido con</p>
+					<div class="social-login text-center mb-2">
+						<a class=" btn-google text-uppercase" href="redirect/google"><i
+								class="fab fa-google mr-2 ml-2"></i></a>
+						<a class=" btn-facebook  text-uppercase" href="redirect/facebook"><i
+								class="fab fa-facebook-f mr-2 ml-2"></i> </a>
+						<a class=" btn-microsoft  text-uppercase" href="redirect/microsoft"><i
+								class="fab fa-microsoft mr-2 ml-2"></i></a>
+					</div>
+
+					<!-- REDIRECCIONAR A LOGIN USUARIO -->
+					<div class="modal-footer">Ya tienes una cuenta creada? <a href="#" data-dismiss="modal"
+							data-toggle="modal">Login</a></div>
+				</div>
+			</div>
+		</div>
+		<!--modal style 2 end -->
+
+		<!-- include scripts here -->
+		<!-- jQuery v3.4.1 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- bootstrap js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			$(window).on('load', function () {
+				$('#modalRegistroUsuario').modal('show');
+			});
+		</script>
 	</div>
 </body>
 
