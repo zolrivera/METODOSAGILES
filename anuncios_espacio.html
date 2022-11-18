@@ -9,8 +9,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 				crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<title>Earthbnb</title>
   	</head>
+
   	<body>
 		<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
 		<include src="" ></include>
@@ -133,9 +135,9 @@
 					</div>
 					<div class="col-md-6  d-flex flex-column justify-content-around" style="align-items: center;">
 
-						<div class="btn-group-vertical">
+						<div id="aBtnGroup" class="btn-group-vertical">
 							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="6" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 70%; text-align: left !important;">Apartamentos</div>
 									<div style="display: inline-block; width: 20%;">
 										<img src="https://a0.muscache.com/im/pictures/eadbcbdb-d57d-44d9-9a76-665a7a4d1cd7.jpg?im_w=240" width="60px" height="48px" class="rounded">
@@ -143,7 +145,7 @@
 								</button>
 							</div>
 							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="5" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 70%; text-align: left !important;">Casa</div>
 									<div style="display: inline-block; width: 20%;">
 										<img src="https://a0.muscache.com/im/pictures/d1af74db-58eb-46bf-b3f5-e42b6c9892db.jpg?im_w=240" width="60px" height="48px" class="rounded">
@@ -151,7 +153,7 @@
 								</button>
 							</div>
     						<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="4" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 70%; text-align: left !important;">Vivienda anexa</div>
 									<div style="display: inline-block; width: 20%;">
 										<img src="https://a0.muscache.com/im/pictures/32897901-1870-4895-8e23-f08dc0e61750.jpg?im_w=240" width="60px" height="48px" class="rounded">
@@ -159,7 +161,7 @@
 								</button>
 							</div>
     						<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="3" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 70%; text-align: left !important;">Alojamiento único</div>
 									<div style="display: inline-block; width: 20%;">
 										<img src="https://a0.muscache.com/im/pictures/7ad56bb1-ed9f-4dcb-a14c-2523da331b44.jpg?im_w=240" width="60px" height="48px" class="rounded">
@@ -167,7 +169,7 @@
 								</button>
 							</div>
 							<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="2" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 70%; text-align: left !important;">Bed and breakfasts</div>
 									<div style="display: inline-block; width: 20%;">
 										<img src="https://a0.muscache.com/im/pictures/d52fb4e7-39a4-46df-9bf9-67e56d35eeca.jpg?im_w=240" width="60px" height="48px" class="rounded">
@@ -175,7 +177,7 @@
 								</button>
 							</div>
 							<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="1" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 70%; text-align: left !important;">Hotel boutique</div>
 									<div style="display: inline-block; width: 20%;">
 										<img src="https://a0.muscache.com/im/pictures/a2c9ad21-b159-4fd2-b417-d810fb23c6a9.jpg?im_w=240" width="60px" height="48px" class="rounded">
@@ -186,7 +188,7 @@
 
 					</div>
 					<div class="col-md-12"><hr/></div>
-					<div class="col-md-6"></div>
+					<div class="col-md-6"><div class="invisible">Selected Val:  <span id="selectedVal"></span></div></div>
 					<div class="col-md-6">
 						<div class="float-start" >
 							<button type="button" class="btn btn-light">
@@ -194,7 +196,7 @@
 							</button>
 						</div>
 						<div class="float-end" >
-							<button type="button" class="btn btn-dark">
+							<button id="btnSiguiente" type="button" class="btn btn-dark">
 								Siguiente
 							</button>
 						</div>
@@ -205,4 +207,56 @@
 
 		</div>
 	</body>
+
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		  
+			// Get click event, assign button to var, and get values from that var
+			$('#aBtnGroup button').on('click', function() {
+				var thisBtn = $(this);
+				
+				$('.btn.btn-outline-secondary').removeClass('active');
+				thisBtn.addClass('active');
+				var btnText = thisBtn.text();
+				var btnValue = thisBtn.val();
+				console.log(btnText + ' - ' + btnValue);
+				
+				$('#selectedVal').text(btnValue);
+				$('#btnSiguiente').prop('disabled', false)
+			});
+			
+			// You can use this to set default value
+			// It will fire above click event which will do the updates for you
+			//$('#aBtnGroup button[value="M"]').click();
+
+		  	$('#btnSiguiente').on('click', function() {
+				var valueTipoEspacio = $('#selectedVal').text();
+			
+				if (valueTipoEspacio == "")
+				{
+					alert('Sin valor');
+				}else{
+					alert('con Valor: ' + valueTipoEspacio);
+					$(location).attr('href','anuncios_espacio_step2.html');
+				}
+
+				//$('.btn.btn-outline-secondary').removeClass('active');
+				//thisBtn.addClass('active');
+				//var btnText = thisBtn.text();
+				//var btnValue = thisBtn.val();
+				console.log('valueTipoEspacio: ' + valueTipoEspacio);
+			
+				//$('#selectedVal').text(btnValue);
+		  		//});
+		  
+				// You can use this to set default value
+				// It will fire above click event which will do the updates for you
+				//$('#aBtnGroup button[value="M"]').click();
+			});
+			$('#btnSiguiente').prop('disabled', true)
+		});
+
+	</script>
+		
 </html>
