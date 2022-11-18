@@ -12,6 +12,8 @@
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
 	<title>Earthbnb</title>
+
+	
 </head>
 
 <body>
@@ -152,9 +154,64 @@
 	</nav>
 	<!-- Fin Menu ::: Luis Romero ::: No tocar -->
 	<div class="container">
-		<!-- TODOCODIGO AQUI -->
-		<h3>Reportes</h3>
+		<h2 id="card-styles">Reportes<a class="anchorjs-link " aria-label="Anchor" data-anchorjs-icon="#" href="#card-styles" style="padding-left: 0.375em;"></a></h2>
+		<br>
+		<div class="d-flex justify-content-center">
+
+		
+			<div class="justify-content-center">
+				<div class="card text-white bg-primary mb-4" style="max-width: 48rem; cursor: pointer !important;" onclick = "reporte1()" >
+					<div class="card-header" >Reporte 1</div>
+					<div class="card-body">
+					<h5 class="card-title">Indicadores de reservas</h5>
+					<p class="card-text">Muestra principales indicadores de reservas.</p>
+					</div>
+				</div>
+				<div class="card text-white bg-success mb-4" style="max-width: 48rem; cursor: pointer !important;" onclick = "reporte2()" >
+					<div class="card-header">Reporte 2 </div>
+					<div class="card-body">
+					<h5 class="card-title">Reservas por cliente</h5>
+					<p class="card-text">Visualiza el historial de reservas por mes.</p>
+					</div>
+				</div>
+				<div class="card text-white bg-info mb-4" style="max-width: 48rem; cursor: pointer !important;" onclick = "reporte3()" >
+					<div class="card-header">Reporte 3</div>
+					<div class="card-body">
+					<h5 class="card-title">Indicadores de ingresos</h5>
+					<p class="card-text">Contiene principaes indicadores de mvimientos monetarios por mes.</p>
+					</div>
+				</div>
+				<div class="card text-white bg-danger mb-4" style="max-width: 48rem;cursor: pointer !important;" onclick = "reporte4()" >
+					<div class="card-header">Reporte 4</div>
+					<div class="card-body">
+					<h5 class="card-title">Indicadores de categoria por anfitrion</h5>
+					<p class="card-text">Muestra el historial de calificaciones por categoruia de cada anfitrion.</p>
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+		
 	</div>
 </body>
 
+
+<script type = "text/javascript">  
+	function reporte1() {   
+	window.location.href = "reporte1.html";
+	}  
+	function reporte2() {   
+	window.location.href = "reporte2.html";
+	}  
+	function reporte3() {   
+	window.location.href = "reporte3.html";
+	}  
+	function reporte4() {   
+	window.location.href = "reporte4.html";
+	}  
+</script>  
+
 </html>
+
