@@ -191,7 +191,7 @@
 					<div class="col-md-6"><div class="invisible">Selected Val:  <span id="selectedVal"></span></div></div>
 					<div class="col-md-6">
 						<div class="float-start" >
-							<button type="button" class="btn btn-light">
+							<button id="btnAtras" type="button" class="btn btn-light">
 								Atrás
 							</button>
 						</div>
@@ -254,6 +254,13 @@
 				// It will fire above click event which will do the updates for you
 				//$('#aBtnGroup button[value="M"]').click();
 			});
+
+			$('#btnAtras').on('click', function() {
+
+				$(location).attr('href','anuncios.html');
+
+			});
+
 			$('#btnSiguiente').prop('disabled', true)
 		});
 
