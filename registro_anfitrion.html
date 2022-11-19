@@ -124,7 +124,75 @@
 		<!-- Fin Menu ::: Luis Romero ::: No tocar -->
 		<div class="container">
 			<!-- TODOCODIGO AQUI -->
-			<h4>  Anfitrion</h4>
+			<section class="d-flex justify-content-center align-items-center">
+        <div class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4   p-4"> 
+            <div class="mb-4 justify-content-start align-items-center"style="text-align:center">
+              
+                <h4>  </i> &nbsp; Registro Anfitrion</h4>
+            </div>
+            <div class="mb-1">
+                <form id = "registroAnf" >
+                   <!-- <div class="mb-4 d-flex justify-content-between"> 
+                        <div>
+                            <label for="nombre"> <i class="bi bi-person-fill"></i> Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "ej: Luis" required>
+                            <div class="nombre text-danger "></div>
+                        </div>
+                    </div>-->
+                    <div class="mb-4">
+                            
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "Nombre" required>
+                            <div class="nombre text-danger"></div>
+                     </div>
+                     <div class="mb-4">
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder= "Apellido" required>
+                            <div class="apellido text-danger"></div>
+                     </div>
+
+                    <div class="mb-4">
+                        <input type="date" class="form-control" name="fecha" id="fecha" placeholder= "Fecha Nacimiento" required>
+                        <div class="fecha text-danger"></div>
+                    </div>
+                     <div class="mb-4">
+                            <input type="text" size="5" class="form-control" name="dni" id="dni" placeholder= "Dni" required>
+                            <div class="dni text-danger"></div>
+                            <input type="file" size="5"class="form-control" name="dni" id="dni" placeholder= "Dni" required>
+                            <div class="dni text-danger"></div>
+                     </div>
+
+                    <div class="mb-4">
+		                    <select name="select" class="form-control" >
+							  <option value="" selected>[Seleccione]</option>
+							  <option value="Usuario" > Pais 1 </option>
+							  <option value="Anfitrion"> Pais 2 </option>
+							  <option value="Usuario" > Pais 3 </option>
+							  <option value="Anfitrion"> Pais 4 </option>
+							</select>
+                     </div>     
+                    <div class="mb-4">
+                        
+                        <input type="text" class="form-control" name="telefono" id="telefono" placeholder= "Telefono" required>
+                        <div class="telefono text-danger"></div>
+                    </div>
+                    <div class="mb-4">
+                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder= "Direccion" required>
+                        <div class="direccion text-danger"></div>
+                    </div>
+                    <div class="mb-4">
+                        
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder= "Correo Electronico" required>
+                        <div class="correo text-danger"></div>
+                    </div> 
+                    
+                    <div class="mb-2">
+                        <button id ="botton" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white">
+                            <span>Aceptar y Continuar </span><i id="icono" ></i>
+                        </button>
+                    </div> 
+                              
+                </form>
+            </div>
+        </div>
 			
 		</div>
 	</body>
