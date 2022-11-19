@@ -167,8 +167,8 @@
 				<div class="modal-content">
 					<div class="modal-header p-0">
 						<h4 class="modal-title">Registrate</h4>
-						<button id="closeModal" type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
+						<button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
 					</div>
 					<div class="modal-body">
 						<form id="formulario1" action="" method="post" class="mt-3">
@@ -200,8 +200,8 @@
 							<div class="form-group">
 								<div class="input-group" style="align-items: flex-start;">
 									<span class="input-group-addon"><i class="fa fa-calendar-times"></i></span>
-									<input id="fecha_nacimiento" type="text" class="form-control" name="fecha_nacimiento"
-										placeholder="Fecha de Nacimiento" required="required" >
+									<input id="fecha_nacimiento" type="text" class="form-control"
+										name="fecha_nacimiento" placeholder="Fecha de Nacimiento" required="required">
 								</div>
 							</div>
 
@@ -224,21 +224,18 @@
 							</div>
 
 							<div class="form-group text-center">
-								<button id="signup-button" type="button" class="btn btn-primary btn-sm">Registrarse</button>
+								<button id="signup-button" type="button"
+									class="btn btn-primary btn-sm">Registrarse</button>
 							</div>
 
 						</form>
 					</div>
 					<!-- social icons -->
 					<p class="hint-text">Acceso rápido con</p>
-					<div class="social-login text-center mb-2">
-						<a id="btnGoogle" class=" btn-google text-uppercase" href="#"><i
-								class="fab fa-google mr-2 ml-2"></i></a>
-						<a class=" btn-facebook  text-uppercase" href="redirect/facebook"><i
-								class="fab fa-facebook-f mr-2 ml-2"></i> </a>
-						<a class=" btn-microsoft  text-uppercase" href="redirect/microsoft"><i
-								class="fab fa-microsoft mr-2 ml-2"></i></a>
-					</div>
+					<button id="btnGoogle" class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+						type="submit"><i class="fab fa-google me-2"></i> Registrarse con Google</button>
+					<button class="btn btn-lg btn-block btn-primary mb-2" style="background-color: #3b5998;"
+						type="submit"><i class="fab fa-facebook-f me-2"></i>Registrarse con Facebook</button>
 
 					<!-- REDIRECCIONAR A LOGIN USUARIO -->
 					<div class="modal-footer">Ya tienes una cuenta creada? <a href="#" data-dismiss="modal"
@@ -248,18 +245,14 @@
 		</div>
 		<!--modal style 2 end -->
 
-
-
-
-
-
+		<!-- MODAL VALIDACION CODIGO-->
 		<div id="modalValidacionCodigo" class="modal-style-2 modal">
 			<div class="modal-dialog modal-signup">
 				<div class="modal-content">
 					<div class="modal-header p-0">
 						<h4 class="modal-title">Ingrese el código de validación que se envio a su correo/celular</h4>
 						<button id="closeModal2" type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
+							aria-hidden="true">&leftarrow;</button>
 					</div>
 					<div class="modal-body">
 						<form id="formulario2" action="" method="post" class="mt-3">
@@ -267,22 +260,22 @@
 							<div class="form-group">
 								<div class="mb-3">
 									<label>Codigo</label>
-									<input type="text" class="form-control" name="email" placeholder="Ingrese su codigo aqui"
-									required="required">
+									<input type="text" class="form-control" name="email"
+										placeholder="Ingrese su codigo aqui" required="required">
 								</div>
 							</div>
 							<div class="form-group text-center">
 								<div class="alert alert-success" id="success-alert" style="display: none;">
 									Se ha reenviado el codigo a su correo/celular
-								 </div>
+								</div>
 								<div class="mb-3">
 									<a href="#" id="liveToastBtn">Reenviar codigo</a>
 								</div>
 							</div>
 
 							<div class="form-group text-center">
-								<button id="signup-button2" type="submit" class="btn btn-primary btn-sm"
-									>Ingresar</button>
+								<button id="signup-button2" type="submit"
+									class="btn btn-primary btn-sm">Ingresar</button>
 							</div>
 
 						</form>
@@ -292,47 +285,51 @@
 			</div>
 		</div>
 
-
-
 		<!-- MODAL GOOGLE-->
 		<div id="modalValidacionGoogle" class="modal-style-2 modal">
 			<div class="modal-dialog modal-signup">
 				<div class="modal-content">
 					<div class="modal-header p-0">
 						<button id="closeModal3" type="button" class="close" data-dismiss="modal"
-							aria-hidden="true">&times;</button>
+							aria-hidden="true">&leftarrow;</button>
 					</div>
 					<div class="modal-body">
 						<form id="formulario3" action="" method="post" class="mt-3">
 							<!-- Celular/Correo -->
 							<div class="row">
-								<a id="btnGoogle" class=" btn-google text-uppercase" href="#"><i class="fab fa-google mr-2 ml-2"></i>Acceder con google</a>
+								<a id="btnGoogle" class=" btn-google text-uppercase" href="#"><i
+										class="fab fa-google mr-2 ml-2"></i>Acceder con google</a>
 							</div>
-							<hr/>
+							<hr />
 							<div class="form-group">
 								<div class="text-center">
-									<img class="img-thumbnail" src="./mi-perfil/img/empty.png" style="max-height: 150px; max-width: 150px;"/>
-									<br/>
+									<img class="img-thumbnail" src="./mi-perfil/img/empty.png"
+										style="max-height: 150px; max-width: 150px;" />
+									<br />
 									<p>La pagina esta solicitando permisos</p>
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="mb-3">
-									<input type="text" class="form-control" name="email" placeholder="Correo electronico o telefono"
-									required="required">
+									<input type="text" class="form-control" name="email"
+										placeholder="Correo electronico o telefono" required="required">
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="text-center">
-									<p>Para continuar, Google compartirá tu nombre, dirección de correo electronico, preferencia de idioma y foto de perfil con esta página. Antes de usar esta pagina, revisa su <a href="#"><b>politica de privacidad</b></a> y <a href="#"><b>condiciones de servicio</b></b></a></p>
+									<p>Para continuar, Google compartirá tu nombre, dirección de correo electronico,
+										preferencia de idioma y foto de perfil con esta página. Antes de usar esta
+										pagina, revisa su <a href="#"><b>politica de privacidad</b></a> y <a
+											href="#"><b>condiciones de servicio</b></b></a></p>
 								</div>
 							</div>
 
 							<div class="form-group">
 								<div class="row">
-									<div class="text-right">
-										<button id="signup-button3" type="button" class="btn btn-primary btn-sm"
-										>Ingresar</button>
+									<div class="text-right" style="padding-left: 20px;">
+										<button id="signup-button3" class="btn btn-lg btn-block btn-primary"
+											style="background-color: #dd4b39;" type="submit"><i
+												class="fab fa-google me-2"></i> Ingresar</button>
 									</div>
 								</div>
 							</div>
@@ -343,7 +340,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 
 		<!-- include scripts here -->
 		<!-- jQuery v3.4.1 -->
@@ -354,47 +351,65 @@
 		<script type="text/javascript">
 			$(window).on('load', function () {
 				$('#modalRegistroUsuario').modal('show');
+
 			});
 
-			$("#btnGoogle").on("click", function(){
+			$("#closeModal").on("click", function () {
+				$("#modalRegistroUsuario").modal("hide");
+				window.location.href = "index.html";
+			});
+
+			$("#btnGoogle").on("click", function () {
 				$("#modalRegistroUsuario").modal("hide");
 				$("#modalValidacionGoogle").modal("show");
 			});
 
-			$("#liveToastBtn").on("click", function(){
-				$("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
+			$("#closeModal2").on("click", function () {
+				$("#modalValidacionCodigo").modal("hide");
+				$("#modalRegistroUsuario").modal("show");
+			});
+
+			$("#closeModal3").on("click", function () {
+				$("#modalValidacionGoogle").modal("hide");
+				$("#modalRegistroUsuario").modal("show");
+			});
+
+
+			$("#liveToastBtn").on("click", function () {
+				$("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
 					$("#success-alert").slideUp(500);
 				});
 			})
 
-			$("#signup-button").on("click", function(){
+			$("#signup-button").on("click", function () {
 				let formulario = $("#formulario1");
 				if (!formulario[0].checkValidity()) {
 					document.getElementById("formulario1").reportValidity();
 				}
-				else{
+				else {
 					$("#modalRegistroUsuario").modal("hide");
 					$("#modalValidacionCodigo").modal("show");
 				}
 			});
 
-			$("#signup-button2").on("click", function(){
+			$("#signup-button2").on("click", function () {
 				let formulario = $("#formulario2");
 				if (!formulario[0].checkValidity()) {
 					document.getElementById("formulario2").reportValidity();
 					return;
 				}
-				window.location.href="index.html";
+				window.location.href = "index.html";
 			});
 
-			$("#signup-button3").on("click", function(){
+			$("#signup-button3").on("click", function () {
 				let formulario = $("#formulario3");
 				if (!formulario[0].checkValidity()) {
 					document.getElementById("formulario3").reportValidity();
 					return;
 				}
-				window.location.href="index.html";
+				window.location.href = "index.html";
 			});
+
 		</script>
 	</div>
 </body>
