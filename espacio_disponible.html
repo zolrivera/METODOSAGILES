@@ -154,6 +154,75 @@
 	<div class="container">
 		<!-- TODOCODIGO AQUI -->
 		<h3>Espacio disponible</h3>
+		
+		<div class="col-12" style="display: inline-flex;">
+			<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#libroReclamacionesModal">Libro de reclamaciones</button>
+		</div>
+		
+		<div class="modal fade" id="libroReclamacionesModal" tabindex="-1" aria-labelledby="libroReclamacionesModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+				  		<h5 class="modal-title" id="libroReclamacionesModal">Libro de reclamaciones</h5>
+				  		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="col-12">
+								<h5 style="text-align:center;">Siempre buscamos mejorar nuestro servicio</h5>
+								<h5 style="text-align:center;">COMPLETA EL FORMULARIO</h5>
+							</div>
+							<div class="col-4">
+								<label for="fecha-libro" class="col-form-label">Fecha</label>
+							  	<input class="form-control" id="fecha-libro" type="date">
+							</div>
+							<div class="col-12">
+								<label for="nombre-libro" class="col-form-label">Nombre</label>
+							  	<input class="form-control" id="nombre-libro" type="text">
+							</div>
+							<div class="col-12">
+								<label for="domicilio-libro" class="col-form-label">Domicilio</label>
+							  	<input class="form-control" id="domicilio-libro" type="text">
+							</div>
+							<div class="col-12">
+								<label for="email-libro" class="col-form-label">Email</label>
+							  	<input class="form-control" id="email-libro" type="email">
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-4">
+									<label for="tipo-doc-libro" class="col-form-label">Tipo Doc.</label>
+									<select class="form-select" aria-label="--Seleccione--" id="tipo-doc-libro">
+										<option selected>--Seleccione--</option>
+										<option value="1">DNI</option>
+										<option value="2">RUC</option>
+										<option value="3">Carnet de Extranjeria</option>
+									</select>
+								</div>
+								<div class="col-2">
+								</div>
+								<div class="col-6">
+									<label for="nro-documento-libro" class="col-form-label">Nro. Documento</label>
+									<input class="form-control" id="nro-documento-libro" type="number">
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="telefono-libro" class="col-form-label">Telefono</label>
+							  	<input class="form-control" id="telefono-libro" type="number">
+							</div>
+							<div class="col-12">
+							  	<label for="desc-reclamo-libro" class="col-form-label">Descripción del reclamo</label>
+							  	<textarea class="form-control" id="desc-reclamo-libro"></textarea>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+				  		<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+				  		<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar</button>
+					</div>
+			  	</div>
+			</div>
+		</div>
+
 	</div>
 </body>
 
