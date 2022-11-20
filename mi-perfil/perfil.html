@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		
 </head>
 
 <body>
@@ -175,114 +176,247 @@
 		<!-- TODOCODIGO AQUI -->
 
 		<div class="container-fluid light-style flex-grow-1 container-p-y ">
-			<h4 class="font-weight-bold py-3 mb-4 titulo">
-				Configuracion de Usuario
-			</h4>
+			 
 			<div class="card overflow-hidden">
 				<div class="row no-gutters row-bordered row-border-light">
 					<!-- Menu - SideBar-->
-					<div class="col-md-3 pt-0">
-						<div class="list-group list-group-flush account-settings-links">
+					<div class="col-md-3 bgcolor-primario">
+						<div class="list-group list-group-flush account-settings-links border m-3 bg-light">
 							<a class="list-group-item list-group-item-action active" data-toggle="list"
-								href="#misdatospersonales">Mis datos personales</a>
+								href="#misdatospersonales"> <i class="bi bi-person text-secondary fa-lg"></i>Mis datos personales </a>
 							<a class="list-group-item list-group-item-action" data-toggle="list"
-								href="#account-change-password">Cambiar Contrasena</a>
+								href="#account-change-password"> Cambiar Contrasena </a>
 							<a class="list-group-item list-group-item-action" data-toggle="list"
-								href="#account-social-links">Mi Menu 3000</a>
+								href="#account-social-links"> Mi Menu 3 </span></a>
 							<a class="list-group-item list-group-item-action" data-toggle="list"
-								href="#account-connections">Mi Menu 400</a>
-							<a class="list-group-item list-group-item-action" data-toggle="list"
-								href="#invita-y-gana">Invita y Gana</a>
+								href="#account-connections"> Mi Menu 4 </a>
+							<a class="list-group-item list-group-item-action" data-toggle="list" href="#invita-y-gana">
+								Invita y Gana </a>
 						</div>
 					</div>
 
-					<div class="col-md-9 profile-content">
-						<div class="tab-content">
+					<div class="col-md-9 profile-content bgcolor-primario">
+						<div class="tab-content m-3">
 
 							<!-- Perfil de usuario-->
 							<div class="tab-pane fade active show" id="misdatospersonales">
-								<div class="card-body pb-2">
-									<h2 class="">
-										Mis datos personales 
-									</h2>	
-									<hr class="border-dark m-0">
-									<!-- YOUR CONTENT -->
+								<!-- START YOUR CONTENT -->
+								<div class="card">
+									<div class="card-header card-custom">
+										<h4 class="text-white pt-3"><img class="img-circle" src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span class="pl-3">Mis datos personales</span></h3>
+									</div>
 									<div class="card-body">
-										<div class="row mb-1">
-											 
-											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Nombres</label>
-												<input type="text" class="form-control mb-1" value="">
-											</div>
-											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Apellidos</label>
-												<input type="text" class="form-control" value="">
-											</div> 
-										</div>
 										<div class="row">
-										<div class="col-md-6">
-											<label class="form-label font-weight-bold">Tipo Documento</label>
-											<select class="custom-select">
-												<option>DNI</option>
-												<option>CE</option>
-												<option>PASAPORTE</option>
-												<option>OTROS</option>
-											  </select>
-										</div>
-										<div class="col-md-6">
-											<label class="form-label font-weight-bold">Numero de documento</label>
-											<input type="text" class="form-control" value="">
-										</div>
-										</div>
-										<div class="row">
+
 											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Fecha de nacimiento</label>
-												<input type="date" class="form-control mb-1" value="">
+												<form class="needs-validation" novalidate>
+													<div class="form-group-sm">
+														<label class="form-label font-weight-bold">Nombres</label>
+														<div class="form-inline">
+															<input type="text" class="form-control input-md mb-1 col-md-9"	value="Luis" required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+													</div>
+												</form>
 											</div>
+
 											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Genero</label>
-												<input type="text" class="form-control" value="">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Apellidos</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"	value="Tejada Duarte" required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+												</form>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Teléfono Móvil</label>
-												<input type="text" class="form-control mb-1" value="">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Tipo Documento</label>
+													<div class="form-inline">
+														<select
+															class="custom-select form-control input-md mb-1 col-md-9"
+															required="required">
+															<option>DNI</option>
+															<option>CE</option>
+															<option>PASAPORTE</option>
+															<option>OTROS</option>
+														</select>
+														<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
 											</div>
 											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Correo Electrónico</label>
-												<input type="email" class="form-control" value="">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Numero de
+														documento</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="10293023" required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Fecha de	nacimiento</label>
+													<div class="form-inline">
+														<input type="date" id="fechanacimiento_cliente" class="form-control input-md mb-1 col-md-9"
+															  required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Genero</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Masculino" required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Teléfono Móvil</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9" value="+51 903033888" required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+												</form>
+											</div>
+
+											<div class="col-md-6">
+												<form>
+													<label class="form-label font-weight-bold">Correo
+														Electrónico</label>
+													<div class="form-inline">
+														<input type="text"
+															class="form-control input-md mb-1 col-md-9" disabled
+															value="Luis.Tejada.Duarte@gmail.com">
+														<span class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
+														 
+													</div>
+												</form>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-12">
-												<label class="form-label font-weight-bold">Lugar de residencia</label>
-												<input type="text" class="form-control mb-1" value="">
-											</div> 
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Nombres Contacto</label>
-												<input type="text" class="form-control mb-1" value="">
-											</div>
-											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Apellidos Contacto</label>
-												<input type="text" class="form-control" value="">
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Telefono Movil Contacto</label>
-												<input type="text" class="form-control mb-1" value="">
-											</div>
-											<div class="col-md-6">
-												<label class="form-label font-weight-bold">Parentesco Contacto</label>
-												<input type="text" class="form-control" value="">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Lugar de
+														residencia</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Lima - Cercado de Lima" required="required">
+															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+												</form>
 											</div>
 										</div>
-									  </div> 
-									 <!-- FIN CONTENT-->
-								</div>
+										<div class="list-group mt-3">
+											<div class="list-group-item">
+												<div class="d-flex w-100 justify-content-between">
+													<h5 class="mb-1">Contacto de emergencia</h5>
+
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Nombres</label>
+															<div class="form-inline">
+																<input type="text" value="Susan"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="" required="required">
+																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name" data-toggle="modal" data-target="#modal-success"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+																	<div class="invalid-feedback">
+																		Completa este campo
+																	</div>
+																</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Apellidos</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9" 
+																	value="Mendoza" required="required">
+																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+																	<div class="invalid-feedback">
+																		Completa este campo
+																	</div>
+																</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Telefono
+																Movil</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="+51 999888777" required="required">
+																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+																	<div class="invalid-feedback">
+																		Completa este campo
+																	</div>
+																</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label
+																class="form-label font-weight-bold">Parentesco</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Amiga" required="required">
+																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+																	<div class="invalid-feedback">
+																		Completa este campo
+																	</div>
+																</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div> 
+								<!-- FIN CONTENT -->
 							</div>
 
 							<!-- Cambiar Contrasena -->
@@ -556,5 +690,6 @@
 		<!-- Copyright -->
 	</footer>
 </body>
-
+<script src="utils/misdatospersonales.js"></script>	
+<script src="utils/validators-forms.js"></script>
 </html>
