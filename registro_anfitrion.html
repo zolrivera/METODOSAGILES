@@ -131,7 +131,7 @@
                 <h4>  </i> &nbsp; Registro Anfitrion</h4>
             </div>
             <div class="mb-1">
-                <form id = "registroAnf" >
+                <form id = "registroAnf"   action="anfitriones.html">
                    <!-- <div class="mb-4 d-flex justify-content-between"> 
                         <div>
                             <label for="nombre"> <i class="bi bi-person-fill"></i> Nombre</label>
@@ -156,13 +156,13 @@
                      <div class="mb-4">
                             <input type="text" size="5" class="form-control" name="dni" id="dni" placeholder= "Dni" required>
                             <div class="dni text-danger"></div>
-                            <input type="file" size="5"class="form-control" name="dni" id="dni" placeholder= "Dni" required>
+                            <input type="file" size="5"class="form-control" name="dni" id="dni" placeholder= "Dni">
                             <div class="dni text-danger"></div>
                      </div>
 
                     <div class="mb-4">
-		                    <select name="select" class="form-control" >
-							  <option value="" selected>[Seleccione]</option>
+		                    <select name="select" class="form-control"  required>
+							  <option value="" selected>Seleccionar Pais</option>
 							  <option value="Usuario" > Pais 1 </option>
 							  <option value="Anfitrion"> Pais 2 </option>
 							  <option value="Usuario" > Pais 3 </option>
@@ -185,7 +185,7 @@
                     </div> 
                     
                     <div class="mb-2">
-                        <button id ="botton" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white">
+                        <button id ="botton" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white"  >
                             <span>Aceptar y Continuar </span><i id="icono" ></i>
                         </button>
                     </div> 
