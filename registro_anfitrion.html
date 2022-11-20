@@ -141,11 +141,11 @@
                     </div>-->
                     <div class="mb-4">
                             
-                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "Nombre" minlength="5" maxlength="50" required>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "Nombre" minlength="5" maxlength="50" required pattern="[A-Za-z]+"  >
                             <div class="nombre text-danger"></div>
                      </div>
                      <div class="mb-4">
-                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder= "Apellido" minlength="5" maxlength="50" required>
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder= "Apellido" minlength="5" maxlength="50" required pattern="[A-Za-z]+">
                             <div class="apellido text-danger"></div>
                      </div>
 
@@ -154,7 +154,7 @@
                         <div class="fecha text-danger"></div>
                     </div>
                      <div class="mb-4">
-                            <input type="text" size="5" class="form-control" name="dni" id="dni" placeholder= "Dni" required>
+                            <input type="text" size="5" class="form-control" name="dni" id="dni" placeholder= "Dni" minlength="8" maxlength="8" required pattern="[0-9]+">
                             <div class="dni text-danger"></div>
                             <input type="file" size="5"class="form-control" name="dni" id="dni" placeholder= "Dni">
                             <div class="dni text-danger"></div>
@@ -174,7 +174,7 @@
                      </div>     
                     <div class="mb-4">
                         
-                        <input type="text" class="form-control" name="telefono" id="telefono" placeholder= "Telefono" minlength="9" maxlength="9" required>
+                        <input type="text" class="form-control" name="telefono" id="telefono" placeholder= "Telefono" minlength="9" maxlength="9" required pattern="[0-9]+">
                         <div class="telefono text-danger"></div>
                     </div>
                     <div class="mb-4">
