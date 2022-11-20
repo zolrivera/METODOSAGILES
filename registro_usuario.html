@@ -5,12 +5,20 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="registro_usuario_styles.css">
+	<!-- font awesome v5.5.0 free version -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet">
+	<!-- bootstrap version v4.0.0 -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+		rel="stylesheet">
+
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
+
 	<title>Earthbnb</title>
 </head>
 
@@ -48,7 +56,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a class="nav-link" href="registro_usuario.html">
+						<a class="nav-link" href="#modalRegistroUsuario" data-toggle="modal">
 							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
 								class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
 								<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
@@ -151,9 +159,256 @@
 		</div>
 	</nav>
 	<!-- Fin Menu ::: Luis Romero ::: No tocar -->
+
 	<div class="container">
-		<!-- TODOCODIGO AQUI -->
-		<h3>Registro de usuarios</h3>
+		<!-- register modal 2 -->
+		<div id="modalRegistroUsuario" class="modal-style-2 modal">
+			<div class="modal-dialog modal-signup">
+				<div class="modal-content">
+					<div class="modal-header p-0">
+						<h4 class="modal-title">Registrate</h4>
+						<button id="closeModal" type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+					</div>
+					<div class="modal-body">
+						<form id="formulario1" action="" method="post" class="mt-3">
+
+							<!-- Tu Ubicacion -->
+							<div class="form-group select">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-globe"></i></span>
+									<select class="form-select">
+										<option selected>Peru</option>
+										<option value="1">Brazil</option>
+										<option value="2">Argentina</option>
+										<option value="3">Chile</option>
+									</select>
+								</div>
+							</div>
+
+
+							<!-- Celular/Correo -->
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+									<input type="text" class="form-control" name="email" placeholder="Celular/Correo"
+										required="required">
+								</div>
+							</div>
+
+							<!-- Fecha de Nacimiento -->
+							<div class="form-group">
+								<div class="input-group" style="align-items: flex-start;">
+									<span class="input-group-addon"><i class="fa fa-calendar-times"></i></span>
+									<input id="fecha_nacimiento" type="text" class="form-control"
+										name="fecha_nacimiento" placeholder="Fecha de Nacimiento" required="required">
+								</div>
+							</div>
+
+							<!-- Password -->
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
+									<input type="password" class="form-control" name="password_confirmation"
+										placeholder="Contraseña" required="required" autocomplete="on">
+								</div>
+							</div>
+
+
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
+									<input type="password" class="form-control" name="password_confirmation"
+										placeholder="Confirmar Contraseña" required="required" autocomplete="on">
+								</div>
+							</div>
+
+							<div class="form-group text-center">
+								<button id="signup-button" type="button"
+									class="btn btn-primary btn-sm">Registrarse</button>
+							</div>
+
+						</form>
+					</div>
+					<!-- social icons -->
+					<p class="hint-text">Acceso rápido con</p>
+					<button id="btnGoogle" class="btn btn-lg btn-block btn-primary" style="background-color: #dd4b39;"
+						type="submit"><i class="fab fa-google me-2"></i> Registrarse con Google</button>
+
+					<!-- REDIRECCIONAR A LOGIN USUARIO -->
+					<div class="modal-footer">Ya tienes una cuenta creada? <a href="#" data-dismiss="modal"
+							data-toggle="modal">Login</a></div>
+				</div>
+			</div>
+		</div>
+		<!--modal style 2 end -->
+
+		<!-- MODAL VALIDACION CODIGO-->
+		<div id="modalValidacionCodigo" class="modal-style-2 modal">
+			<div class="modal-dialog modal-signup">
+				<div class="modal-content">
+					<div class="modal-header p-0">
+						<h4 class="modal-title">Ingrese el código de validación que se envio a su correo/celular</h4>
+						<button id="closeModal2" type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&leftarrow;</button>
+					</div>
+					<div class="modal-body">
+						<form id="formulario2" action="" method="post" class="mt-3">
+							<!-- Celular/Correo -->
+							<div class="form-group">
+								<div class="mb-3">
+									<label>Codigo</label>
+									<input type="text" class="form-control" name="email"
+										placeholder="Ingrese su codigo aqui" required="required">
+								</div>
+							</div>
+							<div class="form-group text-center">
+								<div class="alert alert-success" id="success-alert" style="display: none;">
+									Se ha reenviado el codigo a su correo/celular
+								</div>
+								<div class="mb-3">
+									<a href="#" id="liveToastBtn">Reenviar codigo</a>
+								</div>
+							</div>
+
+							<div class="form-group text-center">
+								<button id="signup-button2" type="button"
+									class="btn btn-primary btn-sm">Ingresar</button>
+							</div>
+
+						</form>
+					</div>
+					<!-- social icons -->
+				</div>
+			</div>
+		</div>
+
+		<!-- MODAL GOOGLE-->
+		<div id="modalValidacionGoogle" class="modal-style-2 modal">
+			<div class="modal-dialog modal-signup">
+				<div class="modal-content">
+					<div class="modal-header p-0">
+						<button id="closeModal3" type="button" class="close" data-dismiss="modal"
+							aria-hidden="true">&leftarrow;</button>
+					</div>
+					<div class="modal-body">
+						<form id="formulario3" action="" method="post" class="mt-3">
+							<!-- Celular/Correo -->
+							<div class="row">
+								<a id="btnGoogle" class=" btn-google text-uppercase" href="#"><i
+										class="fab fa-google mr-2 ml-2"></i>Acceder con google</a>
+							</div>
+							<hr />
+							<div class="form-group">
+								<div class="text-center">
+									<img class="img-thumbnail" src="./mi-perfil/img/empty.png"
+										style="max-height: 150px; max-width: 150px;" />
+									<br />
+									<p>La pagina esta solicitando permisos</p>
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="mb-3">
+									<input type="text" class="form-control" name="email"
+										placeholder="Correo electronico o telefono" required="required">
+								</div>
+							</div>
+							<div class="form-group">
+								<div class="text-center">
+									<p>Para continuar, Google compartirá tu nombre, dirección de correo electronico,
+										preferencia de idioma y foto de perfil con esta página. Antes de usar esta
+										pagina, revisa su <a href="#"><b>politica de privacidad</b></a> y <a
+											href="#"><b>condiciones de servicio</b></b></a></p>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<div class="row">
+									<div class="text-right" style="padding-left: 20px;">
+										<button id="signup-button3" class="btn btn-lg btn-block btn-primary"
+											style="background-color: #dd4b39;" type="button"><i
+												class="fab fa-google me-2"></i> Ingresar</button>
+									</div>
+								</div>
+							</div>
+
+						</form>
+					</div>
+					<!-- social icons -->
+				</div>
+			</div>
+		</div>
+
+
+		<!-- include scripts here -->
+		<!-- jQuery v3.4.1 -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<!-- bootstrap js -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+		<script type="text/javascript">
+			$(window).on('load', function () {
+				$('#modalRegistroUsuario').modal('show');
+
+			});
+
+			$("#closeModal").on("click", function () {
+				$("#modalRegistroUsuario").modal("hide");
+				window.location.href = "index.html";
+			});
+
+			$("#btnGoogle").on("click", function () {
+				$("#modalRegistroUsuario").modal("hide");
+				$("#modalValidacionGoogle").modal("show");
+			});
+
+			$("#closeModal2").on("click", function () {
+				$("#modalValidacionCodigo").modal("hide");
+				$("#modalRegistroUsuario").modal("show");
+			});
+
+			$("#closeModal3").on("click", function () {
+				$("#modalValidacionGoogle").modal("hide");
+				$("#modalRegistroUsuario").modal("show");
+			});
+
+
+			$("#liveToastBtn").on("click", function () {
+				$("#success-alert").fadeTo(2000, 500).slideUp(500, function () {
+					$("#success-alert").slideUp(500);
+				});
+			})
+
+			$("#signup-button").on("click", function () {
+				let formulario = $("#formulario1");
+				if (!formulario[0].checkValidity()) {
+					document.getElementById("formulario1").reportValidity();
+				}
+				else {
+					$("#modalRegistroUsuario").modal("hide");
+					$("#modalValidacionCodigo").modal("show");
+				}
+			});
+
+			$("#signup-button2").on("click", function () {
+				let formulario = $("#formulario2");
+				if (!formulario[0].checkValidity()) {
+					document.getElementById("formulario2").reportValidity();
+					return;
+				}
+				window.location.href = "index.html";
+			});
+
+			$("#signup-button3").on("click", function () {
+				let formulario = $("#formulario3");
+				if (!formulario[0].checkValidity()) {
+					document.getElementById("formulario3").reportValidity();
+					return;
+				}
+				window.location.href = "index.html";
+			});
+
+		</script>
 	</div>
 </body>
 
