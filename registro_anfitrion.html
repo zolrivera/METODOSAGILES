@@ -9,10 +9,8 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 				crossorigin="anonymous"></script>
-		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<title>Earthbnb</title>
   	</head>
-
   	<body>
 		<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
 		<include src="" ></include>
@@ -126,144 +124,78 @@
 		<!-- Fin Menu ::: Luis Romero ::: No tocar -->
 		<div class="container">
 			<!-- TODOCODIGO AQUI -->
+			<section class="d-flex justify-content-center align-items-center">
+        <div class="card shadow col-xs-12 col-sm-6 col-md-6 col-lg-4   p-4"> 
+            <div class="mb-4 justify-content-start align-items-center"style="text-align:center">
+              
+                <h4>  </i> &nbsp; Registro Anfitrion</h4>
+            </div>
+            <div class="mb-1">
+                <form id = "registroAnf" >
+                   <!-- <div class="mb-4 d-flex justify-content-between"> 
+                        <div>
+                            <label for="nombre"> <i class="bi bi-person-fill"></i> Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "ej: Luis" required>
+                            <div class="nombre text-danger "></div>
+                        </div>
+                    </div>-->
+                    <div class="mb-4">
+                            
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder= "Nombre" required>
+                            <div class="nombre text-danger"></div>
+                     </div>
+                     <div class="mb-4">
+                            <input type="text" class="form-control" name="apellido" id="apellido" placeholder= "Apellido" required>
+                            <div class="apellido text-danger"></div>
+                     </div>
+
+                    <div class="mb-4">
+                        <input type="date" class="form-control" name="fecha" id="fecha" placeholder= "Fecha Nacimiento" required>
+                        <div class="fecha text-danger"></div>
+                    </div>
+                     <div class="mb-4">
+                            <input type="text" size="5" class="form-control" name="dni" id="dni" placeholder= "Dni" required>
+                            <div class="dni text-danger"></div>
+                            <input type="file" size="5"class="form-control" name="dni" id="dni" placeholder= "Dni" required>
+                            <div class="dni text-danger"></div>
+                     </div>
+
+                    <div class="mb-4">
+		                    <select name="select" class="form-control" >
+							  <option value="" selected>[Seleccione]</option>
+							  <option value="Usuario" > Pais 1 </option>
+							  <option value="Anfitrion"> Pais 2 </option>
+							  <option value="Usuario" > Pais 3 </option>
+							  <option value="Anfitrion"> Pais 4 </option>
+							</select>
+                     </div>     
+                    <div class="mb-4">
+                        
+                        <input type="text" class="form-control" name="telefono" id="telefono" placeholder= "Telefono" required>
+                        <div class="telefono text-danger"></div>
+                    </div>
+                    <div class="mb-4">
+                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder= "Direccion" required>
+                        <div class="direccion text-danger"></div>
+                    </div>
+                    <div class="mb-4">
+                        
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder= "Correo Electronico" required>
+                        <div class="correo text-danger"></div>
+                    </div> 
+                    
+                    <div class="mb-2">
+                        <button id ="botton" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white">
+                            <span>Aceptar y Continuar </span><i id="icono" ></i>
+                        </button>
+                    </div> 
+                              
+                </form>
+            </div>
+        </div>
 			
-				<div class="row w-100">
-					<div class="col-md-6 w-50 bg-danger bg-gradient d-flex flex-column justify-content-around">
-						<div>
-							<h2 class="text-white">¿En qué tipo de espacio brindarás servicios de anfitrión?</h2>
-						</div>
-					</div>
-					<div class="col-md-6  d-flex flex-column justify-content-around" style="align-items: center;">
-
-						<div id="aBtnGroup" class="btn-group-vertical">
-							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" value="6" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Apartamentos</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/eadbcbdb-d57d-44d9-9a76-665a7a4d1cd7.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" value="5" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Casa</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/d1af74db-58eb-46bf-b3f5-e42b6c9892db.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-    						<div class="col-md-12 btn-lg">
-								<button type="button" value="4" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Vivienda anexa</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/32897901-1870-4895-8e23-f08dc0e61750.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-    						<div class="col-md-12 btn-lg">
-								<button type="button" value="3" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Alojamiento único</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/7ad56bb1-ed9f-4dcb-a14c-2523da331b44.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-							<div class="col-md-12 btn-lg">
-								<button type="button" value="2" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Bed and breakfasts</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/d52fb4e7-39a4-46df-9bf9-67e56d35eeca.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-							<div class="col-md-12 btn-lg">
-								<button type="button" value="1" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Hotel boutique</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/a2c9ad21-b159-4fd2-b417-d810fb23c6a9.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-12"><hr/></div>
-					<div class="col-md-6"><div class="invisible">Selected Val:  <span id="selectedVal"></span></div></div>
-					<div class="col-md-6">
-						<div class="float-start" >
-							<button id="btnAtras" type="button" class="btn btn-light">
-								Atrás
-							</button>
-						</div>
-						<div class="float-end" >
-							<button id="btnSiguiente" type="button" class="btn btn-dark">
-								Siguiente
-							</button>
-						</div>
-					</div>
-				</div>
-			
-
-
 		</div>
 	</body>
 
-	<script type="text/javascript">
 
-		$(document).ready(function() {
-		  
-			// Get click event, assign button to var, and get values from that var
-			$('#aBtnGroup button').on('click', function() {
-				var thisBtn = $(this);
-				
-				$('.btn.btn-outline-secondary').removeClass('active');
-				thisBtn.addClass('active');
-				var btnText = thisBtn.text();
-				var btnValue = thisBtn.val();
-				console.log(btnText + ' - ' + btnValue);
-				
-				$('#selectedVal').text(btnValue);
-				$('#btnSiguiente').prop('disabled', false)
-			});
-			
-			// You can use this to set default value
-			// It will fire above click event which will do the updates for you
-			//$('#aBtnGroup button[value="M"]').click();
-
-		  	$('#btnSiguiente').on('click', function() {
-				var valueTipoEspacio = $('#selectedVal').text();
-			
-				if (valueTipoEspacio == "")
-				{
-					//alert('Sin valor');
-				}else{
-					//alert('con Valor: ' + valueTipoEspacio);
-					$(location).attr('href','anuncios_espacio_step2.html');
-				}
-
-				//$('.btn.btn-outline-secondary').removeClass('active');
-				//thisBtn.addClass('active');
-				//var btnText = thisBtn.text();
-				//var btnValue = thisBtn.val();
-				//console.log('valueTipoEspacio: ' + valueTipoEspacio);
-
-				//$('#selectedVal').text(btnValue);
-		  		//});
-		  
-				// You can use this to set default value
-				// It will fire above click event which will do the updates for you
-				//$('#aBtnGroup button[value="M"]').click();
-			});
-
-			$('#btnAtras').on('click', function() {
-
-				$(location).attr('href','anfitriones.html');
-
-			});
-
-			$('#btnSiguiente').prop('disabled', true)
-		});
-
-	</script>
-		
 </html>

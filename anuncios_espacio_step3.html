@@ -12,18 +12,17 @@
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<title>Earthbnb</title>
   	</head>
-
   	<body>
 		<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
 		<include src="" ></include>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
-				
+
 				<a class="navbar-brand" href="index.html" style="padding-left: 80px;">
 					<img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000" alt="" width="30" height="24" class="d-inline-block align-text-top">
 					Earthbnb
 				</a>
-				
+
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
 					aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -31,7 +30,7 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 80px;">
-						
+
 						<li class="nav-item">
 							<a class="nav-link" href="login.html">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="padding-right:5px">
@@ -40,7 +39,7 @@
 								</svg>Login
 							</a>
 						</li>
-						
+
 						<li class="nav-item">
 							<a class="nav-link" href="registro_usuario.html">
 								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
@@ -49,7 +48,7 @@
 								</svg>Registrar Usuario
 							</a>
 						</li>
-						
+
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 								data-bs-toggle="dropdown" aria-expanded="false">
@@ -126,69 +125,38 @@
 		<!-- Fin Menu ::: Luis Romero ::: No tocar -->
 		<div class="container">
 			<!-- TODOCODIGO AQUI -->
-			
+
 				<div class="row w-100">
 					<div class="col-md-6 w-50 bg-danger bg-gradient d-flex flex-column justify-content-around">
 						<div>
-							<h2 class="text-white">¿En qué tipo de espacio brindarás servicios de anfitrión?</h2>
+							<h2 class="text-white">¿Donde se encuentra tu alojamiento?</h2>
 						</div>
 					</div>
 					<div class="col-md-6  d-flex flex-column justify-content-around" style="align-items: center;">
-
-						<div id="aBtnGroup" class="btn-group-vertical">
+						 
 							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" value="6" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Apartamentos</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/eadbcbdb-d57d-44d9-9a76-665a7a4d1cd7.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
+								  <div id ="map" style="width: 500px; height: 400px !important; align-items: center;"> </div> 
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+							<script>
+								
+							  var map;
+							 function initMap() {
+								map = new google.maps.Map(document.getElementById('map'), {
+								  center: {lat: -11.9876333, lng: -77.0909803},
+								  zoom: 13,
+								});
+								var marker = new google.maps.Marker({
+								  position: {lat: -11.9876333, lng: -77.0909803},
+								  map: map,
+							  title: 'Casa'
+								});
+							  }
+							</script> 
 							</div>
-							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" value="5" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Casa</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/d1af74db-58eb-46bf-b3f5-e42b6c9892db.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
 							</div>
-    						<div class="col-md-12 btn-lg">
-								<button type="button" value="4" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Vivienda anexa</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/32897901-1870-4895-8e23-f08dc0e61750.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-    						<div class="col-md-12 btn-lg">
-								<button type="button" value="3" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Alojamiento único</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/7ad56bb1-ed9f-4dcb-a14c-2523da331b44.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-							<div class="col-md-12 btn-lg">
-								<button type="button" value="2" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Bed and breakfasts</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/d52fb4e7-39a4-46df-9bf9-67e56d35eeca.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-							<div class="col-md-12 btn-lg">
-								<button type="button" value="1" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
-									<div style="display: inline-block; width: 70%; text-align: left !important;">Hotel boutique</div>
-									<div style="display: inline-block; width: 20%;">
-										<img src="https://a0.muscache.com/im/pictures/a2c9ad21-b159-4fd2-b417-d810fb23c6a9.jpg?im_w=240" width="60px" height="48px" class="rounded">
-									</div>
-								</button>
-							</div>
-						</div>
-
-					</div>
-					<div class="col-md-12"><hr/></div>
-					<div class="col-md-6"><div class="invisible">Selected Val:  <span id="selectedVal"></span></div></div>
+					
+							<div class="col-md-12"><hr/></div>
+							<div class="col-md-6"><div class="invisible">Selected Val:  <span id="selectedVal"></span></div></div>
 					<div class="col-md-6">
 						<div class="float-start" >
 							<button id="btnAtras" type="button" class="btn btn-light">
@@ -200,69 +168,35 @@
 								Siguiente
 							</button>
 						</div>
+						</div>
 					</div>
 				</div>
-			
-
-
 		</div>
 	</body>
-
 	<script type="text/javascript">
 
 		$(document).ready(function() {
 		  
-			// Get click event, assign button to var, and get values from that var
-			$('#aBtnGroup button').on('click', function() {
-				var thisBtn = $(this);
-				
-				$('.btn.btn-outline-secondary').removeClass('active');
-				thisBtn.addClass('active');
-				var btnText = thisBtn.text();
-				var btnValue = thisBtn.val();
-				console.log(btnText + ' - ' + btnValue);
-				
-				$('#selectedVal').text(btnValue);
-				$('#btnSiguiente').prop('disabled', false)
-			});
-			
-			// You can use this to set default value
-			// It will fire above click event which will do the updates for you
-			//$('#aBtnGroup button[value="M"]').click();
-
 		  	$('#btnSiguiente').on('click', function() {
 				var valueTipoEspacio = $('#selectedVal').text();
 			
 				if (valueTipoEspacio == "")
 				{
-					//alert('Sin valor');
+					
 				}else{
-					//alert('con Valor: ' + valueTipoEspacio);
-					$(location).attr('href','anuncios_espacio_step2.html');
+					$(location).attr('href','anuncios_espacio_step4.html');
 				}
-
-				//$('.btn.btn-outline-secondary').removeClass('active');
-				//thisBtn.addClass('active');
-				//var btnText = thisBtn.text();
-				//var btnValue = thisBtn.val();
-				//console.log('valueTipoEspacio: ' + valueTipoEspacio);
-
-				//$('#selectedVal').text(btnValue);
-		  		//});
-		  
-				// You can use this to set default value
-				// It will fire above click event which will do the updates for you
-				//$('#aBtnGroup button[value="M"]').click();
 			});
 
 			$('#btnAtras').on('click', function() {
 
-				$(location).attr('href','anfitriones.html');
+				$(location).attr('href','anuncios_espacio_step2.html');
 
 			});
 
-			$('#btnSiguiente').prop('disabled', true)
+			$('#btnSiguiente').prop('disabled', false)
 		});
+
 
 	</script>
 		

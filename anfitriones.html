@@ -9,6 +9,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 				crossorigin="anonymous"></script>
+				<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<title>Earthbnb</title>
   	</head>
   	<body>
@@ -124,6 +125,23 @@
 		<div class="container">
 			<!-- TODOCODIGO AQUI -->
 			<h3>Anfitriones</h3>
+			<button id="btnCrearAnuncio" type="button" class="btn btn-dark">
+				Crear Anuncio
+			</button>
 		</div>
 	</body>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		  
+		  	$('#btnCrearAnuncio').on('click', function() {
+
+					$(location).attr('href','anuncios_espacio.html');
+
+
+			});
+
+		});
+
+	</script>
 </html>
