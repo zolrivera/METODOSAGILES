@@ -9,6 +9,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 				crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<title>Earthbnb</title>
   	</head>
   	<body>
@@ -133,9 +134,9 @@
 					</div>
 					<div class="col-md-6  d-flex flex-column justify-content-around" style="align-items: center;">
 
-						<div class="btn-group-vertical">
+						<div id="aBtnGroup" class="btn-group-vertical">
 							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="6" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 100%; text-align: left !important;" class="fw-bold">Piso</div>
 									<div class="text-sm-start" style="font-size: 0.8rem;">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -143,7 +144,7 @@
 								</button>
 							</div>
 							<div class="col-md-12 btn-lg btn-block" >
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="5" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 100%; text-align: left !important;" class="fw-bold">Apt.residencial</div>
 									<div class="text-sm-start" style="font-size: 0.8rem;">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -151,7 +152,7 @@
 								</button>
 							</div>
     						<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="4" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 100%; text-align: left !important; " class="fw-bold">Left</div>
 									<div class="text-sm-start" style="font-size: 0.8rem;">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -159,7 +160,7 @@
 								</button>
 							</div>
     						<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="3" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 100%; text-align: left !important;" class="fw-bold">Apartamento con servicios</div>
 									<div class="text-sm-start" style="font-size: 0.8rem;">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -167,7 +168,7 @@
 								</button>
 							</div>
 							<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="2" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 100%; text-align: left !important;" class="fw-bold">Casa Particular</div>
 									<div class="text-sm-start" style="font-size: 0.8rem;">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -175,7 +176,7 @@
 								</button>
 							</div>
 							<div class="col-md-12 btn-lg">
-								<button type="button" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
+								<button type="button" value="1" class="btn btn-outline-secondary" style="width: 300px !important; align-items: center;">
 									<div style="display: inline-block; width: 100%; text-align: left !important;" class="fw-bold">Vivienda vacacional</div>
 									<div class="text-sm-start" style="font-size: 0.8rem;">
 										Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
@@ -186,15 +187,15 @@
 
 					</div>
 					<div class="col-md-12"><hr/></div>
-					<div class="col-md-6"></div>
+					<div class="col-md-6"><input id="selectedVal" type="hidden" ></div>
 					<div class="col-md-6">
 						<div class="float-start" >
-							<button type="button" class="btn btn-light">
+							<button id="btnAtras" type="button" class="btn btn-light">
 								Atrás
 							</button>
 						</div>
 						<div class="float-end" >
-							<button type="button" class="btn btn-dark">
+							<button id="btnSiguiente" type="button" class="btn btn-dark">
 								Siguiente
 							</button>
 						</div>
@@ -202,4 +203,39 @@
 				</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+
+			// Get click event, assign button to var, and get values from that var
+			$('#aBtnGroup button').on('click', function() {
+				var thisBtn = $(this);
+				$('.btn.btn-outline-secondary').removeClass('active');
+				thisBtn.addClass('active');
+				var btnValue = thisBtn.val();
+
+				$('#selectedVal').text(btnValue);
+				$('#btnSiguiente').prop('disabled', false)
+			});
+
+			$('#btnSiguiente').on('click', function() {
+				var valueTipoEspacio = $('#selectedVal').text();
+				console.log(valueTipoEspacio)
+
+				if (valueTipoEspacio == "")
+				{
+					//alert('Sin valor');
+				}else{
+					$(location).attr('href','anuncios_espacio_step3.html');
+				}
+			});
+
+			$('#btnAtras').on('click', function() {
+				$(location).attr('href','anuncios_espacio.html');
+			});
+
+			$('#btnSiguiente').prop('disabled', true)
+		});
+
+	</script>
 </html>
