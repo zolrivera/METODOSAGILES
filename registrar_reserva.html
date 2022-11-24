@@ -13,8 +13,30 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+		<!-- Fuente Open Sans y Ubuntu -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu" rel="stylesheet">
+
+		<!-- bootstrap datepicker -->
+		<link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
+
+		<!-- jdSlider -->
+		<link rel="stylesheet" href="assets/css/jquery.jdSlider.css">
+
+		<!-- Pano -->
+		<link rel="stylesheet" href="assets/css/jquery.pano.css">
+
+		 <!-- fullCalendar -->
+		<link rel="stylesheet" href="assets/css/fullcalendar.min.css">
+
+		<!-- Hoja de estilo personalizada -->
         <link rel="stylesheet" href="sitio_style.css">
-        <link rel="stylesheet" href="sitios.css">
+        <link rel="stylesheet" href="sitios.css">       
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -24,7 +46,42 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+		<!--=====================================
+		VÍNCULOS JAVASCRIPT
+		======================================-->
 
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+		<!-- Popper JS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+		<!-- bootstrap datepicker -->
+		<!-- https://bootstrap-datepicker.readthedocs.io/en/latest/ -->
+		<script src="assets/js/bootstrap-datepicker.min.js"></script>
+
+		<!-- https://easings.net/es# -->
+		<script src="assets/js/jquery.easing.js"></script>
+
+		<!-- https://markgoodyear.com/labs/scrollup/ -->
+		<script src="assets/js/scrollUP.js"></script>
+
+		<!-- jdSlider -->
+		<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+		<script src="assets/js/jquery.jdSlider-latest.js"></script>
+
+		<!-- Pano -->
+		<!-- https://www.jqueryscript.net/other/360-Degree-Panoramic-Image-Viewer-with-jQuery-Pano.html -->
+		<script src="assets/js/jquery.pano.js"></script>
+
+		<!-- fullCalendar -->
+		<!-- https://momentjs.com/ -->
+		<script src="assets/js/moment.js"></script>
+		<!-- https://fullcalendar.io/docs/background-events-demo -->	
+		<script src="assets/js/fullcalendar.min.js"></script>
 
         <title>Earthbnb</title>
     </head>
@@ -169,33 +226,7 @@
 HEADER
 ======================================-->
 
-<!--<header class="container-fluid p-0 bg-white">-->
-	
-	<div class="container p-0">
-		
-		<div class="grid-container py-2">
 
-			<div class="grid-item d-none d-lg-block"></div>
-
-			<!-- CAMPANA Y RESERVA -->
-
-			<div class="grid-item d-none d-lg-block bloqueReservas">
-				
-				<div class="py-2 campana-y-reserva mostrarBloqueReservas" modo="abajo">
-
-					<i class="fas fa-concierge-bell lead mx-2"></i>
-
-					<i class="fas fa-caret-up lead mx-2 flechaReserva"></i>
-
-				</div>	
-
-
-			</div>
-		</div>
-
-	</div>
-
-<!--</header>-->
 <!--=====================================
 INFO HABITACIÓN
 ======================================-->
@@ -268,19 +299,15 @@ INFO HABITACIÓN
 
 					<br>
 
-					<h3>PLAN CONTINENTAL</h3>
+					<h3>Lugar</h3>
 
-					<p>(Precio x pareja 1 día 1 noche, incluye: desayuno)<br>
-					Temporada Baja:$300 USD<br>
-					Temporada Alta $350 USD</p>	
+					<p>Republica Dominicana</p>	
 
 					<br>
 
-					<h3>PLAN AMERICANO</h3>
+					<h3>Ciudad</h3>
 
-					<p>(Precio x pareja 1 día 1 noche, incluye: cena, desayuno, almuerzo)<br>
-					Temporada Baja:$380 USD<br>
-					Temporada Alta $420 USD</p>
+					<p>Punta Cana</p>
 					
 					<br>
 
@@ -292,7 +319,7 @@ INFO HABITACIÓN
 
 							 <div class="col-6 col-md-3 input-group pr-1">
 							
-								<input type="text" class="form-control datepicker entrada" placeholder="Entrada">
+								<input type="text" class="form-control datepicker entrada" placeholder="Entrada" required>
 
 								<div class="input-group-append">
 									
@@ -304,7 +331,7 @@ INFO HABITACIÓN
 
 						 	<div class="col-6 col-md-3 input-group pl-1">
 							
-								<input type="text" class="form-control datepicker salida" placeholder="Salida">
+								<input type="text" class="form-control datepicker salida" placeholder="Salida" required>
 
 								<div class="input-group-append">
 									
@@ -316,7 +343,7 @@ INFO HABITACIÓN
 
 							<div class="col-12 col-md-6 mt-2 mt-lg-0 input-group">
 								
-								<a href="reservas.html" class="w-100">
+								<a href="disponibles.html" class="w-100">
 									<input type="button" class="btn btn-block btn-md text-white" value="Ver disponibilidad" style="background:black">	
 								</a>
 
@@ -407,15 +434,15 @@ INFO HABITACIÓN
 
 							<div class="col-12 pb-3 px-0 px-lg-3">
 
-								<a href="habitaciones.html">
+								<a href="disponibles.html">
 									
 									<figure class="text-center">
 										
-										<img src="img/habitacion02.png" class="img-fluid" width="100%">
+										<img src="sitios-disponibles/12vistasol-psicina-abastel.jpg" class="img-fluid" width="100%">
 
-										<p class="small py-4 mb-0">Lorem ipsum dolor sit amet, consectetur</p>
+										<p class="small py-4 mb-0">Hermoso Lugar</p>
 
-										<h3 class="py-2 text-gray-dark mb-0">DESDE $200 USD</h3>
+										<h3 class="py-2 text-gray-dark mb-0">DESDE S/1500 PEN</h3>
 
 										<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2" style=""></i></h5>
 
@@ -429,15 +456,15 @@ INFO HABITACIÓN
 
 							<div class="col-12 pb-3 px-0 px-lg-3">
 
-								<a href="habitaciones.html">
+								<a href="disponibles.html">
 									
 									<figure class="text-center">
 										
-										<img src="img/habitacion03.png" class="img-fluid" width="100%">
+										<img src="sitios-disponibles/Punta_Cana.jpg" class="img-fluid" width="100%">
 
-										<p class="small py-4 mb-0">Lorem ipsum dolor sit amet, consectetur</p>
+										<p class="small py-4 mb-0">Hermoso lugar para descanzar</p>
 
-										<h3 class="py-2 text-gray-dark mb-0">DESDE $150 USD</h3>
+										<h3 class="py-2 text-gray-dark mb-0">DESDE S/1500 PEN</h3>
 
 										<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
 
@@ -573,7 +600,7 @@ VENTANA MODAL INGRESO
 
 
 
-<script src="assets/js/script.js"></script>
+<script src="reserva_script.js"></script>
 	
 </body>
 </html>
