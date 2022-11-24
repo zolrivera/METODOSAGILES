@@ -20,7 +20,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
-		
+
 </head>
 
 <body>
@@ -160,10 +160,6 @@
 									</svg>Cerrar Sesion
 								</a>
 							</li>
-
-							<li>
-								<hr class="dropdown-divider">
-							</li>
 						</ul>
 					</li>
 
@@ -176,16 +172,25 @@
 		<!-- TODOCODIGO AQUI -->
 
 		<div class="container-fluid light-style flex-grow-1 container-p-y ">
-			 
+
 			<div class="card overflow-hidden">
 				<div class="row no-gutters row-bordered row-border-light">
 					<!-- Menu - SideBar-->
 					<div class="col-md-3 bgcolor-primario">
 						<div class="list-group list-group-flush account-settings-links border m-3 bg-light">
 							<a class="list-group-item list-group-item-action active" data-toggle="list"
-								href="#misdatospersonales"> <i class="bi bi-person text-secondary fa-lg"></i>Mis datos personales </a> 
+								href="#misdatospersonales"><i class="bi bi-person text-secondary fa-lg"></i>Mis datos
+								personales</a>
+							<a class="list-group-item list-group-item-action" data-toggle="list" href="#mis-mensajes">
+								<i class="bi bi-person text-secondary fa-lg"></i>Mis Mensajes</a>
+							<a class="list-group-item list-group-item-action" data-toggle="list"
+								href="#mis-preferencias">
+								<i class="bi bi-person text-secondary fa-lg"></i>Mis Preferencias</a>
+							<a class="list-group-item list-group-item-action" data-toggle="list" href="#invita-y-gana">
+								<i class="bi bi-person text-secondary fa-lg"></i>Invitar y Gana</a>
 						</div>
 					</div>
+
 
 					<div class="col-md-9 profile-content bgcolor-primario">
 						<div class="tab-content m-3">
@@ -195,7 +200,9 @@
 								<!-- START YOUR CONTENT -->
 								<div class="card">
 									<div class="card-header card-custom">
-										<h4 class="text-white pt-3"><img class="img-circle" src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span class="pl-3">Mis datos personales</span></h3>
+										<h4 class="text-white pt-3"><img class="img-circle"
+												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+												class="pl-3">Mis datos personales</span></h3>
 									</div>
 									<div class="card-body">
 										<div class="row">
@@ -205,8 +212,14 @@
 													<div class="form-group-sm">
 														<label class="form-label font-weight-bold">Nombres</label>
 														<div class="form-inline">
-															<input type="text" class="form-control input-md mb-1 col-md-9"	value="Luis" required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+															<input type="text"
+																class="form-control input-md mb-1 col-md-9" value="Luis"
+																required="required">
+															<button
+																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																type="submit" id="btn_edit_name"><span><i
+																		class="bi bi-pencil-fill"></i>
+																	Editar</span></button>
 															<div class="invalid-feedback">
 																Completa este campo
 															</div>
@@ -219,12 +232,17 @@
 												<form class="needs-validation" novalidate>
 													<label class="form-label font-weight-bold">Apellidos</label>
 													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"	value="Tejada Duarte" required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Tejada Duarte" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
 														</div>
+													</div>
 												</form>
 											</div>
 										</div>
@@ -241,7 +259,11 @@
 															<option>PASAPORTE</option>
 															<option>OTROS</option>
 														</select>
-														<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
 														<div class="invalid-feedback">
 															Completa este campo
 														</div>
@@ -255,26 +277,36 @@
 													<div class="form-inline">
 														<input type="text" class="form-control input-md mb-1 col-md-9"
 															value="10293023" required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
 														</div>
+													</div>
 												</form>
 											</div>
 										</div>
 										<div class="row">
 											<div class="col-md-6">
 												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Fecha de	nacimiento</label>
+													<label class="form-label font-weight-bold">Fecha de
+														nacimiento</label>
 													<div class="form-inline">
-														<input type="date" id="fechanacimiento_cliente" class="form-control input-md mb-1 col-md-9"
-															  required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
+														<input type="date" id="fechanacimiento_cliente"
+															class="form-control input-md mb-1 col-md-9"
+															required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
 														</div>
+													</div>
 												</form>
 											</div>
 											<div class="col-md-6">
@@ -283,11 +315,15 @@
 													<div class="form-inline">
 														<input type="text" class="form-control input-md mb-1 col-md-9"
 															value="Masculino" required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
 														</div>
+													</div>
 												</form>
 											</div>
 										</div>
@@ -297,12 +333,17 @@
 												<form class="needs-validation" novalidate>
 													<label class="form-label font-weight-bold">Teléfono Móvil</label>
 													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9" value="+51 903033888" required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="+51 903033888" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
 														</div>
+													</div>
 												</form>
 											</div>
 
@@ -311,11 +352,11 @@
 													<label class="form-label font-weight-bold">Correo
 														Electrónico</label>
 													<div class="form-inline">
-														<input type="text"
-															class="form-control input-md mb-1 col-md-9" disabled
-															value="Luis.Tejada.Duarte@gmail.com">
-														<span class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
-														 
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															disabled value="Luis.Tejada.Duarte@gmail.com">
+														<span
+															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
+
 													</div>
 												</form>
 											</div>
@@ -328,11 +369,15 @@
 													<div class="form-inline">
 														<input type="text" class="form-control input-md mb-1 col-md-9"
 															value="Lima - Cercado de Lima" required="required">
-															<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
 														</div>
+													</div>
 												</form>
 											</div>
 										</div>
@@ -348,13 +393,18 @@
 															<label class="form-label font-weight-bold">Nombres</label>
 															<div class="form-inline">
 																<input type="text" value="Susan"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="" required="required">
-																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name" data-toggle="modal" data-target="#modal-success"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-																	<div class="invalid-feedback">
-																		Completa este campo
-																	</div>
+																	class="form-control input-md mb-1 col-md-9" value=""
+																	required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name" data-toggle="modal"
+																	data-target="#modal-success"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
 																</div>
+															</div>
 														</form>
 													</div>
 													<div class="col-md-6">
@@ -362,13 +412,17 @@
 															<label class="form-label font-weight-bold">Apellidos</label>
 															<div class="form-inline">
 																<input type="text"
-																	class="form-control input-md mb-1 col-md-9" 
+																	class="form-control input-md mb-1 col-md-9"
 																	value="Mendoza" required="required">
-																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-																	<div class="invalid-feedback">
-																		Completa este campo
-																	</div>
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
 																</div>
+															</div>
 														</form>
 													</div>
 												</div>
@@ -381,11 +435,15 @@
 																<input type="text"
 																	class="form-control input-md mb-1 col-md-9"
 																	value="+51 999888777" required="required">
-																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-																	<div class="invalid-feedback">
-																		Completa este campo
-																	</div>
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
 																</div>
+															</div>
 														</form>
 													</div>
 													<div class="col-md-6">
@@ -396,242 +454,850 @@
 																<input type="text"
 																	class="form-control input-md mb-1 col-md-9"
 																	value="Amiga" required="required">
-																	<button class="btn btn-md btn-outline-danger col-md-2 offset-md-1" type="submit" id="btn_edit_name"><span><i	class="bi bi-pencil-fill"></i>	Editar</span></button>
-																	<div class="invalid-feedback">
-																		Completa este campo
-																	</div>
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
 																</div>
+															</div>
 														</form>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</div> 
+								</div>
 								<!-- FIN CONTENT -->
 							</div>
 
-							<!-- Cambiar Contrasena -->
-							<div class="tab-pane fade" id="account-change-password">
-								<div class="card-body pb-2">
+							<!-- Mis Mensajes -->
+							<div class="tab-pane fade" id="mis-mensajes">
+								<div class="card">
+									<div class="card-header card-custom">
+										<h4 class="text-white pt-3"><img class="img-circle"
+												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+												class="pl-3">Mis datos personales</span></h3>
+									</div>
+									<div class="card-body">
+										<div class="row">
 
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<div class="form-group-sm">
+														<label class="form-label font-weight-bold">Nombres</label>
+														<div class="form-inline">
+															<input type="text"
+																class="form-control input-md mb-1 col-md-9" value="Luis"
+																required="required">
+															<button
+																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																type="submit" id="btn_edit_name"><span><i
+																		class="bi bi-pencil-fill"></i>
+																	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
 
-									<!-- YOUR CONTENT -->
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Apellidos</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Tejada Duarte" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Tipo Documento</label>
+													<div class="form-inline">
+														<select
+															class="custom-select form-control input-md mb-1 col-md-9"
+															required="required">
+															<option>DNI</option>
+															<option>CE</option>
+															<option>PASAPORTE</option>
+															<option>OTROS</option>
+														</select>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Numero de
+														documento</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="10293023" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Fecha de
+														nacimiento</label>
+													<div class="form-inline">
+														<input type="date" id="fechanacimiento_cliente"
+															class="form-control input-md mb-1 col-md-9"
+															required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Genero</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Masculino" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
 
-									<h1>TU CONTENIDO</h1>
-									<section class="section">
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Teléfono Móvil</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="+51 903033888" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
 
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-									</section>
+											<div class="col-md-6">
+												<form>
+													<label class="form-label font-weight-bold">Correo
+														Electrónico</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															disabled value="Luis.Tejada.Duarte@gmail.com">
+														<span
+															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
+
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Lugar de
+														residencia</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Lima - Cercado de Lima" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="list-group mt-3">
+											<div class="list-group-item">
+												<div class="d-flex w-100 justify-content-between">
+													<h5 class="mb-1">Contacto de emergencia</h5>
+
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Nombres</label>
+															<div class="form-inline">
+																<input type="text" value="Susan"
+																	class="form-control input-md mb-1 col-md-9" value=""
+																	required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name" data-toggle="modal"
+																	data-target="#modal-success"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Apellidos</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Mendoza" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Telefono
+																Movil</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="+51 999888777" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label
+																class="form-label font-weight-bold">Parentesco</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Amiga" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
-							<!-- Menu 3 -->
-							<div class="tab-pane fade" id="account-social-links">
-								<div class="card-body pb-2">
+							<!-- Mis Preferencias -->
+							<div class="tab-pane fade" id="mis-preferencias">
+								<div class="card">
+									<div class="card-header card-custom">
+										<h4 class="text-white pt-3"><img class="img-circle"
+												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+												class="pl-3">Mis datos personales</span></h3>
+									</div>
+									<div class="card-body">
+										<div class="row">
 
-									<!-- YOUR CONTENT -->
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<div class="form-group-sm">
+														<label class="form-label font-weight-bold">Nombres</label>
+														<div class="form-inline">
+															<input type="text"
+																class="form-control input-md mb-1 col-md-9" value="Luis"
+																required="required">
+															<button
+																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																type="submit" id="btn_edit_name"><span><i
+																		class="bi bi-pencil-fill"></i>
+																	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
 
-									<h1>TU CONTENIDO</h1>
-									<section class="section">
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Apellidos</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Tejada Duarte" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Tipo Documento</label>
+													<div class="form-inline">
+														<select
+															class="custom-select form-control input-md mb-1 col-md-9"
+															required="required">
+															<option>DNI</option>
+															<option>CE</option>
+															<option>PASAPORTE</option>
+															<option>OTROS</option>
+														</select>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Numero de
+														documento</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="10293023" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Fecha de
+														nacimiento</label>
+													<div class="form-inline">
+														<input type="date" id="fechanacimiento_cliente"
+															class="form-control input-md mb-1 col-md-9"
+															required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Genero</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Masculino" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
 
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-									</section>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Teléfono Móvil</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="+51 903033888" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
 
-								</div>
-							</div>
+											<div class="col-md-6">
+												<form>
+													<label class="form-label font-weight-bold">Correo
+														Electrónico</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															disabled value="Luis.Tejada.Duarte@gmail.com">
+														<span
+															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
 
-							<!-- Menu 4 -->
-							<div class="tab-pane fade" id="account-connections">
-								<div class="card-body pb-2">
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Lugar de
+														residencia</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Lima - Cercado de Lima" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="list-group mt-3">
+											<div class="list-group-item">
+												<div class="d-flex w-100 justify-content-between">
+													<h5 class="mb-1">Contacto de emergencia</h5>
 
-									<!-- YOUR CONTENT -->
-
-									<h1>TU CONTENIDO</h1>
-									<section class="section">
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-									</section>
-
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Nombres</label>
+															<div class="form-inline">
+																<input type="text" value="Susan"
+																	class="form-control input-md mb-1 col-md-9" value=""
+																	required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name" data-toggle="modal"
+																	data-target="#modal-success"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Apellidos</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Mendoza" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Telefono
+																Movil</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="+51 999888777" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label
+																class="form-label font-weight-bold">Parentesco</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Amiga" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
 							<!-- Invita y Gana -->
 							<div class="tab-pane fade" id="invita-y-gana">
-								<div class="card-body pb-2">
+								<div class="card">
+									<div class="card-header card-custom">
+										<h4 class="text-white pt-3"><img class="img-circle"
+												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+												class="pl-3">Mis datos personales</span></h3>
+									</div>
+									<div class="card-body">
+										<div class="row">
 
-									<!-- YOUR CONTENT -->
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<div class="form-group-sm">
+														<label class="form-label font-weight-bold">Nombres</label>
+														<div class="form-inline">
+															<input type="text"
+																class="form-control input-md mb-1 col-md-9" value="Luis"
+																required="required">
+															<button
+																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																type="submit" id="btn_edit_name"><span><i
+																		class="bi bi-pencil-fill"></i>
+																	Editar</span></button>
+															<div class="invalid-feedback">
+																Completa este campo
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
 
-									<h1>TU CONTENIDO</h1>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Apellidos</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Tejada Duarte" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Tipo Documento</label>
+													<div class="form-inline">
+														<select
+															class="custom-select form-control input-md mb-1 col-md-9"
+															required="required">
+															<option>DNI</option>
+															<option>CE</option>
+															<option>PASAPORTE</option>
+															<option>OTROS</option>
+														</select>
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Numero de
+														documento</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="10293023" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Fecha de
+														nacimiento</label>
+													<div class="form-inline">
+														<input type="date" id="fechanacimiento_cliente"
+															class="form-control input-md mb-1 col-md-9"
+															required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Genero</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Masculino" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
 
-									<section class="section">
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
+											<div class="col-md-6">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Teléfono Móvil</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="+51 903033888" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
 
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-										<article class="article">
-											Lorem Ipsum is simply dummy text of the printing and typesetting
-											industry. Lorem Ipsum has been the industry’s standard dummy text ever
-											since the 1500s, when an unknown printer took a galley of type and
-											scrambled
-										</article>
-									</section>
+											<div class="col-md-6">
+												<form>
+													<label class="form-label font-weight-bold">Correo
+														Electrónico</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															disabled value="Luis.Tejada.Duarte@gmail.com">
+														<span
+															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
+
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-12">
+												<form class="needs-validation" novalidate>
+													<label class="form-label font-weight-bold">Lugar de
+														residencia</label>
+													<div class="form-inline">
+														<input type="text" class="form-control input-md mb-1 col-md-9"
+															value="Lima - Cercado de Lima" required="required">
+														<button
+															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+															type="submit" id="btn_edit_name"><span><i
+																	class="bi bi-pencil-fill"></i>
+																Editar</span></button>
+														<div class="invalid-feedback">
+															Completa este campo
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="list-group mt-3">
+											<div class="list-group-item">
+												<div class="d-flex w-100 justify-content-between">
+													<h5 class="mb-1">Contacto de emergencia</h5>
+
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Nombres</label>
+															<div class="form-inline">
+																<input type="text" value="Susan"
+																	class="form-control input-md mb-1 col-md-9" value=""
+																	required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name" data-toggle="modal"
+																	data-target="#modal-success"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Apellidos</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Mendoza" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label class="form-label font-weight-bold">Telefono
+																Movil</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="+51 999888777" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+													<div class="col-md-6">
+														<form class="needs-validation" novalidate>
+															<label
+																class="form-label font-weight-bold">Parentesco</label>
+															<div class="form-inline">
+																<input type="text"
+																	class="form-control input-md mb-1 col-md-9"
+																	value="Amiga" required="required">
+																<button
+																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+																	type="submit" id="btn_edit_name"><span><i
+																			class="bi bi-pencil-fill"></i>
+																		Editar</span></button>
+																<div class="invalid-feedback">
+																	Completa este campo
+																</div>
+															</div>
+														</form>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 
@@ -682,6 +1348,7 @@
 		<!-- Copyright -->
 	</footer>
 </body>
-<script src="utils/misdatospersonales.js"></script>	
+<script src="utils/misdatospersonales.js"></script>
 <script src="utils/validators-forms.js"></script>
+
 </html>
