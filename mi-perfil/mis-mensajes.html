@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
 		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link  rel="stylesheet"  href="utils/mismensajes.css" />
 
 </head>
 
@@ -197,551 +198,166 @@
 						<div class="tab-content m-3">
 
 							<!-- Perfil de usuario-->
-							<div class="tab-pane fade active show" id="misdatospersonales">
+							<div class="tab-pane fade" id="misdatospersonales">
 								<!-- START YOUR CONTENT -->
-								<div class="card">
-									<div class="card-header card-custom">
-										<h4 class="text-white pt-3"><img class="img-circle"
-												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
-												class="pl-3">Mis datos personales</span></h3>
-									</div>
-									<div class="card-body">
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<div class="form-group-sm">
-														<label class="form-label font-weight-bold">Nombres</label>
-														<div class="form-inline">
-															<input type="text"
-																class="form-control input-md mb-1 col-md-9" value="Luis"
-																required="required">
-															<button
-																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																type="submit" id="btn_edit_name"><span><i
-																		class="bi bi-pencil-fill"></i>
-																	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Apellidos</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Tejada Duarte" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Tipo Documento</label>
-													<div class="form-inline">
-														<select
-															class="custom-select form-control input-md mb-1 col-md-9"
-															required="required">
-															<option>DNI</option>
-															<option>CE</option>
-															<option>PASAPORTE</option>
-															<option>OTROS</option>
-														</select>
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Numero de
-														documento</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="10293023" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Fecha de
-														nacimiento</label>
-													<div class="form-inline">
-														<input type="date" id="fechanacimiento_cliente"
-															class="form-control input-md mb-1 col-md-9"
-															required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Genero</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Masculino" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Teléfono Móvil</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="+51 903033888" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form>
-													<label class="form-label font-weight-bold">Correo
-														Electrónico</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															disabled value="Luis.Tejada.Duarte@gmail.com">
-														<span
-															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
-
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Lugar de
-														residencia</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Lima - Cercado de Lima" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="list-group mt-3">
-											<div class="list-group-item">
-												<div class="d-flex w-100 justify-content-between">
-													<h5 class="mb-1">Contacto de emergencia</h5>
-
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Nombres</label>
-															<div class="form-inline">
-																<input type="text" value="Susan"
-																	class="form-control input-md mb-1 col-md-9" value=""
-																	required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name" data-toggle="modal"
-																	data-target="#modal-success"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Apellidos</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Mendoza" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Telefono
-																Movil</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="+51 999888777" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label
-																class="form-label font-weight-bold">Parentesco</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Amiga" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 								<!-- FIN CONTENT -->
 							</div>
 
 							<!-- Mis Mensajes -->
-							<div class="tab-pane fade" id="mis-mensajes">
+							<div class="tab-pane active show" id="mis-mensajes">
 								<div class="card">
 									<div class="card-header card-custom">
 										<h4 class="text-white pt-3"><img class="img-circle"
 												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
-												class="pl-3">Mis datos personales</span></h3>
+												class="pl-3">Mis mensajes</span></h3>
 									</div>
-									<div class="card-body">
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<div class="form-group-sm">
-														<label class="form-label font-weight-bold">Nombres</label>
-														<div class="form-inline">
-															<input type="text"
-																class="form-control input-md mb-1 col-md-9" value="Luis"
-																required="required">
-															<button
-																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																type="submit" id="btn_edit_name"><span><i
-																		class="bi bi-pencil-fill"></i>
-																	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
-														</div>
+									<div class="card-body" id="lista_mensajes">
+										<div class="row p-3">
+											<div class="col-md-6 col-md-offset-3 mx-auto">
+												<div class="row p-3 border mensaje bg-light">
+													<div class="col-md-3">
+														<img class="img-fluid" src="img/casa_hobit.jpg" />
 													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Apellidos</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Tejada Duarte" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Tipo Documento</label>
-													<div class="form-inline">
-														<select
-															class="custom-select form-control input-md mb-1 col-md-9"
-															required="required">
-															<option>DNI</option>
-															<option>CE</option>
-															<option>PASAPORTE</option>
-															<option>OTROS</option>
-														</select>
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Numero de
-														documento</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="10293023" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Fecha de
-														nacimiento</label>
-													<div class="form-inline">
-														<input type="date" id="fechanacimiento_cliente"
-															class="form-control input-md mb-1 col-md-9"
-															required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Genero</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Masculino" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Teléfono Móvil</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="+51 903033888" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form>
-													<label class="form-label font-weight-bold">Correo
-														Electrónico</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															disabled value="Luis.Tejada.Duarte@gmail.com">
-														<span
-															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
-
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Lugar de
-														residencia</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Lima - Cercado de Lima" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="list-group mt-3">
-											<div class="list-group-item">
-												<div class="d-flex w-100 justify-content-between">
-													<h5 class="mb-1">Contacto de emergencia</h5>
-
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Nombres</label>
-															<div class="form-inline">
-																<input type="text" value="Susan"
-																	class="form-control input-md mb-1 col-md-9" value=""
-																	required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name" data-toggle="modal"
-																	data-target="#modal-success"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Apellidos</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Mendoza" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
+													<div class="col-md-9">
+														<p><b>De: Luis</b></p>
+														<p><b><i></i>24/11/2022 Alquiler de bungalo</b></p>
+														<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución <a href="#"> ver mas ...</a></p>
 													</div>
 												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Telefono
-																Movil</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="+51 999888777" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
+											</div>
+										</div>
+										<div class="row p-3">
+											<div class="col-md-6 col-md-offset-3 mx-auto">
+												<div class="row p-3 border mensaje bg-light">
+													<div class="col-md-3">
+														<img class="img-fluid" src="img/casa_perro.jpg" />
 													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label
-																class="form-label font-weight-bold">Parentesco</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Amiga" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
+													<div class="col-md-9">
+														<p><b>De: Jacinto</b></p>
+														<p><b><i></i>24/11/2022 Alquiler de casa de dos pisos</b></p>
+														<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución <a href="#"> ver mas ...</a></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row p-3">
+											<div class="col-md-6 col-md-offset-3 mx-auto">
+												<div class="row p-3 border mensaje bg-light">
+													<div class="col-md-3">
+														<img class="img-fluid" src="img/casa_cubo.jpg" />
+													</div>
+													<div class="col-md-9">
+														<p><b>De: Criss</b></p>
+														<p><b><i></i>24/11/2022 Alquiler de cuarto especial</b></p>
+														<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución <a href="#"> ver mas ...</a></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-body" style="display: none;" id="detalle_mensaje">
+										<div class="row  justify-content-around">
+											<div class="col-md-10 mx-auto">
+												<div class="row p-3">
+													<div class="col-md-3">
+														<img class="img-thumbnail" style="height: 300px;" src="img/perfil3.jpg" />
+													</div>
+													<div class="col-md-9">
+														<div class="row">
+															<div class="col">
+																<p><b>De: Criss</b></p>
+															</div>
+															<div class="col text-end">
+																<button class="btn btn-info" id="btn_regresar_listado_mensajes" ><i class="bi bi-arrow-left"></i>&nbsp;Regresar</button>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-8">
+																<p><b><i></i>24/11/2022 Alquiler de cuarto especial</b></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row p-3">
+													<div class="col">
+														<hr/>
+													</div>
+												</div>
+												<div class="row justify-content-around">
+													<div class="col-md-6 border">
+														<div class="row p-3">
+															<div class="col-md-12">
+																<h4>Datos de alquiler</h4>
+															</div>
+															<div class="col-md-6">
+																<img class="img-fluid" src="img/casa_perro.jpg" />
+															</div>
+															<div class="col-md-6">
+																Perched high on an ocean hillside, built on 30 ft tall steel legs, the cozy quarters above are akin to an old ship’s cabin. With 360 views at 30ft up you can chart the sun and stars across the sky, set your rhythm to the ebb & flow of the tide and scout the surf from above. Greet the evenings with a cozy woodstove, sunset with drinks on the deck, moonrise with a dip in the hottub & mornings with fresh espresso. Permit yourself to depart land for a while and come stand watch at The Tower.
+															</div>
+														</div>
+														<div class="row p-3">
+															<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.494885006919!2d-76.97891618415325!3d-11.940199491538324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105dacfcc944a6b%3A0xbc02a7202e6fa89e!2sColegio%20Micaela%20Bastidas!5e0!3m2!1ses!2spe!4v1669345982600!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+														</div>
+													</div>
+													<div class="col-md-5 border">
+														<div class="row p-3">
+															<div class="col-md-12">
+																<h4>Mensajes</h4>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="col-md-12">
+																<div class="row p-3 border bg-light">
+																	<div class="col-md-9">
+																		<p><b><i></i>24/11/2022 11:55:05 am</b></p>
+																		<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución</p>
+																	</div>
+																	<div class="col-md-3">
+																		<img class="img-thumbnail" src="img/perfil2.jpg" />
+																	</div>
 																</div>
 															</div>
-														</form>
+														</div>
+														<div class="row p-3">
+															<div class="col-md-12">
+																<div class="row p-3 border bg-light">
+																	<div class="col-md-3">
+																		<img class="img-thumbnail" src="img/perfil3.jpg" />
+																	</div>
+																	<div class="col-md-9">
+																		<p><b><i></i>24/11/2022 14:45:38 pm</b></p>
+																		<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row p-3 fade" id="pseudo_mensaje">
+															<div class="col-md-12">
+																<div class="row p-3 border bg-light">
+																	<div class="col-md-9">
+																		<p><b><i></i>Ahora</b></p>
+																		<p id="pseudo_texto">Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución</p>
+																	</div>
+																	<div class="col-md-3">
+																		<img class="img-thumbnail" src="img/perfil2.jpg" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="col-md-12">
+																<form id="frm_envio_mensaje">
+																	<textarea minlength="2" maxlength="200" required style="resize: none;" class="form-control" rows="3" id="txt_mensaje"></textarea>
+																</form>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="text-right">
+																<button class="btn btn-primary" type="button" id="btn_enviar_mensaje">Enviar mensaje</button>
+															</div>
+														</div>
 													</div>
 												</div>
 											</div>
@@ -752,554 +368,12 @@
 
 							<!-- Mis Preferencias -->
 							<div class="tab-pane fade" id="mis-preferencias">
-								<div class="card">
-									<div class="card-header card-custom">
-										<h4 class="text-white pt-3"><img class="img-circle"
-												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
-												class="pl-3">Mis datos personales</span></h3>
-									</div>
-									<div class="card-body">
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<div class="form-group-sm">
-														<label class="form-label font-weight-bold">Nombres</label>
-														<div class="form-inline">
-															<input type="text"
-																class="form-control input-md mb-1 col-md-9" value="Luis"
-																required="required">
-															<button
-																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																type="submit" id="btn_edit_name"><span><i
-																		class="bi bi-pencil-fill"></i>
-																	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Apellidos</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Tejada Duarte" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Tipo Documento</label>
-													<div class="form-inline">
-														<select
-															class="custom-select form-control input-md mb-1 col-md-9"
-															required="required">
-															<option>DNI</option>
-															<option>CE</option>
-															<option>PASAPORTE</option>
-															<option>OTROS</option>
-														</select>
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Numero de
-														documento</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="10293023" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Fecha de
-														nacimiento</label>
-													<div class="form-inline">
-														<input type="date" id="fechanacimiento_cliente"
-															class="form-control input-md mb-1 col-md-9"
-															required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Genero</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Masculino" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Teléfono Móvil</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="+51 903033888" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form>
-													<label class="form-label font-weight-bold">Correo
-														Electrónico</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															disabled value="Luis.Tejada.Duarte@gmail.com">
-														<span
-															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
-
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Lugar de
-														residencia</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Lima - Cercado de Lima" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="list-group mt-3">
-											<div class="list-group-item">
-												<div class="d-flex w-100 justify-content-between">
-													<h5 class="mb-1">Contacto de emergencia</h5>
-
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Nombres</label>
-															<div class="form-inline">
-																<input type="text" value="Susan"
-																	class="form-control input-md mb-1 col-md-9" value=""
-																	required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name" data-toggle="modal"
-																	data-target="#modal-success"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Apellidos</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Mendoza" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Telefono
-																Movil</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="+51 999888777" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label
-																class="form-label font-weight-bold">Parentesco</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Amiga" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 
 							<!-- Invita y Gana -->
 							<div class="tab-pane fade" id="invita-y-gana">
-								<div class="card">
-									<div class="card-header card-custom">
-										<h4 class="text-white pt-3"><img class="img-circle"
-												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
-												class="pl-3">Mis datos personales</span></h3>
-									</div>
-									<div class="card-body">
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<div class="form-group-sm">
-														<label class="form-label font-weight-bold">Nombres</label>
-														<div class="form-inline">
-															<input type="text"
-																class="form-control input-md mb-1 col-md-9" value="Luis"
-																required="required">
-															<button
-																class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																type="submit" id="btn_edit_name"><span><i
-																		class="bi bi-pencil-fill"></i>
-																	Editar</span></button>
-															<div class="invalid-feedback">
-																Completa este campo
-															</div>
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Apellidos</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Tejada Duarte" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Tipo Documento</label>
-													<div class="form-inline">
-														<select
-															class="custom-select form-control input-md mb-1 col-md-9"
-															required="required">
-															<option>DNI</option>
-															<option>CE</option>
-															<option>PASAPORTE</option>
-															<option>OTROS</option>
-														</select>
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Numero de
-														documento</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="10293023" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Fecha de
-														nacimiento</label>
-													<div class="form-inline">
-														<input type="date" id="fechanacimiento_cliente"
-															class="form-control input-md mb-1 col-md-9"
-															required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Genero</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Masculino" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-
-											<div class="col-md-6">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Teléfono Móvil</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="+51 903033888" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-
-											<div class="col-md-6">
-												<form>
-													<label class="form-label font-weight-bold">Correo
-														Electrónico</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															disabled value="Luis.Tejada.Duarte@gmail.com">
-														<span
-															class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
-
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-md-12">
-												<form class="needs-validation" novalidate>
-													<label class="form-label font-weight-bold">Lugar de
-														residencia</label>
-													<div class="form-inline">
-														<input type="text" class="form-control input-md mb-1 col-md-9"
-															value="Lima - Cercado de Lima" required="required">
-														<button
-															class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-															type="submit" id="btn_edit_name"><span><i
-																	class="bi bi-pencil-fill"></i>
-																Editar</span></button>
-														<div class="invalid-feedback">
-															Completa este campo
-														</div>
-													</div>
-												</form>
-											</div>
-										</div>
-										<div class="list-group mt-3">
-											<div class="list-group-item">
-												<div class="d-flex w-100 justify-content-between">
-													<h5 class="mb-1">Contacto de emergencia</h5>
-
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Nombres</label>
-															<div class="form-inline">
-																<input type="text" value="Susan"
-																	class="form-control input-md mb-1 col-md-9" value=""
-																	required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name" data-toggle="modal"
-																	data-target="#modal-success"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Apellidos</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Mendoza" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label class="form-label font-weight-bold">Telefono
-																Movil</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="+51 999888777" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-													<div class="col-md-6">
-														<form class="needs-validation" novalidate>
-															<label
-																class="form-label font-weight-bold">Parentesco</label>
-															<div class="form-inline">
-																<input type="text"
-																	class="form-control input-md mb-1 col-md-9"
-																	value="Amiga" required="required">
-																<button
-																	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
-																	type="submit" id="btn_edit_name"><span><i
-																			class="bi bi-pencil-fill"></i>
-																		Editar</span></button>
-																<div class="invalid-feedback">
-																	Completa este campo
-																</div>
-															</div>
-														</form>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
+								
 							</div>
 
 						</div>
@@ -1309,47 +383,7 @@
 		</div>
 	</div>
 
-	<footer class="footer text-center text-white">
-		<!-- Grid container -->
-		<div class="container pt-4">
-			<!-- Section: Social media -->
-			<section class="mb-4">
-				<!-- Facebook -->
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
-					data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
-
-				<!-- Twitter -->
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
-					data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
-
-				<!-- Google -->
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
-					data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
-
-				<!-- Instagram -->
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
-					data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
-
-				<!-- Linkedin -->
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
-					data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
-				<!-- Github -->
-				<a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
-					data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
-			</section>
-			<!-- Section: Social media -->
-		</div>
-		<!-- Grid container -->
-
-		<!-- Copyright -->
-		<div class="text-center text-dark p-3">
-			© 2022 Copyright:
-			<a class=" text-dark" href="https://google.com/">Earthbnb.com</a>
-		</div>
-		<!-- Copyright -->
-	</footer>
 </body>
-<script src="utils/misdatospersonales.js"></script>
-<script src="utils/validators-forms.js"></script>
+<script src="utils/mismensajes.js"></script>
 
 </html>
