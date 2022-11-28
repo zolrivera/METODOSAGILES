@@ -189,12 +189,12 @@
 					<div class="col-md-6"></div>
 					<div class="col-md-6">
 						<div class="float-start" >
-							<button type="button" class="btn btn-light">
+							<button id="btnAtras" type="button" class="btn btn-light">
 								Atrás
 							</button>
 						</div>
 						<div class="float-end" >
-							<button type="button" class="btn btn-dark">
+							<button id="btnSiguiente" type="button" class="btn btn-dark">
 								Siguiente
 							</button>
 						</div>
@@ -202,4 +202,31 @@
 				</div>
 		</div>
 	</body>
+	<script type="text/javascript">
+
+		$(document).ready(function() {
+		  
+		
+			
+			// You can use this to set default value
+			// It will fire above click event which will do the updates for you
+			//$('#aBtnGroup button[value="M"]').click();
+
+		  	$('#btnSiguiente').on('click', function() {
+				
+					$(location).attr('href','anuncios_espacio_step3.html');
+				});
+
+			
+
+			$('#btnAtras').on('click', function() {
+
+				$(location).attr('href','anuncios_espacio.html');
+
+			});
+
+			
+		});
+
+	</script>
 </html>
