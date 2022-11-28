@@ -9,10 +9,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 				crossorigin="anonymous"></script>
-<<<<<<< Updated upstream
+
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
-=======
->>>>>>> Stashed changes
+
+
 		<title>Earthbnb</title>
   	</head>
   	<body>
@@ -136,22 +136,25 @@
 						</div>
 					</div>
 					<div class="col-md-6  d-flex flex-column justify-content-around" style="align-items: center;">
-						 
+						 <div>
+						 <label>Dirección</label>
+						 <input id="txtdireccion" name="txtdireccion" type="text" style="width: 400px; height: 35px" >
+						 </div>
 							<div class="col-md-12 btn-lg btn-block" >
 								  <div id ="map" style="width: 500px; height: 400px !important; align-items: center;"> </div> 
-							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBCKiIqCdZGrVxx06LSbe7uG3zXOq1Cz5k&callback=initMap" async defer></script>
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCa4ou0Kz4MHnbWVJQtslxblq5MQTdI5qE&callback=initMap" async defer></script>
 							<script>
 								
 							  var map;
 							 function initMap() {
 								map = new google.maps.Map(document.getElementById('map'), {
-								  center: {lat: -11.9876333, lng: -77.0909803},
+								  center: {lat: -12.071157, lng: -77.026013},
 								  zoom: 13,
 								});
 								var marker = new google.maps.Marker({
-								  position: {lat: -11.9876333, lng: -77.0909803},
+								  position: {lat: -12.071157, lng: -77.026013},
 								  map: map,
-							  title: 'Casa'
+							  title: 'Condominio Los Girasoles'
 								});
 							  }
 							</script> 
@@ -180,20 +183,56 @@
 
 		$(document).ready(function() {
 
-		  	$('#btnSiguiente').on('click', function() {
+			$('#btnSiguiente').on('click', function() {
 				
-					$(location).attr('href','anuncios_espacio_step4.html');
-				});
-			
-
-			$('#btnAtras').on('click', function() {
-
-				$(location).attr('href','anuncios_espacio_step2.html');
-
+				$(location).attr('href','anuncios_espacio_step4.html');
 			});
+		
+
+		$('#btnAtras').on('click', function() {
+
+			$(location).attr('href','anuncios_espacio_step2.html');
 
 		});
 
+		$('#btnSiguiente').prop('disabled', true)
+
+
+		
+			$('input:text[name=txtdireccion]').change(function(){
+				var  thisBtn = $('input:text[name=txtdireccion]').val();
+				
+				console.log('------- ' + thisBtn); 
+				$('#btnSiguiente').prop('disabled', false)
+				$('#selectedVal').text(thisBtn);
+				getCoordinates(thisBtn);
+
+			});
+		
+
+		  	
+		});
+
+		async function getCoordinates(address){
+			const resp = await fetch("https://maps.googleapis.com/maps/api/geocode/json?address="+address+'&key=AIzaSyCa4ou0Kz4MHnbWVJQtslxblq5MQTdI5qE');
+			const data = await resp.json();
+			console. log("-------->  "+ data.results[0].geometry.location.lat);
+			console. log("-------->  "+ data.results[0].geometry.location.lng);
+			initMap_2(data.results[0].geometry.location.lat,data.results[0].geometry.location.lng)
+			return data.results[0].geometry.location;
+			
+		};
+		async function initMap_2(latitud,longitud){
+			map = new google.maps.Map(document.getElementById('map'), {
+			center: {lat: latitud, lng: longitud},
+			zoom: 13,
+			});
+			var marker = new google.maps.Marker({
+			position: {lat: latitud, lng: longitud},
+			map: map,
+			title: 'Condominio Los Girasoles'
+			});
+			}
 	</script>
 		
 </html>
