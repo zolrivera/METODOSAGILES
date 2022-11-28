@@ -262,13 +262,42 @@
 					<div class="col-md-6"></div>
 					<div class="col-md-6">
 						<div class="float-start" >
-							<button type="button" class="btn btn-light">
+							<button id="btnAtras" type="button" class="btn btn-light">
 								Atrás
 							</button>
 						</div>
 						<div class="float-end" >
-							<button type="button" class="btn btn-dark">
+							<button id="btnSiguiente" type="button" class="btn btn-dark">
 								Siguiente
 							</button>
 						</div>
-					</div>
+					</div>			
+				</div>			
+	 </body>				
+	 
+	 <script type="text/javascript">
+
+		$(document).ready(function() {
+		  
+			
+
+		  	$('#btnSiguiente').on('click', function() {
+				var valueTipoEspacio = $('#selectedVal').text();
+			
+				
+					$(location).attr('href','anuncios.html');
+				});
+
+		
+
+			$('#btnAtras').on('click', function() {
+
+				$(location).attr('href','anuncios_espacio_step3.html');
+
+			});
+
+			
+		});
+
+	</script>
+</html>	
