@@ -9,6 +9,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 				integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 				crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/js/jquery.js"></script>
 		<title>Earthbnb</title>
   	</head>
   	<body>
@@ -132,135 +133,70 @@
 						</div>
 					</div>
 					<div  style="height: 550px;" class="col-md-6  d-flex flex-column justify-content-center" style="align-items: center;" class="text-sm-start" style="font-size: 0.10rem;">
-
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Huéspedes 
-                                <div class="align-items: left">
-                                    <script>
-                                         $(document).ready(function(){
-                                          $('.left1').click(function(){
-                                         var qty_val1 = 1;
-                                            if(qty_val1>1){
-                                            $('#qty').val(parseInt(qty_val1)-1);                  
-                                            }
-                                            });
-                                            $('.right1').click(function(){
-                                            if($("#qty").val()!=""){
-                                            var qty_val1 = $(this).prev().val();
-                                            $('#qty').val(parseInt(qty_val1)+1);
-                                            }
-                                            });   
-                                            });
-                                    </script>
-                                    
-                                    <body>
-                                        <div class="left">
-                                        <div >
-                                        <span class="btn btn-primary btn-sm left1">-</span>
-                                        <input type="text" class="qty" name="qty" id="qty" value="0">
-                                        <span class="btn btn-primary btn-sm right1">+</span>
-                                        </div>
-                                        </div>
-                                     </body>
-                                </div>     
 
-                             </li>
-                            <li class="list-group-item">Camas
-                                <div class="align-items: left">
-                                    <script>
-                                         $(document).ready(function(){
-                                          $('.left1').click(function(){
-											var qty_val1 = 1;
-                                            if(qty_val1>1){
-                                            $('#qty').val(parseInt(qty_val1)-1);                  
-                                            }
-										 
-                                            });
-                                            $('.right1').click(function(){
-                                            if($("#qty").val()!=""){
-                                            var qty_val1 = $(this).prev().val();
-                                            $('#qty').val(parseInt(qty_val1)+1);
-                                            }
-                                            });   
-                                            });
-                                    </script>
-                                    
-                                    <body>
-                                        <div class="left">
-                                        <div >
-                                        <span class="btn btn-primary btn-sm left1">-</span>
-                                        <input type="text" class="qty" name="qty" id="qty" value="0">
-                                        <span class="btn btn-primary btn-sm right1">+</span>
-                                        </div>
-                                        </div>
-                                     </body>
-                                </div>     
-                            </li>
-                            <li class="list-group-item">Dormitorios
-                                <div class="align-items: left">
-                                    <script>
-                                         $(document).ready(function(){
-                                          $('.left1').click(function(){
-                                         var qty_val1 = 1;
-                                            if(qty_val1>1){
-                                            $('#qty').val(parseInt(qty_val1)-1);                  
-                                            }
-                                            });
-                                            $('.right1').click(function(){
-                                            if($("#qty").val()!=""){
-                                            var qty_val1 = $(this).prev().val();
-                                            $('#qty').val(parseInt(qty_val1)+1);
-                                            }
-                                            });   
-                                            });
-                                    </script>
-                                    
-                                    <body>
-                                        <div class="left">
-                                        <div >
-                                        <span class="btn btn-primary btn-sm left1">-</span>
-                                        <input type="text" class="qty" name="qty" id="qty" value="0">
-                                        <span class="btn btn-primary btn-sm right1">+</span>
-                                        </div>
-                                        </div>
-                                     </body>
-                                </div>     
-                            </li>
-                            <li class="list-group-item">Baños
-                                <div class="align-items: left">
-                                    <script>
-                                         $(document).ready(function(){
-                                          $('.left1').click(function(){
-                                         var qty_val1 = 1;
-                                            if(qty_val1>1){
-                                            $('#qty').val(parseInt(qty_val1)-1);                  
-                                            }
-                                            });
-                                            $('.right1').click(function(){
-                                            if($("#qty").val()!=""){
-                                            var qty_val1 = $(this).prev().val();
-                                            $('#qty').val(parseInt(qty_val1)+1);
-                                            }
-                                            });   
-                                            });
-                                    </script>
-                                    
-                                    <body>
-                                        <div class="left">
-                                        <div >
-                                        <span class="btn btn-primary btn-sm left1">-</span>
-                                        <input type="text" class="qty" name="qty" id="qty" value="0">
-                                        <span class="btn btn-primary btn-sm right1">+</span>
-                                        </div>
-                                        </div>
-                                     </body>
-                                </div>     
-                            </li>
+
+							<li class="list-group-item">Huéspedes
+								<div class="align-items: left">
+									<div>
+										<div class="left">
+											<div>
+												<span class="btn btn-primary btn-sm left1">-</span>
+												<input type="text" class="qty" name="huespedes" id="huespedes" value="0">
+												<span class="btn btn-primary btn-sm right1">+</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">Camas
+								<div class="align-items: left">
+									<div>
+										<div class="left">
+											<div>
+												<span class="btn btn-primary btn-sm left1">-</span>
+												<input type="text" class="qty" name="camas" id="camas" value="0">
+												<span class="btn btn-primary btn-sm right1">+</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">Dormitorios
+								<div class="align-items: left">
+									<div>
+										<div class="left">
+											<div>
+												<span class="btn btn-primary btn-sm left1">-</span>
+												<input type="text" class="qty" name="dormitorios" id="dormitorios" value="0">
+												<span class="btn btn-primary btn-sm right1">+</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="list-group-item">Baños
+								<div class="align-items: left">
+									<div>
+										<div class="left">
+											<div>
+												<span class="btn btn-primary btn-sm left1">-</span>
+												<input type="text" class="qty" name="banos" id="banos" value="0">
+												<span class="btn btn-primary btn-sm right1">+</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
                         </ul>
 
 					</div>
 					<div class="col-md-12"><hr/></div>
-					<div class="col-md-6"><div class="invisible">Selected Val:  <span id="selectedVal"></span></div></div>
+
+
+                    <div class="col-md-6"><input id="selectedVal" type="hidden" ></div>
+
 					<div class="col-md-6">
 						<div class="float-start" >
 							<button id="btnAtras" type="button" class="btn btn-light">
@@ -272,32 +208,67 @@
 								Siguiente
 							</button>
 						</div>
-					</div>			
-				</div>			
-	 </body>				
-	 
-	 <script type="text/javascript">
-
-		$(document).ready(function() {
-		  
 			
 
-		  	$('#btnSiguiente').on('click', function() {
-			
-				
-					$(location).attr('href','anuncios.html');
-				});
+					</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
 
-		
+		$(document).ready(function () {
+            let huespedObligatorio = 0;
+            let camasObligatorio = 0;
+            let dormitorioObligatorio = 0;
+            // buttons + -
+            $('.left1').click(function () {
+                let qty_val1 = $(this).next().val();
+                let id = $(this).next().get(0).id;
+                if (qty_val1 > 0) {
+                    $('#' + id).val(parseInt(qty_val1) - 1);
+                    if (id === "huespedes") {
+                        huespedObligatorio--
+                    } else if (id === "camas") {
+                        camasObligatorio--
+                    } else if (id === "dormitorios") {
+                        dormitorioObligatorio--
+                    }
+                    habilitarBtnSiguiente();
+                }
+            });
+            $('.right1').click(function () {
+                let id = $(this).prev().get(0).id;
+                if ($(id).val() != "") {
+                    var qty_val1 = $(this).prev().val();
+                    $('#' + id).val(parseInt(qty_val1) + 1);
+                    if (id === "huespedes") {
+                        huespedObligatorio++;
+                    } else if (id === "camas") {
+                        camasObligatorio++;
+                    } else if (id === "dormitorios") {
+                        dormitorioObligatorio++
+                    }
+                    habilitarBtnSiguiente();
+                }
+            });
 
-			$('#btnAtras').on('click', function() {
+            function habilitarBtnSiguiente() {
+                if (huespedObligatorio > 0 && camasObligatorio > 0 && dormitorioObligatorio > 0) {
+                    $('#btnSiguiente').prop('disabled', false);
+                } else {
+                    $('#btnSiguiente').prop('disabled', true);
+                }
+            };
 
-				$(location).attr('href','anuncios_espacio_step3.html');
+            $('#btnSiguiente').on('click', function () {
+                $(location).attr('href', 'anfitriones.html');
+            });
 
+			$('#btnAtras').on('click', function () {
+				$(location).attr('href', 'anuncios_espacio_step3.html');
 			});
 
-			
+			$('#btnSiguiente').prop('disabled', true)
 		});
-
 	</script>
-</html>	
+</html>
