@@ -1,0 +1,35 @@
+body{
+    background: url(../img/arch_1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.user-img{
+    margin-top: 10px;
+    margin-bottom: 35px;
+}
+
+.user-img img{
+    width: 100px;
+    height: 100px;
+}
+
+.table {
+    width: 100%;
+}
+.pb-21 {
+    padding-bottom: 2.1em!important;
+    padding-top: 1.4em!important;
+}
+
+.text-title-login {
+    margin-top: 100px;
+    font-family: sgothic,Arial,sans-serif!important;
+    font-weight: 700;
+    color: #000;
+    font-style: normal;
+}
+
+a, body, html {
+    color: #58585A;
+}
+    

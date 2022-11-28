@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Recuperar Contraseña</title>
+
+    <!--JQUERY-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="static/css/validate-pass.css" th:href="@{/css/validate-pass.css}">
+
+</head>
+
+<body class="background-02" style="height: 664px;" wfd-invisible="true">
+    <div class="overlay dark">
+
+        <div class="container">
+            <div class="row">
+                <div class="col background-03-desktop">
+                    <div class="logo">
+                        <img />
+                    </div>
+                    <div class="mb-72 ml-md-32 mr-md-64">
+                        <h3 class="title">Recuperar Contraseña</h3>
+                        <p></p>
+                    </div>
+                    <div class="col-12 recovery-img">
+                        <img src="static/img/learn.jpg" th:src="@{/img/user.png}" />
+                    </div>
+                </div>
+                <div class="col bg-white">
+
+                    <!-- Formulario -->
+                    <form id="forgot-password-step-2" action="#" class="form-sign-in mt-md-32 mb-md-96">
+                        <div class="toast p-8">
+                            <div class="text-center text-danger error">
+                                <p class="font-14 mb-0">
+                                    <span class="icon-circle">!</span> <span class="toast-title">&nbsp;</span>
+                                </p>
+                                <p class="font-14 toast-message">&nbsp;</p>
+                            </div>
+                        </div>
+
+                        <!-- <div class="form-group">
+                                <p>Elige por que medio quieres recibir el mensaje:</p>
+                            </div> -->
+
+                        <!--SMS radio button-->
+                        <!-- <div class="form-group mb-0">
+                                <label for="input-sms" class="font-regular ml-16">
+                                    <input type="radio" name="recover-method" id="input-sms" value="sms">
+                                    &nbsp; <span class="icon-sms font-20"></span> &nbsp;
+                                    SMS
+                                </label>
+                            </div> -->
+                        <!--SMS textbox Ingresar celular JCRD 15.06.2020-->
+                        <!-- <div id="smstext" style="display: none;">
+                                <div class="form-group">
+                                    <p>Confirma el número de teléfono: <span id="span-sms">******544</span></p>
+                                </div>
+                                <div class="form-group">
+                                    <label for="input-confirm-sms" class="sr-only"></label>
+                                    <div class="input-icon">
+                                        <span class="icon-sms"></span>
+                                        <input type="text" id="input-confirm-sms" class="form-control input-icon-user" placeholder="Teléfono">
+                                    </div>
+                                </div>
+                            </div> -->
+                        <!--Fin-->
+                        <!--Correo radio button-->
+                        <!-- <div class="form-group mb-0">
+                                <label for="input-email" class="font-regular ml-16">
+                                    <input type="radio" name="recover-method" id="input-email" value="email">
+                                    &nbsp; <span class="icon-mail"></span> &nbsp;
+                                    Correo electrónico
+                                </label>
+                            </div> -->
+                        <!--Mail textbox Ingresar correo-->
+                        <div id="mailtext" style="display: block;" wfd-invisible="true">
+                            <!-- <div class="form-group">
+                                    <p>Ingresa tu correo personal: <span id="span-email">******inser@gmail.com</span></p>
+                                </div> -->
+                            <div class="form-group">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Clave Dinámica</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" required="required">
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Nueva Contraseña</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="password" required="required">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Confirmar Nueva
+                                        Contraseña</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="password" required="required">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Fin-->
+
+                        <div class="form-group row">
+                            <div class="col-lg-12 text-center">
+                                <div class="col-lg-12 text-center">
+                                    <button id="forgot-password-step-2-cancel-button" class="btn btn-dark"
+                                        type="button">
+                                        Regresar</button>
+                                    <button id="forgot-password-step-2-continue-button" class="btn btn-danger"
+                                        type="button">
+                                        Continuar</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <span style="color:rgb(123, 112, 112); margin:10px 10px;"></span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row" style="padding-top:20px">
+                <p>PROYECTO 2022</p>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        $("#forgot-password-step-2-continue-button").on("click", function () {
+            let formulario = $("#forgot-password-step-2");
+            if (!formulario[0].checkValidity()) {
+                document.getElementById("forgot-password-step-2").reportValidity();
+                return;
+            }
+            window.location.href = "../index.html";
+        });
+
+        $("#forgot-password-step-2-cancel-button").on("click", function () {
+            window.location.href = "../recuperar-password/validate-pass.html";
+        });
+
+
+    </script>
+</body>
+
+</html>
