@@ -158,6 +158,9 @@
 			<button id="btnCrearAnuncio" type="button" class="btn btn-dark">
 				Crear Anuncio
 			</button>
+			<button id="btnLstReservas" type="button" class="btn btn-dark">
+				Crear Anuncio
+			</button>
 		</div>
 	</body>
 	<script type="text/javascript">
@@ -165,10 +168,11 @@
 		$(document).ready(function() {
 		  
 		  	$('#btnCrearAnuncio').on('click', function() {
-
 					$(location).attr('href','anuncios_espacio.html');
+			});
 
-
+			$('#btnLstReservas').on('click', function() {
+					$(location).attr('href','evaluar_reserva.html');
 			});
 
 		});
