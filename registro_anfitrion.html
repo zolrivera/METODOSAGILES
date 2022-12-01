@@ -184,7 +184,7 @@
 		                <span class="span-required">Completar Correo Electronico</span>                
                         </div>
                         <div class="mb-2">
-                        <button type="submit" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white" > Aceptar y Continuar</button>
+                        <button type="submit" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white" onclick=" confirmar()"> Aceptar y Continuar</button>
                         </div>
 
         </form>
@@ -195,6 +195,11 @@
 		</div>
 	</body>
 <script type="text/javascript">
+
+function confirmar(){
+         window.alert('REGISTRO REALIZADO')
+}
+	
        		const form = document.getElementById('form');
        		const campos = document.querySelectorAll('.required');
             const spans = document.querySelectorAll('.span-required');
