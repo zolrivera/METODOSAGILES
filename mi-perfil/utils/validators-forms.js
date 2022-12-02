@@ -17,3 +17,36 @@
         }, false)
       })
   })()
+
+
+  $("#btn_vinculate").on("click", function () {
+    $("#modalRegistroUsuario").modal("hide");
+    $("#modalValidacionGoogle").modal("show");
+  });
+  
+  
+  $("#closeModal3").on("click", function () {
+    $("#modalValidacionGoogle").modal("hide");
+  });
+  $("#signup-button3").on("click", function () {
+    let formulario = $("#formulario3");
+    if (!formulario[0].checkValidity()) {
+      document.getElementById("formulario3").reportValidity();
+      return;
+    }
+    $("#modalValidacionGoogle").modal("hide");
+  });
+  
+  $('#FileUpload1').change(function () {
+    var filename = $(this).val();
+    $('#section-filename').text(filename);
+  
+    var fileExtension = ['jpg', 'png'];
+    if ($.inArray(filename.split('.').pop().toLowerCase(), fileExtension) == -1) {
+      $('#section-foto').show();
+      $('#section-foto').text("Solo se permite extensiones JPG or PNG");
+    }
+    else {
+      $('#section-foto').hide();
+    }
+  });
