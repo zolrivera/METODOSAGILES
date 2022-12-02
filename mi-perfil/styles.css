@@ -100,8 +100,8 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 }
 
 .regalo-img img {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
 }
 
 .como-funciona-content {
@@ -124,6 +124,11 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 .share-button {
   display: flex;
   justify-content: space-evenly;
+  align-items: baseline;
+  margin-top: 10%;
+  border: #4e5155; 
+  border-style: solid;
+  padding-top: 10px;
 }
 
 .share-button input {
@@ -131,11 +136,14 @@ html:not(.dark-style) .account-settings-links .list-group-item.active {
 }
 
 .invita-y-gana-section {
-  margin: 0px 300px;
+  margin: 0px 20%;
+  /* display: flex; */
+  align-items: center;
 }
 
 #copyTarget {
-  padding: 10px;
+  font-style: italic;
+  color: blue;
 }
 
 .social-media-links {
