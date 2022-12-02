@@ -573,8 +573,8 @@
 													<div class="form-group-sm">
 														<label class="form-label font-weight-bold">Contraseña</label>
 														<div class="form-inline">
-															<input type="password"	class="form-control input-md mb-1 col-md-9" value=""required="required">
-															<button	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"	type="submit" id="btn_changepwd" onclick="changepassword()"><span><i class="bi bi-pencil-fill"></i> Editar</span></button>
+															<input type="password" class="form-control input-md mb-1 col-md-9" value="" required="required"  inputmode="numeric" minlength="8" maxlength="16" size="16">
+															<button	class="btn btn-md btn-outline-danger col-md-2 offset-md-1"	type="submit" id="btn_changepwd" onclick="changepassword()"  ><span><i class="bi bi-pencil-fill"></i> Editar</span></button>
 															<div class="invalid-feedback">
 																Completa este campo
 															</div>
@@ -1527,7 +1527,7 @@
 								</div>
 								<div class="form-group">
 									<div class="mb-3">
-										<input type="text" class="form-control" name="email"
+										<input type="email" class="form-control" name="email"
 											placeholder="Correo electronico o telefono" required="required">
 									</div>
 								</div>
@@ -1570,6 +1570,11 @@
 				$("#modalValidacionGoogle").modal("hide"); 
 			});
 			$("#signup-button3").on("click", function () {
+				let formulario = $("#formulario3");
+				if (!formulario[0].checkValidity()) {
+					document.getElementById("formulario3").reportValidity();
+					return;
+				}				
 				$("#modalValidacionGoogle").modal("hide"); 
 			});
 
@@ -1588,8 +1593,6 @@
 				{
 					$('#section-foto').hide();
 				}
-
-
 			});
 
 		 
