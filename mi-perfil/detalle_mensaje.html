@@ -1,0 +1,1159 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>Usuario Settings - Earthbnb.com</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link  rel="stylesheet"  href="utils/mismensajes.css" />
+    <link href="utils/upload-photos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Inicio Menu ::: Luis Romero ::: No tocar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html" style="padding-left: 80px;">
+        <img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000"
+          alt="" width="30" height="24" class="d-inline-block align-text-top">
+        Earthbnb
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 80px;">
+            <li class="nav-item">
+              <a class="nav-link" href="../login.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="padding-right:5px">
+                  <path fill-rule="evenodd"
+                    d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+                  <path fill-rule="evenodd"
+                    d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+                </svg>
+                Login
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../registro_usuario.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
+                  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                  <path fill-rule="evenodd"
+                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+                </svg>
+                Registrar Usuario
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-person-fill" viewBox="0 0 16 16" style="padding-right:5px">
+                  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                </svg>
+                Usuario
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="perfil.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-person-square" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                      <path
+                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
+                    </svg>
+                    Perfil
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../reservas.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-card-checklist" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                      <path
+                        d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                    </svg>
+                    Reservas
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../anuncios.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-chat-right-dots" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path
+                        d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+                      <path
+                        d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+                    </svg>
+                    Anuncios
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../anfitriones.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-house-door" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path
+                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+                    </svg>
+                    Anfitriones
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../evaluar_reserva.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-check2-square" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path
+                        d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
+                      <path
+                        d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+                    </svg>
+                    Evaluar reserva
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../historial_pagos.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-cash" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                      <path
+                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
+                    </svg>
+                    Historial de pagos
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="../reportes.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-card-list" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                      <path
+                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                    </svg>
+                    Reportes
+                  </a>
+                </li>
+                <!-- Cerrar Session -->
+                <li>
+                  <a class="dropdown-item" href="../login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                      class="bi bi-card-list" viewBox="0 0 16 16" style="padding-right:5px">
+                      <path
+                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                      <path
+                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+                    </svg>
+                    Cerrar Sesion
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Fin Menu ::: Luis Romero ::: No tocar -->
+    <div class="wrapper">
+      <!-- TODOCODIGO AQUI -->
+      <div class="container-fluid light-style flex-grow-1 container-p-y ">
+        <div class="card overflow-hidden">
+          <div class="row no-gutters row-bordered row-border-light">
+            <!-- Menu - SideBar-->
+            <div class="col-md-3 bgcolor-primario">
+              
+            </div>
+            <div class="col-md-9 profile-content bgcolor-primario">
+              <div class="tab-content m-3">
+                <!-- Perfil de usuario-->
+                <div class="tab-pane fade " id="misdatospersonales">
+                  <!-- START YOUR CONTENT -->
+                  <div class="card">
+                    <div class="card-header card-custom">
+                      <h4 class="text-white pt-3">
+                      <img class="img-circle"
+                        src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+                        class="pl-3">Mis datos personales</span></h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Nombres</label>
+                              <div class="form-inline">
+                                <input type="text"
+                                  class="form-control input-md mb-1 col-md-9" value="Luis"
+                                  required="required">
+                                <button
+                                  class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                  type="submit" id="btn_edit_name"><span><i
+                                  class="bi bi-pencil-fill"></i>
+                                Editar</span></button>
+                                <div class="invalid-feedback">
+                                  Completa este campo
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Apellidos</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-9"
+                                value="Tejada Duarte" required="required">
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Tipo Documento</label>
+                            <div class="form-inline">
+                              <select
+                                class="custom-select form-control input-md mb-1 col-md-9"
+                                required="required">
+                                <option>DNI</option>
+                                <option>CE</option>
+                                <option>PASAPORTE</option>
+                                <option>OTROS</option>
+                              </select>
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Numero de
+                            documento</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-9"
+                                value="10293023" required="required">
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Fecha de
+                            nacimiento</label>
+                            <div class="form-inline">
+                              <input type="date" id="fechanacimiento_cliente"
+                                class="form-control input-md mb-1 col-md-9"
+                                required="required">
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Genero</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-9"
+                                value="Masculino" required="required">
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Teléfono Móvil</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-9"
+                                value="+51 903033888" required="required">
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form>
+                            <label class="form-label font-weight-bold">Correo
+                            Electrónico</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-9"
+                                disabled value="Luis.Tejada.Duarte@gmail.com">
+                              <span
+                                class="badge bg-primary  col-md-2 offset-md-1">Verificado</span>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Lugar de
+                            residencia</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-9"
+                                value="Lima - Cercado de Lima" required="required">
+                              <button
+                                class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                type="submit" id="btn_edit_name"><span><i
+                                class="bi bi-pencil-fill"></i>
+                              Editar</span></button>
+                              <div class="invalid-feedback">
+                                Completa este campo
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="list-group mt-3">
+                        <div class="list-group-item">
+                          <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Contacto de emergencia</h5>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <form class="needs-validation" novalidate>
+                                <label class="form-label font-weight-bold">Nombres</label>
+                                <div class="form-inline">
+                                  <input type="text" value="Susan"
+                                    class="form-control input-md mb-1 col-md-9" value=""
+                                    required="required">
+                                  <button
+                                    class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                    type="submit" id="btn_edit_name" data-toggle="modal"
+                                    data-target="#modal-success"><span><i
+                                    class="bi bi-pencil-fill"></i>
+                                  Editar</span></button>
+                                  <div class="invalid-feedback">
+                                    Completa este campo
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="col-md-6">
+                              <form class="needs-validation" novalidate>
+                                <label class="form-label font-weight-bold">Apellidos</label>
+                                <div class="form-inline">
+                                  <input type="text"
+                                    class="form-control input-md mb-1 col-md-9"
+                                    value="Mendoza" required="required">
+                                  <button
+                                    class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                    type="submit" id="btn_edit_name"><span><i
+                                    class="bi bi-pencil-fill"></i>
+                                  Editar</span></button>
+                                  <div class="invalid-feedback">
+                                    Completa este campo
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <form class="needs-validation" novalidate>
+                                <label class="form-label font-weight-bold">Telefono
+                                Movil</label>
+                                <div class="form-inline">
+                                  <input type="text"
+                                    class="form-control input-md mb-1 col-md-9"
+                                    value="+51 999888777" required="required">
+                                  <button
+                                    class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                    type="submit" id="btn_edit_name"><span><i
+                                    class="bi bi-pencil-fill"></i>
+                                  Editar</span></button>
+                                  <div class="invalid-feedback">
+                                    Completa este campo
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                            <div class="col-md-6">
+                              <form class="needs-validation" novalidate>
+                                <label
+                                  class="form-label font-weight-bold">Parentesco</label>
+                                <div class="form-inline">
+                                  <input type="text"
+                                    class="form-control input-md mb-1 col-md-9"
+                                    value="Amiga" required="required">
+                                  <button
+                                    class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                    type="submit" id="btn_edit_name"><span><i
+                                    class="bi bi-pencil-fill"></i>
+                                  Editar</span></button>
+                                  <div class="invalid-feedback">
+                                    Completa este campo
+                                  </div>
+                                </div>
+                              </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- FIN CONTENT -->
+                </div>
+                <!-- Mi perfil -->
+                <div class="tab-pane fade" id="miperfil">
+                  <div class="card">
+                    <div class="card-header card-custom">
+                      <h4 class="text-white pt-3">
+                      <img class="img-circle"
+                        src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+                        class="pl-3">Mi perfil</span></h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-12 font-weight-bold">
+                          <h4>Hola Luis</h4>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="card-body media align-items-center">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt=""
+                              class="d-block ui-w-80">
+                            <div class="media-body ml-4">
+                              <label class="btn btn-outline-primary">
+                              Escoger foto
+                              <input type="file" id="FileUpload1" accept=".jpg,.gif,.png"
+                                class="account-settings-fileinput">
+                              </label> &nbsp;
+                              <label id="section-filename"
+                                class="text-light small mt-1"></label>
+                              <div class="text-light small mt-1"><label id="section-foto"
+                                class="text-danger font-weight-bold"></label></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Acerca de ti</label>
+                              <div class="form-inline">
+                                <textarea rows="5"
+                                  class="form-control input-md mb-1 col-md-9"
+                                  maxlength="500"
+                                  required="required">Me considero un joven sociable, respetuoso, que le gusta viajar.</textarea>
+                                <button
+                                  class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                  type="submit" id="btn_edit_name"><span><i
+                                  class="bi bi-pencil-fill"></i>
+                                Editar</span></button>
+                                <div class="invalid-feedback">
+                                  Completa este campo
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Sitio Web</label>
+                              <div class="form-inline">
+                                <input type="text"
+                                  class="form-control input-md mb-1 col-md-9"
+                                  value="www.luis.com.pe" required="required">
+                                <button
+                                  class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                  type="submit" id="btn_edit_name"><span><i
+                                  class="bi bi-pencil-fill"></i>
+                                Editar</span></button>
+                                <div class="invalid-feedback">
+                                  Completa este campo
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <label class="form-label font-weight-bold">Tipo Perfil</label>
+                            <div class="form-inline">
+                              <input type="text" class="form-control input-md mb-1 col-md-12"
+                                disabled="disabled" value="Cliente">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mi cuenta y seguridad -->
+                <div class="tab-pane fade" id="micuenta-seguridad">
+                  <div class="card">
+                    <div class="card-header card-custom">
+                      <h4 class="text-white pt-3">
+                      <img class="img-circle"
+                        src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+                        class="pl-3">Mi cuenta y seguridad</span></h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <h5><i class="bi bi-calendar4-week"></i> Se unio en noviembre del 2022
+                          </h5>
+                        </div>
+                      </div>
+                      <hr>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Contraseña</label>
+                              <div class="form-inline">
+                                <input type="password"
+                                  class="form-control input-md mb-1 col-md-9" value=""
+                                  required="required" inputmode="numeric" minlength="8"
+                                  maxlength="16" size="16">
+                                <button
+                                  class="btn btn-md btn-outline-danger col-md-2 offset-md-1"
+                                  type="submit" id="btn_changepwd"
+                                  onclick="changepassword()"><span><i
+                                  class="bi bi-pencil-fill"></i>
+                                Editar</span></button>
+                                <div class="invalid-feedback">
+                                  Completa este campo
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Redes sociales
+                              (Vincula tus cuentas)</label>
+                              <div class="form-inline">
+                                <div class="form-group">
+                                  <div class="text-center">
+                                    <img class="img-thumbnail" src="img/google.png"
+                                      style="max-height: 150px; max-width: 150px;" />
+                                    <br />
+                                    <button class="btn btn-md btn-danger mt-3 mb-1"
+                                      type="button" id="btn_vinculate"><span><i
+                                      class="bi bi-subtract"></i>
+                                    Vincular</span></button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Sesiones
+                              activas</label>
+                              <div class="form-group">
+                                <div class="text-justify">
+                                  <p>Al "cerrar sesión" cerrarás las sesiones abiertas en
+                                    cualquier dispositivo 
+                                  </p>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <div class="form-group">
+                                <div class="text-left">
+                                  <button class="btn btn-md btn-outline-danger mt-3"
+                                    type="button" id="btn_closesession"><span><i
+                                    class="bi bi-subtract"></i> Cerrar
+                                  sesiones</span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                      <div class="row mt-3">
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <label class="form-label font-weight-bold">Eliminar
+                              cuenta</label>
+                              <div class="form-group">
+                                <div class="text-justify">
+                                  <p>Eliminar cuenta definitivamente </p>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="col-md-6">
+                          <form class="needs-validation" novalidate>
+                            <div class="form-group-sm">
+                              <div class="form-group">
+                                <div class="text-left">
+                                  <button class="btn btn-md btn-outline-danger mt-3"
+                                    type="button" id="btn_eliminate"><span><i
+                                    class="bi bi-subtract"></i> Eliminar
+                                  cuenta</span></button>
+                                </div>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Mis Mensajes -->
+				<div class="tab-pane active show" id="mis-mensajes">
+								<div class="card">
+									<div class="card-header card-custom">
+										<h4 class="text-white pt-3"><img class="img-circle"
+												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+												class="pl-3">Mis mensajes</span></h3>
+									</div>
+									<div class="card-body" style="display: none;" id="lista_mensajes">
+										<div class="row p-3">
+											<div class="col-md-6 col-md-offset-3 mx-auto">
+												<div class="row p-3 border mensaje bg-light">
+													<div class="col-md-3">
+														<img class="img-fluid" src="img/casa_hobit.jpg" />
+													</div>
+													<div class="col-md-9">
+														<p><b>De: Luis</b></p>
+														<p><b><i></i>24/11/2022 Alquiler de bungalo</b></p>
+														<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución <a href="#"> ver mas ...</a></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row p-3">
+											<div class="col-md-6 col-md-offset-3 mx-auto">
+												<div class="row p-3 border mensaje bg-light">
+													<div class="col-md-3">
+														<img class="img-fluid" src="img/casa_perro.jpg" />
+													</div>
+													<div class="col-md-9">
+														<p><b>De: Jacinto</b></p>
+														<p><b><i></i>24/11/2022 Alquiler de casa de dos pisos</b></p>
+														<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución <a href="#"> ver mas ...</a></p>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="row p-3">
+											<div class="col-md-6 col-md-offset-3 mx-auto">
+												<div class="row p-3 border mensaje bg-light">
+													<div class="col-md-3">
+														<img class="img-fluid" src="img/casa_cubo.jpg" />
+													</div>
+													<div class="col-md-9">
+														<p><b>De: Criss</b></p>
+														<p><b><i></i>24/11/2022 Alquiler de cuarto especial</b></p>
+														<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución <a href="#"> ver mas ...</a></p>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="card-body"  id="detalle_mensaje">
+										<div class="row  justify-content-around">
+											<div class="col-md-10 mx-auto">
+												<div class="row p-3">
+													<div class="col-md-3">
+														<img class="img-thumbnail" style="height: 300px;" src="img/perfil3.jpg" />
+													</div>
+													<div class="col-md-9">
+														<div class="row">
+															<div class="col">
+																<p><b>De: Criss</b></p>
+															</div>
+															<div class="col text-end">
+																<button class="btn btn-info" id="btn_regresar_listado_mensajes" ><i class="bi bi-arrow-left"></i>&nbsp;Regresar</button>
+															</div>
+														</div>
+														<div class="row">
+															<div class="col-md-8">
+																<p><b><i></i>24/11/2022 Alquiler de cuarto especial</b></p>
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row p-3">
+													<div class="col">
+														<hr/>
+													</div>
+												</div>
+												<div class="row justify-content-around">
+													<div class="col-md-6 border">
+														<div class="row p-3">
+															<div class="col-md-12">
+																<h4>Datos de alquiler</h4>
+															</div>
+															<div class="col-md-6">
+																<img class="img-fluid" src="img/casa_perro.jpg" />
+															</div>
+															<div class="col-md-6">
+																Perched high on an ocean hillside, built on 30 ft tall steel legs, the cozy quarters above are akin to an old ship’s cabin. With 360 views at 30ft up you can chart the sun and stars across the sky, set your rhythm to the ebb & flow of the tide and scout the surf from above. Greet the evenings with a cozy woodstove, sunset with drinks on the deck, moonrise with a dip in the hottub & mornings with fresh espresso. Permit yourself to depart land for a while and come stand watch at The Tower.
+															</div>
+														</div>
+														<div class="row p-3">
+															<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3903.494885006919!2d-76.97891618415325!3d-11.940199491538324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105dacfcc944a6b%3A0xbc02a7202e6fa89e!2sColegio%20Micaela%20Bastidas!5e0!3m2!1ses!2spe!4v1669345982600!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+														</div>
+													</div>
+													<div class="col-md-5 border">
+														<div class="row p-3">
+															<div class="col-md-12">
+																<h4>Mensajes</h4>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="col-md-12">
+																<div class="row p-3 border bg-light">
+																	<div class="col-md-9">
+																		<p><b><i></i>Luigi Palacios - 24/11/2022 11:55:05 am</b></p>
+																		<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución</p>
+																	</div>
+																	<div class="col-md-3">
+																		<img class="img-thumbnail" src="img/perfil2.jpg" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="col-md-12">
+																<div class="row p-3 border bg-light">
+																	<div class="col-md-3">
+																		<img class="img-thumbnail" src="img/perfil3.jpg" />
+																	</div>
+																	<div class="col-md-9">
+																		<p><b><i></i>Anfitrion - 24/11/2022 14:45:38 pm</b></p>
+																		<p>Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row p-3 fade" id="pseudo_mensaje">
+															<div class="col-md-12">
+																<div class="row p-3 border bg-light">
+																	<div class="col-md-9">
+																		<p><b><i></i>Luigi Palacios - Ahora</b></p>
+																		<p id="pseudo_texto">Nuestro equipo está formado por arquitectos, interioristas, diseñadores industriales, diseñadores gráficos, y disponemos de oficina propia para dirigir nuestro estudio. Nuestro objetivo es ofrecer una solución</p>
+																	</div>
+																	<div class="col-md-3">
+																		<img class="img-thumbnail" src="img/perfil2.jpg" />
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="col-md-12">
+																<form id="frm_envio_mensaje">
+																	<textarea minlength="2" maxlength="200" required style="resize: none;" class="form-control" rows="3" id="txt_mensaje"></textarea>
+																</form>
+															</div>
+														</div>
+														<div class="row p-3">
+															<div class="text-right">
+																<button class="btn btn-primary" type="button" id="btn_enviar_mensaje">Enviar mensaje</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+				</div>
+                <!-- Mis Preferencias -->
+                <div class="tab-pane fade" id="mis-preferencias">
+					<div class="card">
+
+						<!-- START YOUR CONTENT -->
+						<div class="card-header card-custom">
+							<h4 class="text-white pt-3"><img class="img-circle"
+									src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+									class="pl-3">Tomese unos minutos para ajustar sus preferencias y
+									vivir la mejor
+									experiencia</span></h4>
+
+						</div>
+						<div class="card-body">
+							<div class="row">
+
+								<div class="col-md-12">
+									<form class="needs-validation" id="formulario1">
+										<div class="form-group-sm">
+
+											<div class="mb-lg-4 row preferencia">
+												<label class="col-sm-8 col-form-label">Nombre
+													preferencia</label>
+												<div class="col-sm-10">
+													<input type="text" class="form-control"
+														id="nombre-preferencia" name="nombre-preferencia"
+														placeholder="coloca un nombre a tu preferencia"
+														value="" required>
+												</div>
+											</div>
+
+											<div class="mb-lg-2 row inmueble">
+												<label class="col-sm-8 col-form-label">Tipo
+													de Inmueble</label>
+											</div>
+
+
+											<div class="">
+												<div class="form-check">
+													<input class="form-check-input" type="radio"
+														name="inlineRadioOptions" id="inlineRadio1"
+														value="Casa" required>
+													<label class="form-check-label"
+														for="inlineRadio1">Casa</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio"
+														name="inlineRadioOptions" id="inlineRadio2" required
+														value="Departamento">
+													<label class="form-check-label"
+														for="inlineRadio2">Departamento</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" required
+														name="inlineRadioOptions" id="inlineRadio2"
+														value="Alojamiento">
+													<label class="form-check-label"
+														for="inlineRadio2">Alojamiento</label>
+												</div>
+												<div class="form-check">
+													<input class="form-check-input" type="radio" required
+														name="inlineRadioOptions" id="inlineRadio2"
+														value="Hotel">
+													<label class="form-check-label"
+														for="inlineRadio2">Hotel</label>
+												</div>
+											</div>
+
+
+											<div class="mb-lg-4 row tipo-moneda">
+												<label for="tipo_moneda">Tipo de Moneda</label>
+												<div class="component">
+													<select class="form-select" name="tipo_moneda" required
+														id="tipo_moneda"
+														aria-label="Default select example">
+														<option value="Dolares" selected>USD - Dolares
+														</option>
+														<option value="Soles">PEN - Soles</option>
+														<option value="Euros">EUR - Euros</option>
+													</select>
+												</div>
+											</div>
+
+
+											<div>
+												<input id="rangeInput" type="range" min="0" max="5000"
+													class="form-control-range"
+													oninput="amount.value=rangeInput.value" />
+
+											</div>
+
+											<div class="mb-3 row precio">
+												<label for="amount" class="col-sm-10 col-form-label">Precio
+													Hasta:</label>
+												<div class="col-sm-10">
+													<input id="amount" name="amount" type="number"
+														class="form-control" min="0" max="5000"
+														oninput="rangeInput.value=amount.value" required />
+												</div>
+											</div>
+
+
+											<div class="agregar-preferencia">
+												<button id="mis-preferencias-button-agregar"
+													class=" btn btn-success" type="button">
+													Crear nueva preferencia</button>
+											</div>
+
+											<div class="table-hover mi-tabla-preferencias">
+												<table class="table" id="myTable">
+													<thead class="thead-dark">
+														<tr>
+															<th class="col-xs-1">#</th>
+															<th class="col-xs-2">Preferencia</th>
+															<th class="col-xs-3">Moneda</th>
+															<th class="col-xs-4">Precio</th>
+															<th class="col-xs-5">Tipo Inmueble</th>
+															<th class="col-xs-6">Delete</th>
+														</tr>
+													</thead>
+													<tbody>
+													</tbody>
+												</table>
+											</div>
+
+										</div>
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+                <!-- Invita y Gana -->
+                <div class="tab-pane fade" id="invita-y-gana">
+                  <!-- START YOUR CONTENT -->
+                  <div class="card">
+                    <div class="card-header card-custom">
+                      <h4 class="text-white pt-3">
+                      <img class="img-circle"
+                        src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
+                        class="pl-3">Mis datos personales</span></h4>
+                    </div>
+                    <div class="card-body pb-2 invita-y-gana-section">
+                      <div class="regalo-img">
+                        <img src="img/regalo-invita-y-gana.png" alt="">
+                      </div>
+                      <section>
+                        <h2>Invita a tus amigos y Gana</h2>
+                        <div class="como-funciona-content">
+                          ¡Invita a la gente que mas quieres a unirse a nuestra plataforma a
+                          realizar
+                          su primera reserva
+                          y ganaras un cupon de descuento de 5% para tu proxima reserva.
+                        </div>
+                        <hr />
+                        <div class="share-button">
+                          <p id="copyTarget">
+                            http://www.google.com/ig/redirectdomain?brand=CKM
+                          </p>
+                          <button class="btn btn-success" id="copyButton"
+                            onclick="copyToClipboard('#copyTarget')">Copy</button>
+                        </div>
+                        <p class="break-line">---------- O ----------</p>
+                        <div class="social-media-links">
+                          <p>COMPARTE TU LINK</p>
+                          <div class="links">
+                            <i class="bi-whatsapp btn social-share whatsapp btn"
+                              style="color:green; font-size: 40px;"></i>
+                            <i class="bi-facebook btn social-share facebook"
+                              style="color:blue; font-size: 40px;"></i>
+                            <i class="social-share twitter bi-twitter btn"
+                              style="color:lightblue; font-size: 40px;"></i>
+                          </div>
+                        </div>
+                        <div class="terminos-y-como-funciona">
+                          <a target="_blank"
+                            href="https://developer.mozilla.org/es/docs/Learn/Common_questions/How_does_the_Internet_work">¿Como
+                          funciona?</a>
+                          <a target="_blank"
+                            href="https://www.mozilla.org/es-ES/about/legal/terms/mozilla/">Terminos
+                          y
+                          Condiciones</a>
+                        </div>
+                      </section>
+                    </div>
+                  </div>
+                  <!-- FIN CONTENT -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="modalValidacionGoogle" class="modal-style-2 modal">
+          <div class="modal-dialog modal-signup">
+            <div class="modal-content">
+              <div class="modal-header p-0">
+                <button id="closeModal3" type="button" class="close" data-dismiss="modal"
+                  aria-hidden="true"><i class="bi bi-x-circle"></i></button>
+              </div>
+              <div class="modal-body">
+                <form id="formulario3" action="" method="post" class="mt-3">
+                  <!-- Celular/Correo -->
+                  <div class="row">
+                    <a id="btnGoogle" class=" btn-google text-uppercase" href="#"><i
+                      class="fab fa-google mr-2 ml-2"></i>Acceder con google</a>
+                  </div>
+                  <hr />
+                  <div class="form-group">
+                    <div class="text-center">
+                      <img class="img-thumbnail" src="img/empty.png"
+                        style="max-height: 150px; max-width: 150px;" />
+                      <br />
+                      <p>La pagina esta solicitando permisos</p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="mb-3">
+                      <input type="email" class="form-control" name="email"
+                        placeholder="Correo electronico o telefono" required="required">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="text-center">
+                      <p>Para continuar, Google compartirá tu nombre, dirección de correo electronico,
+                        preferencia de idioma y foto de perfil con esta página. Antes de usar esta
+                        pagina, revisa su <a href="#"><b>politica de privacidad</b></a> y <a
+                          href="#"><b>condiciones de servicio</b></a>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="text-right" style="padding-left: 20px;">
+                        <button id="signup-button3" class="btn btn-lg btn-block btn-primary"
+                          style="background-color: #dd4b39;" type="button"><i
+                          class="fab fa-google me-2"></i> Ingresar</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <!-- social icons -->
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript">
+          $("#btn_vinculate").on("click", function () {
+          	$("#modalRegistroUsuario").modal("hide");
+          	$("#modalValidacionGoogle").modal("show");
+          });
+          
+          
+          $("#closeModal3").on("click", function () {
+          	$("#modalValidacionGoogle").modal("hide");
+          });
+          $("#signup-button3").on("click", function () {
+          	let formulario = $("#formulario3");
+          	if (!formulario[0].checkValidity()) {
+          		document.getElementById("formulario3").reportValidity();
+          		return;
+          	}
+          	$("#modalValidacionGoogle").modal("hide");
+          });
+          
+          $('#FileUpload1').change(function () {
+          	var filename = $(this).val();
+          	$('#section-filename').text(filename);
+          
+          	var fileExtension = ['jpg', 'png'];
+          	if ($.inArray(filename.split('.').pop().toLowerCase(), fileExtension) == -1) {
+          		$('#section-foto').show();
+          		$('#section-foto').text("Solo se permite extensiones JPG or PNG");
+          	}
+          	else {
+          		$('#section-foto').hide();
+          	}
+          });
+          
+          
+        </script>
+      </div>
+    </div>
+    <footer class="footer text-center text-white">
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-facebook-f"></i></a>
+          <!-- Twitter -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-twitter"></i></a>
+          <!-- Google -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-google"></i></a>
+          <!-- Instagram -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-instagram"></i></a>
+          <!-- Linkedin -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-linkedin"></i></a>
+          <!-- Github -->
+          <a class="btn btn-link btn-floating btn-lg text-dark m-1" href="#!" role="button"
+            data-mdb-ripple-color="dark"><i class="fab fa-github"></i></a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3">
+        © 2022 Copyright:
+        <a class=" text-dark" href="https://google.com/">Earthbnb.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>
+    $("#btn_regresar_listado_mensajes").on("click", function(){
+        window.location = "./perfil.html";
+    });
+  </script>
+</html>
