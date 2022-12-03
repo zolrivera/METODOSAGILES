@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+    <!-- Fuente Open Sans y Ubuntu -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu" rel="stylesheet">
+
+
+    <!-- Hoja de estilo personalizada -->
+    <link rel="stylesheet" href="sitio_style.css">
+    <!--    <link rel="stylesheet" href="sitios.css">-->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <!--    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>-->
+    <!--=====================================
+    VÍNCULOS JAVASCRIPT
+    ======================================-->
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+
+    <title>Earthbnb</title>
+</head>
+<body>
+<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="index.html" style="padding-left: 80px;">
+            <img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000"
+                 alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Earthbnb
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 80px;">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="padding-right:5px">
+                            <path fill-rule="evenodd"
+                                  d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z"/>
+                            <path fill-rule="evenodd"
+                                  d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z"/>
+                        </svg>
+                        Login
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="registro_usuario.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
+                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                            <path fill-rule="evenodd"
+                                  d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Registrar Usuario
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                             class="bi bi-person-fill" viewBox="0 0 16 16" style="padding-right:5px">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Usuario
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="mi-perfil/perfil.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-person-square" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                                    <path
+                                            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z"/>
+                                </svg>
+                                Perfil
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="reservas.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-card-checklist" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path
+                                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                    <path
+                                            d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
+                                </svg>
+                                Reservas
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="anuncios.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-chat-right-dots" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path
+                                            d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z"/>
+                                    <path
+                                            d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                                </svg>
+                                Anuncios
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="anfitriones.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-house-door" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path
+                                            d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+                                </svg>
+                                Anfitriones
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="evaluar_reserva.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-check2-square" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path
+                                            d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z"/>
+                                    <path
+                                            d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/>
+                                </svg>
+                                Evaluar reserva
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="pagos/historial_pagos.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-cash" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/>
+                                    <path
+                                            d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"/>
+                                </svg>
+                                Historial de pagos
+                            </a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="reportes.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                     class="bi bi-card-list" viewBox="0 0 16 16" style="padding-right:5px">
+                                    <path
+                                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                                    <path
+                                            d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                                </svg>
+                                Reportes
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- Fin Menu ::: Luis Romero ::: No tocar -->
+
+<div class="container">
+    <div class="row">
+
+        <!--=====================================
+        BLOQUE IZQ
+        ======================================-->
+        <div class="col-12 col-lg-12 colIzqHabitaciones p-0">
+
+            <!--=====================================
+            MULTIMEDIA HABITACIONES
+            ======================================-->
+
+            <!-- SLIDE  -->
+
+            <section class="jd-slider mb-3 my-lg-3 slideHabitaciones">
+                <div class="slide-inner">
+                    <ul class="slide-area">
+                        <li>
+                            <img src="sitios-disponibles/12vistasol-psicina-abastel.jpg" class="img-fluid">
+                        </li>
+                    </ul>
+                </div>
+
+            </section>
+
+
+            <!--=====================================
+            DESCRIPCIÓN HABITACIONES
+            ======================================-->
+
+            <div class="descripcionHabitacion px-3" id="descriptionRooms">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--</div>-->
+
+<!--=====================================
+MAPA
+======================================-->
+<div class="mapa container-fluid bg-white p-0">
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2181015083097!2d-75.16167268476889!3d6.2349559954867315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e441d2a2f90b049%3A0xe73c0a7060062903!2sHOTEL+PORTOBELO+GUATAPE!5e0!3m2!1ses!2sco!4v1544281019677"
+            width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+    <div class=" p-4 info">
+
+        <h3 class="mt-4"><strong>Visítanos</strong></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+        <p>
+            Apple inc.<br>
+            Infinte Loop.<br>
+            Cupertino, CA 95014<br>
+            408-996-1010
+        </p>
+
+        <p class="pb-4">Email: info@apple.com<br>
+            Tel: 1-800-676-2775</p>
+
+    </div>
+
+</div>
+
+<div class="modal" id="modalIngreso">
+
+    <div class="modal-dialog">
+
+        <div class="modal-content">
+
+            <div class="modal-header bg-info text-white">
+                <h4 class="modal-title">Ingresar</h4>
+                <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-footer">
+
+                ¿No tiene una cuenta registrada? |
+
+                <strong>
+
+                    <a href="#modalRegistro" data-toggle="modal" data-dismiss="modal">
+                        Registrarse
+                    </a>
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script type="text/javascript" src="anfitriones.js"></script>
+<script type="text/javascript">
+
+    function updateDB(idAnuncio, dirección) {
+        if(confirm('Está seguro que desea guardar los cambios')){
+            Editar(idAnuncio,findPositionInDBById(idAnuncio), dirección);
+            $(location).attr('href','anfitriones.html');
+        }
+    }
+
+    $(document).ready(function () {
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let infoAnuncio = JSON.parse(urlParams.get('id') != null ? findById(urlParams.get('id')) : null);
+        $("#descriptionRooms").append(
+            `
+                <h1 class="colorTitulos float-left" id="tituloAnuncio">${infoAnuncio.titulo}</h1>
+                <h3>${infoAnuncio.descripcion_anuncio}</h3>
+                <div class="float-right pt-2">
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-tv"></i> Cable </button>
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-tint"></i> Agua Caliente </button>
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-wifi"></i> WIFI</button>
+                    <button id="btnEditar" type="button" class="btn btn-primary" style="margin-left: 5rem;"><i class="fas fa-edit"></i> Editar</button>
+                </div>
+                <div class="clearfix mb-4"></div>
+                <h4> <i class="fas fa-power-off w-25 colorTitulos"></i> Estado: <span class="text-dark small">${infoAnuncio.estado == true ? "Disponible" : "No Disponible"}</span>
+                </h4>
+                <br>
+                <h4> <i class="fas fa-hand-holding-dollar w-25 colorTitulos"></i> Precio x Noche s/.<span class="text-dark small">${infoAnuncio.precio_noche}</span> </h4>
+                <br>
+                <h4> <i class="fas fa-house w-25 colorTitulos"></i> Tipo de Inmueble <span class="text-dark small">${infoAnuncio.tipo_inmueble}</span> </h4>
+                <br>
+                <h4> <i class="fas fa-building w-25 colorTitulos"></i> Tipo de Alojamiento <span class="text-dark small">${infoAnuncio.tipo_alojamiento}</span> </h4>
+                <br>
+                <h4> <i class="fas fa-user-friends w-25 colorTitulos"></i> Huesped(es) x <span class="text-dark small">${infoAnuncio.huespedes}</span> </h4>
+                <br>
+                <h4> <i class="fas fa-bed w-25 colorTitulos"></i> Cama(s) x <span class="text-dark small">${infoAnuncio.camas}</span> </h4>
+                <br>
+                <h4> <i class="fas fa-toilet w-25 colorTitulos"></i> Baño(s) x <span class="text-dark small">${infoAnuncio.baños}</span> </h4>
+                <br>
+                <h4> <i class="fas fa-person-booth w-25 colorTitulos"></i> Dormitorio(s) x <span class="text-dark small">${infoAnuncio.dormitorios}</span> </h4>
+                <br>
+            `
+        )
+        $("#btnEditar").on('click', function () {
+            $("#descriptionRooms").empty();
+            $("#descriptionRooms").append(`
+                <h1 class="colorTitulos float-left" id="tituloAnuncio">
+                     <input type="text" value="${infoAnuncio.titulo}" id="tituloEdit" minlength="1" maxlength="30" />
+                </h1>
+                <h3>
+                     <textarea type="text" id="descripcionEdit" name="i-like" required minlength="1" maxlength="100" >${infoAnuncio.descripcion_anuncio}</textarea>
+                </h3>
+                <div class="float-right pt-2">
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-tv"></i> Cable </button>
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-tint"></i> Agua Caliente </button>
+                    <button type="button" class="btn btn-info" disabled><i class="fas fa-wifi"></i> WIFI</button>
+                    <button id="btnEditar" type="button" class="btn btn-primary" style="margin-left: 5rem;"><i class="fas fa-edit"></i>Editar</button>
+                </div>
+                <div class="clearfix mb-4"></div>
+                <h4 class="form-switch" style="padding-left: 0rem;"> <i class="fas fa-power-off w-25 colorTitulos"></i> Disponible? :
+                     <input class="form-check-input" style="margin: 4px 0px 0px 0px;" type="checkbox" id="estadoEdit" ${infoAnuncio.estado == true ? "checked" : ""}>
+                </h4>
+                <br>
+                <h4> <i class="fas fa-hand-holding-dollar w-25 colorTitulos"></i> Precio x Noche s/.<input type="number" id="precioEdit" name="precioEdit" value=${infoAnuncio.precio_noche} min="1" max="10000" /></h4>
+                <br>
+                <h4> <i class="fas fa-house w-25 colorTitulos"></i> Tipo de Inmueble
+                 <select id="selectInmueble">
+                      <option value="Apartamento" ${infoAnuncio.tipo_inmueble.toLowerCase() == "apartamento" ? "selected" : ""}>Apartamento</option>
+                      <option value="Casa" ${infoAnuncio.tipo_inmueble.toLowerCase() == "casa" ? "selected" : ""}>Casa</option>
+                      <option value="Vivienda Anexa" ${infoAnuncio.tipo_inmueble.toLowerCase() == "vivienda anexa" ? "selected" : ""}>Vivienda Anexa</option>
+                      <option value="Alojamiento único" ${infoAnuncio.tipo_inmueble.toLowerCase() == "alojamiento único" ? "selected" : ""}>Alojamiento único</option>
+                      <option value="Bed and Breakfast" ${infoAnuncio.tipo_inmueble.toLowerCase() == "bed and breakfast" ? "selected" : ""}>Bed and Breakfast</option>
+                      <option value="Hotel Boutique" ${infoAnuncio.tipo_inmueble.toLowerCase() == "hotel boutique" ? "selected" : ""}>Hotel Boutique</option>
+                 </select>
+                 </h4>
+                <br>
+                <h4> <i class="fas fa-building w-25 colorTitulos"></i> Tipo de Alojamiento
+                 <select id="selectAlojamiento">
+                      <option value="Piso" ${infoAnuncio.tipo_alojamiento.toLowerCase() == "piso" ? "selected" : ""}>Piso</option>
+                      <option value="Apt. Residencial" ${infoAnuncio.tipo_alojamiento.toLowerCase() == "apt. residencial" ? "selected" : ""}>Apt. Residencial</option>
+                      <option value="Left"  ${infoAnuncio.tipo_alojamiento.toLowerCase() == "left" ? "selected" : ""}>Left</option>
+                      <option value="Apt. Con Servicios" ${infoAnuncio.tipo_alojamiento.toLowerCase() == "apt. con servicios" ? "selected" : ""}>Apt. Con Servicios</option>
+                      <option value="Casa Particular" ${infoAnuncio.tipo_alojamiento.toLowerCase() == "casa particular" ? "selected" : ""}>Casa Particular</option>
+                      <option value="Vivienda Vacacional" ${infoAnuncio.tipo_alojamiento.toLowerCase() == "vivienda vacacional" ? "selected" : ""}>Vivienda Vacacional</option>
+                 </select>
+                </h4>
+                <br>
+                <h4> <i class="fas fa-user-friends w-25 colorTitulos"></i> Huesped(es) x  <input type="number" id="huespedEdit" name="huespedEdit" value=${infoAnuncio.huespedes} min="1" max="10" /> </h4>
+                <br>
+                <h4> <i class="fas fa-bed w-25 colorTitulos"></i> Cama(s) x  <input type="number" id="camasEdit" name="camasEdit" value=${infoAnuncio.camas} min="1" max="10" /> </h4>
+                <br>
+                <h4> <i class="fas fa-toilet w-25 colorTitulos"></i> Baño(s) x <input type="number" id="bañosEdit" name="bañosEdit" value=${infoAnuncio.baños} min="1" max="10" /> </h4>
+                <br>
+                <h4> <i class="fas fa-person-booth w-25 colorTitulos"></i> Dormitorio(s) x <input type="number" id="dormitoriosEdit" name="dormitoriosEdit" value=${infoAnuncio.dormitorios} min="1" max="10"</h4>
+                <br>
+                <button onclick="updateDB('${infoAnuncio.id}', '${infoAnuncio.direccion}');" type="button" class="btn btn-success" style="margin-left: 25rem; margin-top: 3rem; margin-bottom: 2rem;"><i class="fas fa-edit"></i> Guardar</button>
+            `);
+        });
+
+    });
+</script>
+</body>
+</html>
+
