@@ -160,38 +160,14 @@
 							</button>
 						</div>
 						<div class="float-end" >
-							<button id="btnGuardar" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#dialogo1">
-								Guardar anuncio
+							<button id="btnSiguiente" type="button" class="btn btn-dark">
+								Siguiente
 							</button>
 						</div>
 					</div>
 
 			</div>
-			<div class="modal fade" id="dialogo1">
-			  <div class="modal-dialog modal-sm modal-dialog-centered">
-				<div class="modal-content">
 			
-				  <!-- cabecera del diálogo -->
-				  <div class="modal-header">
-					<h4 class="modal-title">Confirmar</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-				  </div>
-			
-				  <!-- cuerpo del diálogo -->
-				  <div class="modal-body">
-					¿Seguro que desea guardar el anuncio?
-				  </div>
-			
-				  <!-- pie del diálogo -->
-				  <div class="modal-footer">
-					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-					<a href="anfitriones.html" class="btn btn-primary" >Guardar</a>
-					 
-				  </div>
-			
-				</div>
-			  </div>
-			</div>
         </div>
     </body>
 
@@ -206,7 +182,7 @@
 
 		});
 
-		$('#btnGuardar').prop('disabled', true)
+		$('#btnSiguiente').prop('disabled', true)
 
 
 		
@@ -214,20 +190,22 @@
 				var  thisBtn = $('input:text[name=txtnombre]').val();
 				
 				console.log('------- ' + thisBtn); 
-				$('#btnGuardar').prop('disabled', false)
-				$('#selectedVal').text(thisBtn);
-
+				
 			});
 
 			$('input:text[name=txtprecio]').change(function(){
-				var  thisBtn = $('input:text[name=txtprecio]').val();
-				
+			var  thisBtn = $('input:text[name=txtnombre]').val();
+				var  thisBtn2 = $('input:text[name=txtprecio]').val();
+				if(thisBtn.length>0 &&thisBtn2.length>0){
 				console.log('------- ' + thisBtn); 
-				$('#btnGuardar').prop('disabled', false)
+				$('#btnSiguiente').prop('disabled', false)
 				$('#selectedVal').text(thisBtn);
+				}
 
 			});
-		
+			$('#btnSiguiente').on('click', function () {
+                $(location).attr('href', 'anuncios_espacio_step6.html');
+            });
 
 		  	
 		});
