@@ -14,7 +14,7 @@ $("#mis-preferencias-button-agregar").on("click", function () {
         var tipoInmueble = $("input[name='inlineRadioOptions']:checked").val();
         var price = document.getElementById("amount").value;
         var nombrePreferencia = document.getElementById("nombre-preferencia").value;
-        var tipoMoneda = $('select').find('option:selected').val();
+        var tipoMoneda = $('#tipo_moneda').find('option:selected').val();
         var index = $('table tr').length
 
         //Add row
