@@ -11,7 +11,38 @@
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
 		<script type="text/javascript" src="assets/js/jquery.js"></script>
+	<link rel="stylesheet" href="sitios.css">
 	<title>Earthbnb</title>
+    <style>
+        #footer {
+            margin: 20px;
+            /*padding: 16px 0;*/
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #load-more {
+            width: calc((70% / 3) - 8px);
+            padding: 16px;
+            background-color: #212529;
+            color: #FFFFFF;
+            border: none;
+            cursor: pointer;
+            transition: all 200ms ease-in-out;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
+        }
+        #load-more:not([disabled]):hover {
+            box-shadow: 0 1px 9px rgba(0, 0, 0, 0.2);
+        }
+
+        #load-more[disabled] {
+            background-color: #eaeaea !important;
+            color: #909095;
+        }
+    </style>
 </head>
 
 <body>
@@ -151,8 +182,7 @@
 
 		</nav>
 		<!-- Fin Menu ::: Luis Romero ::: No tocar -->
-    
-		<div class="container">
+		<div class="container" id="container">
 			<!-- TODOCODIGO AQUI -->
 			<h3>Anfitriones</h3>
 			<button id="btnCrearAnuncio" type="button" class="btn btn-dark">
@@ -162,8 +192,23 @@
 				Reservas
 			</button>
 		</div>
+    <div id="footer">
+        <button id="load-more">Cargar más</button>
+			<span>Mostrando
+                <span id="card-count"></span> de
+                <span id="card-total"></span> anuncios
+	        </span>
+
+    </div>
 	</body>
+    <script type="text/javascript" src="anfitriones.js"></script>
 	<script type="text/javascript">
+
+		function eliminarAnuncio(titulo, id) {
+			if (confirm('Está seguro que desea eliminar este anuncio ' + titulo)) {
+				Eliminar(findPositionInDBById(id))
+			}
+		}
 
 		$(document).ready(function() {
 		  
@@ -175,7 +220,89 @@
 					$(location).attr('href','evaluar_reserva.html');
 			});
 
-		});
+            // CARDs
+            if (localStorage.getItem("dbAnfitriones") === null) {
+                localStorage.setItem("dbAnfitriones",JSON.stringify($.getJSON("anfitrionDB.json")));
+            }
+            addCards(currentPage);
+            loadMoreButton.addEventListener("click", () => {
+                addCards(currentPage + 1);
+            });
+
+        });
+
+        //------------------
+        const loadMoreButton = document.getElementById("load-more");
+        const cardCountElem = document.getElementById("card-count"); //
+        const cardTotalElem = document.getElementById("card-total"); //
+
+        const cardLimit = dbAnfitriones["anuncios"].length;
+        const cardIncrease = 6;
+        const pageCount = Math.ceil(cardLimit / cardIncrease);
+        let currentPage = 1;
+
+        cardTotalElem.innerHTML = cardLimit;
+
+        const handleButtonStatus = () => {
+            if (pageCount === currentPage) {
+                loadMoreButton.classList.add("disabled");
+                loadMoreButton.setAttribute("disabled", true);
+            }
+        };
+
+        let lastCurrentRowId = "";
+
+        const createRow = (id) => {
+            lastCurrentRowId = "row-" + id;
+            $(".container").append(
+                `
+         <div class="row" id=${lastCurrentRowId}>
+            <div class="row p-4 text-center">
+
+            </div>
+        </div>
+        `
+            );
+        }
+
+        const createCard = (anuncio) => {
+            $("#" + lastCurrentRowId).children().append(
+                `
+       <div class="col-12 col-lg-4 pb-3 px-0 px-lg-3">
+            <div class="card" style="width: 20rem;">
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill ${anuncio.estado ? "bg-success":"bg-danger"}"> ${anuncio.estado ? "ON":"OFF"}
+				<span class="visually-hidden"></span>
+		      </span>
+                <a href=anuncio_detalle.html?id=${anuncio.id}>
+					<img class="card-img-top" src="sitios-disponibles/12vistasol-psicina-abastel.jpg" alt="">
+                    <div class="card-body">
+                        <h5>${anuncio.titulo}</h5>
+                        <h6>${anuncio.tipo_alojamiento}</h6>
+                        <label>${anuncio.direccion}_</label>
+                        <label>_S/.${anuncio.precio_noche} x Noche</label>
+                    </div>
+                </a>
+                <button type="button" onclick="eliminarAnuncio('${anuncio.titulo}','${anuncio.id}')"
+                class="btn btn-danger btn-sm">Eliminar</button>
+            </div>
+        </div>
+        `
+            );
+        };
+
+        const addCards = (pageIndex) => {
+            currentPage = pageIndex;
+            handleButtonStatus();
+            const startRange = (pageIndex - 1) * cardIncrease;
+            const endRange = pageIndex * cardIncrease > cardLimit ? cardLimit : pageIndex * cardIncrease;
+            cardCountElem.innerHTML = endRange;
+            for (let i = startRange + 1; i <= endRange; i++) {
+                if ((i-1) % 3 === 0) {
+                    createRow(i-1);
+                }
+                createCard(dbAnfitriones["anuncios"][i - 1]);
+            }
+        };
 
 	</script>
 
