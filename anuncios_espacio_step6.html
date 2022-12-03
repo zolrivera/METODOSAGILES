@@ -139,16 +139,30 @@
 						<label class="fw-bold">Selecciona una imágen</label>
 						<p style="text-align: justify;"><small>Puedes agregar hasta un máximo de 5 imágenes por alojamiento.
 						</small> </p>
-						<p style="text-align: justify;"><small>Deberás seleccionar una imágen predeterminada.
-						</small> </p>
 						
 					</div>
 					<div class="col-md-11 "style="align-items: center;" >
 					<div class="input-group" >
 						<div class="custom-file">
-							<input type="file" class="custom-file-input" id="seleccionArchivos" accept="image/*">
-							<label class="custom-file-label" for="seleccionArchivos">Selecciona una imágen</label>
-							<img id="imagenPrevisualizacion" width="200" height="90">
+							<input type="file" class="custom-file-input" id="seleccionArchivos" accept=".jpg, .png, .gif" multiple="multiple>
+							<label class="custom-file-label" for="seleccionArchivos">Selecciona una imágen</label><br><br>
+							<table id="ImagenesPrev" >
+								
+								<tbody>
+								  <tr>
+									<td><img id="imagenPrevisualizacion" width="200" height="90"></td>
+									<td><img id="imagenPrevisualizacion2" width="200" height="90"/></td>
+								  </tr>
+								  <tr>
+									<td><img id="imagenPrevisualizacion3" width="200" height="90"></td>
+									<td><img id="imagenPrevisualizacion4" width="200" height="90"/></td>
+								  </tr>
+								  <tr>
+									<td><img id="imagenPrevisualizacion5" width="200" height="90"></td>
+								  </tr>
+								</tbody>
+							</table>
+							
 							<script src="anfitrion_script.js"></script>
 						</div>
 						</div>
@@ -200,39 +214,26 @@
     </body>
 
 	<script type="text/javascript">
+	$("#seleccionArchivos").on("change", function() { 
+		if ($("#seleccionArchivos")[0].files.length > 5) { 
+			alert("Puedes seleccionar máximo 5 imágenes");
+			
+		}
+		else {
+			
+		}
+	});
 
 		$(document).ready(function() {
  
 
 		$('#btnAtras').on('click', function() {
 
-			$(location).attr('href','anuncios_espacio_step4.html');
+			$(location).attr('href','anuncios_espacio_step5.html');
 
 		});
 
 		$('#btnGuardar').prop('disabled', true)
-
-
-		
-			$('input:text[name=txtnombre]').change(function(){
-				var  thisBtn = $('input:text[name=txtnombre]').val();
-				
-				console.log('------- ' + thisBtn); 
-				$('#btnGuardar').prop('disabled', false)
-				$('#selectedVal').text(thisBtn);
-
-			});
-
-			$('input:text[name=txtprecio]').change(function(){
-				var  thisBtn = $('input:text[name=txtprecio]').val();
-				
-				console.log('------- ' + thisBtn); 
-				$('#btnGuardar').prop('disabled', false)
-				$('#selectedVal').text(thisBtn);
-
-			});
-		
-
 		  	
 		});
 
