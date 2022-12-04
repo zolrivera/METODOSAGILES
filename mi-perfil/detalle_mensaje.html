@@ -178,29 +178,12 @@
           <div class="row no-gutters row-bordered row-border-light">
             <!-- Menu - SideBar-->
             <div class="col-md-3 bgcolor-primario">
-              <div class="list-group list-group-flush account-settings-links border m-3 bg-light">
-                <a class="list-group-item list-group-item-action active" data-toggle="list"
-                  href="#misdatospersonales"><i class="bi bi-person text-secondary fa-lg"></i>Mis datos
-                personales</a>
-                <a class="list-group-item list-group-item-action" data-toggle="list" href="#miperfil"><i
-                  class="bi bi-person text-secondary fa-lg"></i>Mi perfil</a>
-                <a class="list-group-item list-group-item-action" data-toggle="list"
-                  href="#micuenta-seguridad"><i class="bi bi-person text-secondary fa-lg"></i>Mi cuenta y
-                seguridad</a>
-                <a class="list-group-item list-group-item-action" data-toggle="list" href="#mis-mensajes">
-                <i class="bi bi-person text-secondary fa-lg"></i>Mis Mensajes</a>
-                <a class="list-group-item list-group-item-action" data-toggle="list"
-                  href="#mis-preferencias">
-                <i class="bi bi-person text-secondary fa-lg"></i>Mis Preferencias</a>
-                <a class="list-group-item list-group-item-action" data-toggle="list"
-                  href="#invita-y-gana">
-                <i class="bi bi-person text-secondary fa-lg"></i>Invitar y Gana</a>
-              </div>
+              
             </div>
             <div class="col-md-9 profile-content bgcolor-primario">
               <div class="tab-content m-3">
                 <!-- Perfil de usuario-->
-                <div class="tab-pane fade active show" id="misdatospersonales">
+                <div class="tab-pane fade " id="misdatospersonales">
                   <!-- START YOUR CONTENT -->
                   <div class="card">
                     <div class="card-header card-custom">
@@ -498,7 +481,8 @@
                               <input type="file" id="FileUpload1" accept=".jpg,.gif,.png"
                                 class="account-settings-fileinput">
                               </label> &nbsp;
-                             <label id="section-filename" class="text-gray-dark small mt-1"></label>
+                              <label id="section-filename"
+                                class="text-light small mt-1"></label>
                               <div class="text-light small mt-1"><label id="section-foto"
                                 class="text-danger font-weight-bold"></label></div>
                             </div>
@@ -688,14 +672,14 @@
                   </div>
                 </div>
                 <!-- Mis Mensajes -->
-				<div class="tab-pane face" id="mis-mensajes">
+				<div class="tab-pane active show" id="mis-mensajes">
 								<div class="card">
 									<div class="card-header card-custom">
 										<h4 class="text-white pt-3"><img class="img-circle"
 												src="https://bootdey.com/img/Content/icons/32/PNG/32/rocket.png"><span
 												class="pl-3">Mis mensajes</span></h3>
 									</div>
-									<div class="card-body" id="lista_mensajes">
+									<div class="card-body" style="display: none;" id="lista_mensajes">
 										<div class="row p-3">
 											<div class="col-md-6 col-md-offset-3 mx-auto">
 												<div class="row p-3 border mensaje bg-light">
@@ -739,7 +723,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="card-body" style="display: none;" id="detalle_mensaje">
+									<div class="card-body"  id="detalle_mensaje">
 										<div class="row  justify-content-around">
 											<div class="col-md-10 mx-auto">
 												<div class="row p-3">
@@ -1095,7 +1079,37 @@
           </div>
         </div>
         <script type="text/javascript">
+          $("#btn_vinculate").on("click", function () {
+          	$("#modalRegistroUsuario").modal("hide");
+          	$("#modalValidacionGoogle").modal("show");
+          });
           
+          
+          $("#closeModal3").on("click", function () {
+          	$("#modalValidacionGoogle").modal("hide");
+          });
+          $("#signup-button3").on("click", function () {
+          	let formulario = $("#formulario3");
+          	if (!formulario[0].checkValidity()) {
+          		document.getElementById("formulario3").reportValidity();
+          		return;
+          	}
+          	$("#modalValidacionGoogle").modal("hide");
+          });
+          
+          $('#FileUpload1').change(function () {
+          	var filename = $(this).val();
+          	$('#section-filename').text(filename);
+          
+          	var fileExtension = ['jpg', 'png'];
+          	if ($.inArray(filename.split('.').pop().toLowerCase(), fileExtension) == -1) {
+          		$('#section-foto').show();
+          		$('#section-foto').text("Solo se permite extensiones JPG or PNG");
+          	}
+          	else {
+          		$('#section-foto').hide();
+          	}
+          });
           
           
         </script>
@@ -1137,9 +1151,9 @@
     </footer>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="utils/misdatospersonales.js"></script>
-  <script src="utils/mismensajes.js"></script>
-  <script src="utils/validators-forms.js"></script>
-  <script src="utils/invita-y-gana.js"></script>
-  <script src="utils/mispreferencias.js"></script>
+  <script>
+    $("#btn_regresar_listado_mensajes").on("click", function(){
+        window.location = "./perfil.html";
+    });
+  </script>
 </html>
