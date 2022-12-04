@@ -1,625 +1,334 @@
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="styles.css">
-		<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-		integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<!doctype html>
+<html lang="es">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+	integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+	crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
 
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
-		<!-- Fuente Open Sans y Ubuntu -->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu" rel="stylesheet">
+	<!-- Fuente Open Sans y Ubuntu -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu" rel="stylesheet">
 
-		<!-- bootstrap datepicker -->
-		<link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
+	<!-- bootstrap datepicker -->
+	<link rel="stylesheet" href="assets/css/bootstrap-datepicker.standalone.min.css">
 
-		<!-- jdSlider -->
-		<link rel="stylesheet" href="assets/css/jquery.jdSlider.css">
+	<!-- jdSlider -->
+	<link rel="stylesheet" href="assets/css/jquery.jdSlider.css">
 
-		<!-- Pano -->
-		<link rel="stylesheet" href="assets/css/jquery.pano.css">
+	<!-- Pano -->
+	<link rel="stylesheet" href="assets/css/jquery.pano.css">
 
-		 <!-- fullCalendar -->
-		<link rel="stylesheet" href="assets/css/fullcalendar.min.css">
+	 <!-- fullCalendar -->
+	<link rel="stylesheet" href="assets/css/fullcalendar.min.css">
 
-		<!-- Hoja de estilo personalizada -->
-        <link rel="stylesheet" href="sitio_style.css">
-        <link rel="stylesheet" href="sitios.css">
-		<link rel="stylesheet" href="disponibles.css">        
+	<!-- Hoja de estilo personalizada -->
+    <link rel="stylesheet" href="sitio_style.css">
+    <link rel="stylesheet" href="sitios.css">
+	<link rel="stylesheet" href="disponibles.css">        
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-			crossorigin="anonymous"></script>
-		<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-		<!--=====================================
-		VÍNCULOS JAVASCRIPT
-		======================================-->
+    			
+	<!--script-->	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"	
+	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+	crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<!-- jQuery library -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 
-		<!-- Popper JS -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 
-		<!-- Latest compiled JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<!-- bootstrap datepicker -->
+	<!-- https://bootstrap-datepicker.readthedocs.io/en/latest/ -->
+	<script src="assets/js/bootstrap-datepicker.min.js"></script>
 
-		<!-- bootstrap datepicker -->
-		<!-- https://bootstrap-datepicker.readthedocs.io/en/latest/ -->
-		<script src="assets/js/bootstrap-datepicker.min.js"></script>
+	<!-- https://easings.net/es# -->
+	<script src="assets/js/jquery.easing.js"></script>
 
-		<!-- https://easings.net/es# -->
-		<script src="assets/js/jquery.easing.js"></script>
+	<!-- https://markgoodyear.com/labs/scrollup/ -->
+	<script src="assets/js/scrollUP.js"></script>
 
-		<!-- https://markgoodyear.com/labs/scrollup/ -->
-		<script src="assets/js/scrollUP.js"></script>
+	<!-- jdSlider -->
+	<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+	<script src="assets/js/jquery.jdSlider-latest.js"></script>
 
-		<!-- jdSlider -->
-		<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
-		<script src="assets/js/jquery.jdSlider-latest.js"></script>
+	<!-- Pano -->
+	<!-- https://www.jqueryscript.net/other/360-Degree-Panoramic-Image-Viewer-with-jQuery-Pano.html -->
+	<script src="assets/js/jquery.pano.js"></script>
 
-		<!-- Pano -->
-		<!-- https://www.jqueryscript.net/other/360-Degree-Panoramic-Image-Viewer-with-jQuery-Pano.html -->
-		<script src="assets/js/jquery.pano.js"></script>
-
-		<!-- fullCalendar -->
-		<!-- https://momentjs.com/ -->
-		<script src="assets/js/moment.js"></script>
-		<!-- https://fullcalendar.io/docs/background-events-demo -->	
-		<script src="assets/js/fullcalendar.min.js"></script>
-
-        <title>Earthbnb</title>
-    </head>
+	<!-- fullCalendar -->
+	<!-- https://momentjs.com/ -->
+	<script src="assets/js/moment.js"></script>
+	<!-- https://fullcalendar.io/docs/background-events-demo -->	
+	<script src="assets/js/fullcalendar.min.js"></script>	
+	<title>Earthbnb</title>
+</head>
 <body>
-<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
-<include src=""></include>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-
-        <a class="navbar-brand" href="index.html" style="padding-left: 80px;">
-            <img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000"
-                alt="" width="30" height="24" class="d-inline-block align-text-top">
-            Earthbnb
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 80px;">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="padding-right:5px">
-                            <path fill-rule="evenodd"
-                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                            <path fill-rule="evenodd"
-                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                        </svg>Login
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="registro_usuario.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
-                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                            <path fill-rule="evenodd"
-                                d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                        </svg>Registrar Usuario
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-fill" viewBox="0 0 16 16" style="padding-right:5px">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>Usuario
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="mi-perfil/perfil.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person-square" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                    <path
-                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
-                                </svg>Perfil
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="reservas.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-card-checklist" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
-                                    <path
-                                        d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
-                                </svg>Reservas
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="anuncios.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chat-right-dots" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
-                                    <path
-                                        d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                                </svg>Anuncios
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="anfitriones.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-house-door" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
-                                </svg>Anfitriones
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="evaluar_reserva.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-check2-square" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
-                                    <path
-                                        d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
-                                </svg>Evaluar reserva
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="historial_pagos.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-cash" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
-                                    <path
-                                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
-                                </svg>Historial de pagos
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="reportes.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-card-list" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
-                                    <path
-                                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
-                                </svg>Reportes
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Fin Menu ::: Luis Romero ::: No tocar -->	
-<!--=====================================	
-HEADER
-======================================-->
-
-<header class="container-fluid p-0 bg-white">
-	
-	<div class="container p-0">
-		
-		<div class="grid-container py-2">
-
-			<!-- LOGO -->
-			
-			<div class="grid-item">
-
-				<a href="index.html">
-				
-					<img src="img/logoPortobelo.png" class="img-fluid">
-
-				</a>
-
-			</div>
-
-			<div class="grid-item d-none d-lg-block"></div>
-
-			<!-- CAMPANA Y RESERVA -->
-
-			<div class="grid-item d-none d-lg-block bloqueReservas">
-				
-				<div class="py-2 campana-y-reserva mostrarBloqueReservas" modo="abajo">
-
-					<i class="fas fa-concierge-bell lead mx-2"></i>
-
-					<i class="fas fa-caret-up lead mx-2 flechaReserva"></i>
-
-				</div>	
-
-				<!--=====================================
-				FORMULARIO DE RESERVAS
-				======================================-->
-
-				<div class="formReservas py-1 py-lg-2 px-4">
-					
-					<div class="form-group my-4">
-						<select class="form-control form-control-lg">
-							<option>Tipo de habitación</option>
-							<option>Suite</option>
-							<option>Especial</option>
-							<option>Standar</option>
-						</select>
-					</div>
-
-					<div class="form-group my-4">
-						<select class="form-control form-control-lg">
-							<option>Temática de habitación</option>
-							<option>Oriental</option>
-							<option>Contemporánea</option>
-							<option>Africana</option>
-							<option>Clásica</option>
-							<option>Retro</option>
-						</select>
-					</div>
-
-					<div class="row">
-						
-						 <div class="col-6 input-group input-group-lg pr-1">
-						
-							<input type="text" class="form-control datepicker entrada" placeholder="Entrada">
-
-							<div class="input-group-append">
-								
-								<span class="input-group-text p-2">
-									<i class="far fa-calendar-alt small text-gray-dark"></i>
-								</span>
-							
-							</div>
-
-						</div>
-
-						<div class="col-6 input-group input-group-lg pl-1">
-						
-							<input type="text" class="form-control datepicker salida" placeholder="Salida">
-
-							<div class="input-group-append">
-								
-								<span class="input-group-text p-2">
-									<i class="far fa-calendar-alt small text-gray-dark"></i>
-								</span>
-							
-							</div>
-
-						</div>
-
-					</div>
-
-					<input type="button" class="btn btn-block btn-lg my-4 text-white" value="Ver disponibilidad">
-					
-
-				</div>
-
-			</div>
-
-			<!-- INGRESO DE USUARIOS -->
-
-			<div class="grid-item d-none d-lg-block mt-2">
-
-				<a href="#modalIngreso" data-toggle="modal"><i class="fas fa-user"></i></a>
-
-			</div>
-
-			<!-- SELECCIÓN DE IDIOMA -->
-
-			<div class="grid-item d-none d-lg-block mt-1 idiomas">
-				
-				<span class="border border-info float-left p-1 bg-info text-white idiomaEs">ES</span>
-
-				<span class="border border-info float-left p-1 bg-white text-dark idiomaEn">EN</span>
-
-			</div>
-
-			<!-- MENÚ HAMBURGUESA -->
-
-			<div class="grid-item mt-1 mt-sm-3 mt-md-4 mt-lg-2 botonMenu">
-				
-				<i class="fas fa-bars lead"></i>
-
-			</div>
-
-		</div>
-
-	</div>
-
-</header>
-
-<!--=====================================
-MENÚ
-======================================-->
-<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
-<include src=""></include>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-
-        <a class="navbar-brand" href="index.html" style="padding-left: 80px;">
-            <img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000"
-                alt="" width="30" height="24" class="d-inline-block align-text-top">
-            Earthbnb
-        </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 80px;">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="padding-right:5px">
-                            <path fill-rule="evenodd"
-                                d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
-                            <path fill-rule="evenodd"
-                                d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
-                        </svg>Login
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="registro_usuario.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
-                            <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                            <path fill-rule="evenodd"
-                                d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                        </svg>Registrar Usuario
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-person-fill" viewBox="0 0 16 16" style="padding-right:5px">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>Usuario
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li>
-                            <a class="dropdown-item" href="mi-perfil/perfil.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person-square" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                                    <path
-                                        d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
-                                </svg>Perfil
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="reservas.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-card-checklist" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
-                                    <path
-                                        d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
-                                </svg>Reservas
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="anuncios.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chat-right-dots" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
-                                    <path
-                                        d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
-                                </svg>Anuncios
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="anfitriones.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-house-door" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
-                                </svg>Anfitriones
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="evaluar_reserva.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-check2-square" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
-                                    <path
-                                        d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
-                                </svg>Evaluar reserva
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="historial_pagos.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-cash" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
-                                    <path
-                                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
-                                </svg>Historial de pagos
-                            </a>
-                        </li>
-                        <li>
-                            <a class="dropdown-item" href="reportes.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-card-list" viewBox="0 0 16 16" style="padding-right:5px">
-                                    <path
-                                        d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
-                                    <path
-                                        d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
-                                </svg>Reportes
-                            </a>
-                        </li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
-                    </ul>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- Fin Menu ::: Luis Romero ::: No tocar -->	
-
-
-<!--=====================================
-BANNER-INTERIOR
-======================================-->
-
-<div class="bannerInterior container-fluid bg-white p-0 d-none d-lg-block">
-	
-	<figure>
-		
-		<img src="sitios-disponibles/12vistasol-psicina-abastel.jpg" class="img-fluid" width="100%">
-
-	</figure>
-
-</div>
-
-<!--=====================================
-INFO RESERVAS
-======================================-->
-
-<div class="infoReservas container-fluid bg-white p-0 pb-5">
-	
-	<div class="container">
-		
-		<div class="row">
-
-			<!--=====================================
-			BLOQUE IZQ
-			======================================-->
-			
-			<div class="col-12 col-lg-8 colIzqReservas p-0">
-				
-				<!--=====================================
-				CABECERA RESERVAS
-				======================================-->
-				
-				<div class="pt-4 cabeceraReservas">
-					
-					<a href="registrar_reserva.html" class="float-left lead text-white pt-1 px-3">
-						<h5><i class="fas fa-chevron-left"></i> Regresar</h5>
-					</a>
-
-					<div class="clearfix"></div>
-
-					<h1 class="float-left text-white p-2 pb-lg-5">RESERVAS</h1>	
-
-					<h6 class="float-right px-3">
-
-						<br>
-						<a href="reservas.html" style="color:#FFCC29">Ver tus reservas</a>
-
-					</h6>
-
-					<div class="clearfix"></div>
-
-				</div>
-
-				<!--=====================================
-				CALENDARIO RESERVAS
-				======================================	-->
-
-				<div class="bg-white p-4 calendarioReservas">
-
-					<h1 class="pb-5 float-left">¡Está Disponible!</h1>
-
-					<div class="float-right pb-3">
-							
-						<ul>
+	<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+
+			<a class="navbar-brand" href="index.html" style="padding-left: 80px;">
+				<img src="https://img.freepik.com/premium-vector/home-icon-house-symbol-simple-vector-design-logo_231786-5048.jpg?w=2000"
+					alt="" width="30" height="24" class="d-inline-block align-text-top">
+				Earthbnb
+			</a>
+
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 80px;">
+
+					<li class="nav-item">
+						<a class="nav-link" href="login.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-box-arrow-up-right" viewBox="0 0 16 16" style="padding-right:5px">
+								<path fill-rule="evenodd"
+									d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5z" />
+								<path fill-rule="evenodd"
+									d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0v-5z" />
+							</svg>Login
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="registro_usuario.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
+								<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+								<path fill-rule="evenodd"
+									d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+							</svg>Registrar Usuario
+						</a>
+					</li>
+
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-bs-toggle="dropdown" aria-expanded="false">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-person-fill" viewBox="0 0 16 16" style="padding-right:5px">
+								<path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+							</svg>Usuario
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<li>
-								<i class="fas fa-square-full" style="color:#847059"></i> No disponible
+								<a class="dropdown-item" href="mi-perfil/perfil.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-person-square" viewBox="0 0 16 16" style="padding-right:5px">
+										<path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+										<path
+											d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1v-1c0-1-1-4-6-4s-6 3-6 4v1a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12z" />
+									</svg>Perfil
+								</a>
 							</li>
-
 							<li>
-								<i class="fas fa-square-full" style="color:#eee"></i> Disponible
+								<a class="dropdown-item" href="reservas.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-card-checklist" viewBox="0 0 16 16" style="padding-right:5px">
+										<path
+											d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path
+											d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+									</svg>Reservas
+								</a>
 							</li>
-
 							<li>
-								<i class="fas fa-square-full" style="color:#FFCC29"></i> Tu reserva
+								<a class="dropdown-item" href="anuncios.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-chat-right-dots" viewBox="0 0 16 16" style="padding-right:5px">
+										<path
+											d="M2 1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h9.586a2 2 0 0 1 1.414.586l2 2V2a1 1 0 0 0-1-1H2zm12-1a2 2 0 0 1 2 2v12.793a.5.5 0 0 1-.854.353l-2.853-2.853a1 1 0 0 0-.707-.293H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12z" />
+										<path
+											d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+									</svg>Anuncios
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="anfitriones.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-house-door" viewBox="0 0 16 16" style="padding-right:5px">
+										<path
+											d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z" />
+									</svg>Anfitriones
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="evaluar_reserva.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-check2-square" viewBox="0 0 16 16" style="padding-right:5px">
+										<path
+											d="M3 14.5A1.5 1.5 0 0 1 1.5 13V3A1.5 1.5 0 0 1 3 1.5h8a.5.5 0 0 1 0 1H3a.5.5 0 0 0-.5.5v10a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V8a.5.5 0 0 1 1 0v5a1.5 1.5 0 0 1-1.5 1.5H3z" />
+										<path
+											d="m8.354 10.354 7-7a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
+									</svg>Evaluar reserva
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="pagos/historial_pagos.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-cash" viewBox="0 0 16 16" style="padding-right:5px">
+										<path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+										<path
+											d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z" />
+									</svg>Historial de pagos
+								</a>
+							</li>
+							<li>
+								<a class="dropdown-item" href="reportes.html">
+									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+										class="bi bi-card-list" viewBox="0 0 16 16" style="padding-right:5px">
+										<path
+											d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+										<path
+											d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
+									</svg>Reportes
+								</a>
+							</li>
+							<li>
+								<hr class="dropdown-divider">
 							</li>
 						</ul>
+					</li>
 
-					</div>
-
-					<div class="clearfix"></div>
-			
-					<div id="calendar"></div>
-
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<!-- Fin Menu ::: Luis Romero ::: No tocar -->
+	<div class="container">
+		<div class="bannerInterior container-fluid bg-white p-0 d-none d-lg-block">
+			<figure>
+				<img src="sitios-disponibles/12vistasol-psicina-abastel.jpg" class="img-fluid" width="100%">
+			</figure>
+		</div>		
+		<!--=====================================
+		INFO RESERVAS
+		======================================-->
+		<div class="infoReservas container-fluid bg-white p-0 pb-5">
+			<div class="container">
+				<div class="row">
 					<!--=====================================
-					MODIFICAR FECHAS
-					======================================	-->
-
-					<h6 class="lead pt-4 pb-2">Puede modificar la fecha de acuerdo a los días disponibles:</h6>
-
-					<div class="container mb-3">
-
-						<div class="row py-2" style="background:#509CC3">
-
-							 <div class="col-6 col-md-3 input-group pr-1">
+					BLOQUE IZQ
+					======================================-->
+					<div class="col-12 col-lg-8 colIzqReservas p-0">
+						<!--=====================================
+						CABECERA RESERVAS
+						======================================-->
+						
+						<div class="pt-4 cabeceraReservas">
 							
-								<input type="text" class="form-control datepicker entrada" placeholder="Entrada" required>
+							<a href="registrar_reserva.html" class="float-left lead text-white pt-1 px-3">
+								<h5><i class="fas fa-chevron-left"></i> Regresar</h5>
+							</a>
 
-								<div class="input-group-append">
+							<div class="clearfix"></div>
+
+							<h1 class="float-left text-white p-2 pb-lg-5">RESERVAS</h1>	
+
+							<h6 class="float-right px-3">
+
+								<br>
+								<a href="reservas.html" style="color:#FFCC29">Ver tus reservas</a>
+
+							</h6>
+
+							<div class="clearfix"></div>
+
+						</div>
+
+						<!--=====================================
+						CALENDARIO RESERVAS
+						======================================	-->
+
+						<div class="bg-white p-4 calendarioReservas">
+
+							<h1 class="pb-5 float-left">¡Está Disponible!</h1>
+
+							<div class="float-right pb-3">
 									
-									<span class="input-group-text"><i class="far fa-calendar-alt small text-gray-dark"></i></span>
-								
-								</div>
+								<ul>
+									<li>
+										<i class="fas fa-square-full" style="color:#847059"></i> No disponible
+									</li>
+
+									<li>
+										<i class="fas fa-square-full" style="color:#eee"></i> Disponible
+									</li>
+
+									<li>
+										<i class="fas fa-square-full" style="color:#FFCC29"></i> Tu reserva
+									</li>
+								</ul>
 
 							</div>
 
-						 	<div class="col-6 col-md-3 input-group pl-1">
-							
-								<input type="text" class="form-control datepicker salida" placeholder="Salida" required>
+							<div class="clearfix"></div>
+					
+							<div id="calendar"></div>
 
-								<div class="input-group-append">
+							<!--=====================================
+							MODIFICAR FECHAS
+							======================================	-->
+
+							<h6 class="lead pt-4 pb-2">Puede modificar la fecha de acuerdo a los días disponibles:</h6>
+
+							<div class="container mb-3">
+
+								<div class="row py-2" style="background:#509CC3">
+
+									 <div class="col-6 col-md-3 input-group pr-1">
 									
-									<span class="input-group-text"><i class="far fa-calendar-alt small text-gray-dark"></i></span>
-								
+										<input type="text" class="form-control datepicker entrada" placeholder="Entrada" required>
+
+										<div class="input-group-append">
+											
+											<span class="input-group-text"><i class="far fa-calendar-alt small text-gray-dark"></i></span>
+										
+										</div>
+
+									</div>
+
+								 	<div class="col-6 col-md-3 input-group pl-1">
+									
+										<input type="text" class="form-control datepicker salida" placeholder="Salida" required>
+
+										<div class="input-group-append">
+											
+											<span class="input-group-text"><i class="far fa-calendar-alt small text-gray-dark"></i></span>
+										
+										</div>
+
+									</div>
+
+									<div class="col-12 col-md-6 mt-2 mt-lg-0 input-group">
+										
+										<a href="reservas.html" class="w-100">
+											<input type="button" class="btn btn-block btn-md text-white" value="Ver disponibilidad" style="background:black">	
+										</a>
+
+									</div>
+
 								</div>
-
-							</div>
-
-							<div class="col-12 col-md-6 mt-2 mt-lg-0 input-group">
-								
-								<a href="reservas.html" class="w-100">
-									<input type="button" class="btn btn-block btn-md text-white" value="Ver disponibilidad" style="background:black">	
-								</a>
 
 							</div>
 
@@ -627,193 +336,131 @@ INFO RESERVAS
 
 					</div>
 
-				</div>
+					<!--=====================================
+					BLOQUE DER
+					======================================-->
 
-			</div>
-
-			<!--=====================================
-			BLOQUE DER
-			======================================-->
-
-			<div class="col-12 col-lg-4 colDerReservas">
-
-				<h4 class="mt-lg-5">Código de la Reserva:</h4>
-				<h2 class="colorTitulos"><strong>K2DRESF34</strong></h2>
-
-				<div class="form-group">
-				  <label>Ingreso:</label>
-				  <input type="date" class="form-control" value="2019-03-13" readonly>
-				</div>
-
-				<div class="form-group">
-				  <label>Salida:</label>
-				  <input type="date" class="form-control" value="2019-03-15"  readonly>
-				</div>
-
-				<div class="form-group">
-				  <label>Lugar: Republica Dominicana</label>
-				  <input type="text" class="form-control" value="Lugar" readonly>
-
-				  <img src="sitios-disponibles/136268646.jpg" class="img-fluid">
-
-				</div>
-
-				<div class="form-group">
-                  <label>Ciudad:</label>
-                  <input type="text" class="form-control" value="Punta Cana" readonly>
-
-				</div>
-				
-				<div class="form-group">
-				  <label>Personas:</label>
-				  <select class="form-control">
-				  	
-					<option value="2">2</option>
-					<option value="3">3</option>
-					<option value="4">4</option>
-					<option value="5">5</option>
-
-				  </select>
-				</div>
-
-				<div class="row py-4">
-
-					<div class="col-12 col-lg-6 col-xl-7 text-center text-lg-left">
-						
-						<h1>S/300 PEN</h1>
-
+					<div class="col-12 col-lg-4 colDerReservas">
+						<h4 class="mt-lg-5">Código de la Reserva:</h4>
+						<h2 class="colorTitulos"><strong>K2DRESF34</strong></h2>
+						<div class="form-group">
+						  <label>Ingreso:</label>
+						  <input type="date" class="form-control" value="2022-12-03" readonly>
+						</div>
+						<div class="form-group">
+						  <label>Salida:</label>
+						  <input type="date" class="form-control" value="2022-12-05"  readonly>
+						</div>
+						<div class="form-group">
+						  <label>Lugar: Republica Dominicana</label>
+						  <input type="text" class="form-control" value="Lugar" readonly>
+						  <img src="sitios-disponibles/136268646.jpg" class="img-fluid">
+						</div>
+						<div class="form-group">
+		                  <label>Ciudad:</label>
+		                  <input type="text" class="form-control" value="Punta Cana" readonly>
+						</div>
+						<div class="form-group">
+						  <label>Personas:</label>
+						  <select class="form-control" required>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						  </select>
+						</div>
+						<div class="row py-4">
+							<div class="col-12 col-lg-6 col-xl-7 text-center text-lg-left">
+								<h1>S/300 PEN</h1>
+							</div>
+							<div class="col-12 col-lg-6 col-xl-5">
+								<a href="pagos/realizar_pago.html">
+									<button class="btn btn-dark btn-lg w-100">PAGAR <br> RESERVA</button>
+								</a>
+							</div>
+						</div>
 					</div>
-					
-					<div class="col-12 col-lg-6 col-xl-5">
-				
-						<a href="perfil.html">
-							<button class="btn btn-dark btn-lg w-100">PAGAR <br> RESERVA</button>
-						</a>
 
-					</div>
-			
 				</div>
 
 			</div>
 
 		</div>
-
-	</div>
-
-</div>
-
-<!--=====================================
-CONTÁCTENOS
-======================================-->
-
-<div class="contactenos container-fluid bg-white py-4" id="contactenos">
-	
-	<div class="container text-center">
-		
-		<h1 class="py-sm-4">CONTÁCTENOS</h1>
-
-		<form>
-
-			<div class="input-group input-group-lg">
-				
-				<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Nombre">
-
-				<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Apellido">
-
+		<!--=====================================
+		CONTÁCTENOS
+		======================================-->
+		<div class="contactenos container-fluid bg-white py-4" id="contactenos">
+			<div class="container text-center">
+				<h1 class="py-sm-4">CONTÁCTENOS</h1>
+				<form>
+					<div class="input-group input-group-lg">
+						<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Nombre" required>
+						<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Apellido" required>
+					</div>
+					<div class="input-group input-group-lg">
+						<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Móvil" required>
+						<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Correo Electrónico" required>
+					</div>
+					<textarea class="form-control" rows="6" placeholder="Escribe aquí tu mensaje" required></textarea>
+					<!--<input class="btn btn-dark my-4 btn-lg py-3 text-uppercase" value="Enviar">-->
+					<button class="btn btn-dark my-4 btn-lg py-3 text-uppercase" type="submit">Enviar</button>					
+				</form>
 			</div>
+		</div>
+		<!--=====================================
+		MAPA
+		======================================-->
+		<div class="mapa container-fluid bg-white p-0">
+			
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2181015083097!2d-75.16167268476889!3d6.2349559954867315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e441d2a2f90b049%3A0xe73c0a7060062903!2sHOTEL+PORTOBELO+GUATAPE!5e0!3m2!1ses!2sco!4v1544281019677" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-			<div class="input-group input-group-lg">
-				
-				<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Móvil">
+			<div class=" p-4 info"> 
 
-				<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Correo Electrónico">
+				<h3 class="mt-4"><strong>Visítanos</strong></h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
+				<p>
+				Apple inc.<br>
+				Infinte Loop.<br>
+				Cupertino, CA 95014<br>
+				408-996-1010
+				</p>
+
+				<p class="pb-4">Email: info@apple.com<br>
+				Tel: 1-800-676-2775</p>
+
+			</div>	
+		</div>
+		<!--=====================================
+		FOOTER
+		======================================-->
+		<footer class="container-fluid p-0">
+
+			<div class="grid-container">
+				<div class="grid-item d-none d-lg-block pt-2"></div>
+				<div class="grid-item d-none d-lg-block pt-2">			
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat.</p>
+				</div>
+				<div class="grid-item pt-2">
+					<ul class="py-1">
+						<li>
+							<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white float-left mx-3"></i></a>
+						</li>
+						<li>
+							<a href="#" target="_blank"><i class="fab fa-twitter lead text-white float-left mx-3"></i></a>
+						</li>
+						<li>
+							<a href="#" target="_blank"><i class="fab fa-youtube lead text-white float-left mx-3"></i></a>
+						</li>
+						<li>
+							<a href="#" target="_blank"><i class="fab fa-instagram lead text-white float-left mx-3"></i></a>
+						</li>	
+					</ul>	
+				</div>
 			</div>
-
-			<textarea class="form-control" rows="6" placeholder="Escribe aquí tu mensaje"></textarea>
-
-			<input class="btn btn-dark my-4 btn-lg py-3 text-uppercase" value="Enviar">
-
-		</form>
-
+		</footer>
+		<script src="reserva_script.js"></script>
 	</div>
-
-</div>
-
-<!--=====================================
-MAPA
-======================================-->
-<div class="mapa container-fluid bg-white p-0">
-	
-	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.2181015083097!2d-75.16167268476889!3d6.2349559954867315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e441d2a2f90b049%3A0xe73c0a7060062903!2sHOTEL+PORTOBELO+GUATAPE!5e0!3m2!1ses!2sco!4v1544281019677" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-	<div class=" p-4 info"> 
-
-		<h3 class="mt-4"><strong>Visítanos</strong></h3>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-		<p>
-		Apple inc.<br>
-		Infinte Loop.<br>
-		Cupertino, CA 95014<br>
-		408-996-1010
-		</p>
-
-		<p class="pb-4">Email: info@apple.com<br>
-		Tel: 1-800-676-2775</p>
-
-	</div>	
-
-</div>
-
-<!--=====================================
-FOOTER
-======================================-->
-
-<footer class="container-fluid p-0">
-
-	<div class="grid-container">
-			
-		<div class="grid-item d-none d-lg-block pt-2"></div>
-
-		<div class="grid-item d-none d-lg-block pt-2">
-			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat.</p>
-
-		</div>
-
-		<div class="grid-item pt-2">
-			
-			<ul class="py-1">
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white float-left mx-3"></i></a>
-				</li>
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-twitter lead text-white float-left mx-3"></i></a>
-				</li>
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-youtube lead text-white float-left mx-3"></i></a>
-				</li>
-
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-instagram lead text-white float-left mx-3"></i></a>
-				</li>	
-			
-			</ul>	
-
-		</div>
-
-	</div>
-
-</footer>
-
-
-<script src="reserva_script.js"></script>
-	
 </body>
 </html>
 
