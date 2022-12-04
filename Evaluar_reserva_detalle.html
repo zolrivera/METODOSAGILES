@@ -165,27 +165,109 @@
                     
                         <p><h3>Acciones</h3></p>
 						<div class="float-start" >
-							<button id="btnAceptar" type="button" class="btn btn-light">
+							<button id="btnAceptar" type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#dialogo1">
 								Aceptar Reserva
 							</button>
 						</div>
 						<div class="float-end" >
-							<button id="btnRechazar" type="button" class="btn btn-dark">
+							<button id="btnRechazar" type="button" class="btn btn-dark"data-bs-toggle="modal" data-bs-target="#dialogo2">
 								Rechazar Reserva
 							</button>
 						</div>
+
+                        <div class="modal fade" id="dialogo1">
+                            <div class="modal-dialog modal-sm modal-dialog-centered">
+                              <div class="modal-content">
+                          
+                                <!-- cabecera del diálogo -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Reserva</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            
+                                </div>
+                          
+                                <!-- cuerpo del diálogo -->
+                                <div class="modal-body">
+                                  Se acepto la reserva
+                                 
+                                </div>
+                          
+                                <!-- pie del diálogo -->
+                                <div class="modal-footer">
+                                    
+                                    <a href="anfitriones.html" class="btn btn-primary" >Ok</a>
+                                     
+                                  </div>
+                          
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="dialogo2">
+                            <div class="modal-dialog modal-sm modal-dialog-centered">
+                              <div class="modal-content">
+                          
+                                <!-- cabecera del diálogo -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Reserva</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            
+                                </div>
+                          
+                                <!-- cuerpo del diálogo -->
+                                <div class="modal-body">
+                                  Se rechazó la reserva
+                                 
+                                </div>
+                          
+                                <!-- pie del diálogo -->
+                                <div class="modal-footer">
+                                    
+                                    <a href="anfitriones.html" class="btn btn-primary" >Ok</a>
+                                     
+                                  </div>
+                          
+                              </div>
+                            </div>
+                        </div>
                     </div>
+
+                    
 					
 
 					</div>
+
+                    
+
+                   
 					
 
 					
 				</div>
-		</div>
-	</body>
-	<script type="text/javascript">
 
-		
-	</script>
+                
+	</body>
+    <script type="text/javascript">
+
+            $('#btnSiguiente').on('click', function () {
+                $(location).attr('href', 'anuncios_espacio_step6.html');
+            });
+        
+    
+            $(document).ready(function() {
+     
+    
+            $('#btnAtras').on('click', function() {
+    
+                $(location).attr('href','anuncios_espacio_step5.html');
+    
+            });
+    
+            $('#btnGuardar').prop('disabled', true)
+                  
+            });
+    
+            
+        </script>
+	
 </html>
