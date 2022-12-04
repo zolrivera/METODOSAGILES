@@ -145,7 +145,7 @@
 		                <span class="span-required">Nombre minimo 3 caracteres</span>                
                         </div>
                         <div class="mb-2">
-		                <input id="apellido" type="text" class="form-control inputs required" placeholder= "Apellido" minlength="5" maxlength="50" required pattern="[A-Za-zñ ]+" onkeypress="return vvsoloLetras(event)" oninput="vapellido()">
+		                <input id="apellido" type="text" class="form-control inputs required" placeholder= "Apellido" minlength="5" maxlength="50" required pattern="[A-Za-zñ ]+"  onkeypress="return vvsoloLetras(event)" oninput="vapellido()">
 		                <span class="span-required">Apellido minimo 3 caracteres</span>               
                         </div>
                         <div class="mb-4">
@@ -161,7 +161,7 @@
                         <div class="mb-4">
                         	<select name="select" id="pais" class="form-control inputs required" placeholder= "Pais"  required>
 							  <option value="" selected>Seleccionar Pais</option>
-							  <option value="0" > Peru </option>
+							  <option value="0" > Perú </option>
 							  <option value="1"> Colombia </option>
 							  <option value="2" > Costa Rica </option>
 							  <option value="3"> Brasil </option>
@@ -184,7 +184,7 @@
 		                <span class="span-required">Completar Correo Electronico</span>                
                         </div>
                         <div class="mb-2">
-                        <button type="submit" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white" onclick=" confirmar()"> Aceptar y Continuar</button>
+                        <button type="submit" class="col-12 btn d-flex justify-content-center" style="background-color:#ff3399;color: white" data-bs-toggle="modal" data-bs-target="#dialogo2"> Aceptar y Continuar</button>
                         </div>
 
         </form>
@@ -193,12 +193,41 @@
        </div>
 			
 		</div>
+		
+		<div class="modal fade" id="dialogo2">
+                            <div class="modal-dialog modal-sm modal-dialog-centered">
+                              <div class="modal-content">
+                          
+                                <!-- cabecera del diálogo -->
+                                <div class="modal-header">
+                                  <h4 class="modal-title">Confirmación</h4>
+                                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            
+                                </div>
+                          
+                                <div class="modal-body">
+								<form>
+								  
+								  <div class="form-group">
+									<label for="message-text" class="col-form-label">Anfitrión registrado</label>
+									
+								  </div>
+								</form>
+							  </div>
+                          
+                                <!-- pie del diálogo -->
+                                <div class="modal-footer">
+                                    
+                                    <a href="anfitriones.html" class="btn btn-primary" >Guardar</a>
+                                     
+                                  </div>
+                          
+                              </div>
+                            </div>
+                        </div>
 	</body>
 <script type="text/javascript">
 
-function confirmar(){
-         window.alert('REGISTRO REALIZADO')
-}
 	
        		const form = document.getElementById('form');
        		const campos = document.querySelectorAll('.required');
