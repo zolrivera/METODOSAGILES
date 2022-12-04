@@ -177,7 +177,7 @@
 									<td>S/. 14,425.00</td>
 									<td>11/12/2022</td>
 									<td>20/12/2022</td>
-									<td><button type="button" class="btn btn-info">...</button></td>
+									<td><button id="btnA"type="button" class="btn btn-info">...</button></td>
 								</tr>
 								<tr>
 									<td>&#xF162;JA</td>
@@ -185,7 +185,7 @@
 									<td>S/. 10,200.00</td>
 									<td>05/01/2023</td>
 									<td>29/01/2023</td>
-									<td><button type="button" class="btn btn-info">...</button></td>
+									<td><button id="btnI" type="button" class="btn btn-info">...</button></td>
 								</tr>
 								<tr>
 									<td>&#xF162;JA</td>
@@ -193,7 +193,7 @@
 									<td>S/. 9,800.00</td>
 									<td>15/01/2023</td>
 									<td>20/01/2023</td>
-									<td><button type="button" class="btn btn-info">...</button></td>
+									<td><button id="btnP"type="button" class="btn btn-info">...</button></td>
 								</tr>
 								<tr>
 									<td>&#xF162;JA</td>
@@ -201,7 +201,7 @@
 									<td>S/. 10,225.00</td>
 									<td>10/02/2023</td>
 									<td>28/02/2023</td>
-									<td><button type="button" class="btn btn-info">...</button></td>
+									<td><button id="btnAr"type="button" class="btn btn-info">...</button></td>
 								</tr>
 								<tr>
 									<td>&#xF162;JA</td>
@@ -233,6 +233,21 @@
 				$("#divMensaje").text("Se listaron las últimas " + lineNo + " solicitudes de reserva");
             });
         }); 
+
+		$('#btnA').on('click', function () {
+                $(location).attr('href', 'evaluar_reserva_detalle.html');
+            });
+
+			$('#btnI').on('click', function () {
+                $(location).attr('href', 'evaluar_reserva_detalle2.html');
+            });	
+
+			$('#btnP').on('click', function () {
+                $(location).attr('href', 'evaluar_reserva_detalle3.html');
+            });	
+			$('#btnAr').on('click', function () {
+                $(location).attr('href', 'evaluar_reserva_detalle4.html');
+            });	
     </script>
 </body>
 
