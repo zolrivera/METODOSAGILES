@@ -99,7 +99,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Clave Dinámica</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="text" required="required">
+                                        <input class="form-control" type="text" required="required" id="clave_dinamica">
                                     </div>
                                 </div>
                                 <br />
@@ -156,10 +156,15 @@
 
         let password = $("#forgot_password").val();
         let confirm_password = $("#forgot_password_confirmation").val();
-            
+        let codigo_verificacion = $("#clave_dinamica").val();            
 
         if (password !== confirm_password) {
             alert("Password y Confirmar Password deben ser iguales");
+            return;
+        }
+
+        if (codigo_verificacion !== "12345") {
+            alert("Código de verificación ingresado es incorrecto");
             return;
         }
 
