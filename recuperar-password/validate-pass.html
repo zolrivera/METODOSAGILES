@@ -56,13 +56,6 @@
                                 <p class="font-14 toast-message">&nbsp;</p>
                             </div>
                             <div class="form-group">
-                                <div class="form-group row">
-                                    <label class="col-lg-3 col-form-label form-control-label">Usuario</label>
-                                    <div class="col-lg-9">
-                                        <input class="form-control" type="text" required="required">
-                                    </div>
-                                </div>
-
                                 <div class="form-group">
                                     <p>Elige por qué medio quieres recibir tu clave dinámica:</p>
                                 </div>
@@ -115,13 +108,13 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Correo Personal</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="email" name="email">
+                                        <input class="form-control" type="email" name="email" id="email">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Nro de teléfono</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="text" name="phone-number">
+                                        <input class="form-control" type="text" name="phone-number" id="phone_number">
                                     </div>
                                 </div>
                             </div>
@@ -160,6 +153,26 @@
 
         $("#forgot-password-step-1-cancel-button").on("click", function () {
             window.location.href = "../index.html";
+        });
+
+        $('#email').blur(function(){
+            if($(this).val().length != 0){
+                $('#phone_number').attr('disabled', 'disabled');
+            } 
+            
+            if($(this).val().length === 0){
+                $('#phone_number').attr('disabled', false);
+            } 
+        });
+
+        $('#phone_number').blur(function(){
+            if($(this).val().length != 0){
+                $('#email').attr('disabled', 'disabled');
+            } 
+            
+            if($(this).val().length === 0){
+                $('#email').attr('disabled', false);
+            } 
         });
 
     </script>

@@ -106,14 +106,14 @@
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Nueva Contraseña</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="password" required="required" inputmode="numeric" minlength="8" maxlength="16" size="16">
+                                        <input class="form-control" id="forgot_password" type="password" required="required" inputmode="numeric" minlength="8" maxlength="16" size="16">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label form-control-label">Confirmar Nueva
                                         Contraseña</label>
                                     <div class="col-lg-9">
-                                        <input class="form-control" type="password" required="required" inputmode="numeric" minlength="8" maxlength="16" size="16">
+                                        <input class="form-control" id="forgot_password_confirmation" type="password" required="required" inputmode="numeric" minlength="8" maxlength="16" size="16">
                                     </div>
                                 </div>
                             </div>
@@ -145,18 +145,30 @@
         </div>
     </div>
     <script>
-        $("#forgot-password-step-2-continue-button").on("click", function () {
-            let formulario = $("#forgot-password-step-2");
-            if (!formulario[0].checkValidity()) {
-                document.getElementById("forgot-password-step-2").reportValidity();
-                return;
-            }
-            window.location.href = "../index.html";
-        });
 
-        $("#forgot-password-step-2-cancel-button").on("click", function () {
-            window.location.href = "../recuperar-password/validate-pass.html";
-        });
+
+    $("#forgot-password-step-2-continue-button").on("click", function () {
+        let formulario = $("#forgot-password-step-2");
+        if (!formulario[0].checkValidity()) {
+            document.getElementById("forgot-password-step-2").reportValidity();
+            return;
+        }
+
+        let password = $("#forgot_password").val();
+        let confirm_password = $("#forgot_password_confirmation").val();
+            
+
+        if (password !== confirm_password) {
+            alert("Password y Confirmar Password deben ser iguales");
+            return;
+        }
+
+        window.location.href = "../index.html";
+    });
+
+    $("#forgot-password-step-2-cancel-button").on("click", function () {
+        window.location.href = "../recuperar-password/validate-pass.html";
+    });
 
 
     </script>

@@ -209,7 +209,7 @@
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
-									<input type="password" class="form-control" name="password_confirmation" inputmode="numeric" minlength="8" maxlength="16" size="16"
+									<input type="password" class="form-control" name="password" id="password" inputmode="numeric" minlength="8" maxlength="16" size="16"
 										placeholder="Contraseña" required="required" autocomplete="on">
 								</div>
 							</div>
@@ -218,7 +218,7 @@
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
-									<input type="password" class="form-control" name="password_confirmation" inputmode="numeric" minlength="8" maxlength="16" size="16"
+									<input type="password" class="form-control" name="password_confirmation" id="password_confirmation" inputmode="numeric" minlength="8" maxlength="16" size="16"
 										placeholder="Confirmar Contraseña" required="required" autocomplete="on">
 								</div>
 							</div>
@@ -387,9 +387,16 @@
 				else {
 
 					let correo = $("#correo_usuario").val();
+					let password = $("#password").val();
+					let confirm_password = $("#password_confirmation").val();
 				
 					if(correo == "lpalacios@upc.edu.pe"){
 						alert("Correo ya existe");
+						return;
+					}
+
+					if (password !== confirm_password) {
+						alert("Password y Confirmar Password deben ser iguales");
 						return;
 					}
 
@@ -397,6 +404,7 @@
 					$("#modalValidacionCodigo").modal("show");
 				}
 			});
+
 
 			$("#signup-button2").on("click", function () {
 				let formulario = $("#formulario2");
