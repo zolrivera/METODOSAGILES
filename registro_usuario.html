@@ -191,7 +191,7 @@
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" name="email" placeholder="Celular/Correo"
+									<input id="correo_usuario" type="email" class="form-control" name="email" placeholder="Celular/Correo"
 										required="required">
 								</div>
 							</div>
@@ -380,10 +380,19 @@
 
 			$("#signup-button").on("click", function () {
 				let formulario = $("#formulario1");
+
 				if (!formulario[0].checkValidity()) {
 					document.getElementById("formulario1").reportValidity();
 				}
 				else {
+
+					let correo = $("#correo_usuario").val();
+				
+					if(correo == "lpalacios@upc.edu.pe"){
+						alert("Correo ya existe");
+						return;
+					}
+
 					$("#modalRegistroUsuario").modal("hide");
 					$("#modalValidacionCodigo").modal("show");
 				}
@@ -404,6 +413,7 @@
 					document.getElementById("formulario3").reportValidity();
 					return;
 				}
+				alert("Cuenta creada correctamente");
 				window.location.href = "index.html";
 			});
 

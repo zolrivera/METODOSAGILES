@@ -180,7 +180,7 @@
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-									<input type="email" class="form-control" name="email"
+									<input id="email_usuario" type="email" class="form-control" name="email"
 										placeholder="Ingresa tu Celular o Correo" required="required">
 								</div>
 							</div>
@@ -189,7 +189,7 @@
 							<div class="form-group">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-eye-slash"></i></span>
-									<input type="password" class="form-control" name="password_confirmation" inputmode="numeric" minlength="8" maxlength="16" size="16"
+									<input id="clave_usuario" type="password" class="form-control" name="password_confirmation" inputmode="numeric" minlength="8" maxlength="16" size="16"
 										placeholder="Ingresar tu Contraseña" required="required" autocomplete="on">
 								</div>
 							</div>
@@ -309,6 +309,15 @@
 					document.getElementById("formulario1").reportValidity();
 					return;
 				}
+
+				let texto = $("#email_usuario").val();
+				let clave = $("#clave_usuario").val();
+
+				if(texto == "antony@upc.edu.pe" && clave != "12345678"){
+					alert("La clave ingresada no es la correcta.");
+					return;
+				}
+
 				window.location.href = "index.html";
 			});
 
