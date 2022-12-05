@@ -50,3 +50,13 @@
       $('#section-foto').hide();
     }
   });
+
+
+function closeActiveSessions() {
+  let text;
+  if (confirm("Desea cerrar todas las sesiones activas?")) {
+    window.location.href = "../login.html";
+  } else {
+    return;
+  }
+}
