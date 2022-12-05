@@ -446,14 +446,14 @@ $('#calendar').fullCalendar({
   },
   events: [
     {
-      start: '2019-03-12',
-      end: '2019-03-15',
+      start: '2022-11-05',
+      end: '2022-11-30',
       rendering: 'background',
       color: '#847059'
     },
     {
-      start: '2019-03-22',
-      end: '2019-03-24',
+      start: '2022-12-01',
+      end: '2022-12-05',
       rendering: 'background',
       color: '#FFCC29'
     }  
