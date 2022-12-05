@@ -40,5 +40,9 @@ $("#mis-preferencias-button-agregar").on("click", function () {
 
 function deleteRow(r) {
     var i = r.parentNode.parentNode.rowIndex;
-    document.getElementById("myTable").deleteRow(i);
+    if (confirm("Desea eliminar la preferencia seleccionada?")) {
+        document.getElementById("myTable").deleteRow(i);
+      } else {
+        return;
+      }
 }
