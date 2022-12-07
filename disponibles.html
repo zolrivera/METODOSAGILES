@@ -404,18 +404,49 @@
 		<div class="contactenos container-fluid bg-white py-4" id="contactenos">
 			<div class="container text-center">
 				<h1 class="py-sm-4">CONTÁCTENOS</h1>
-				<form>
+				<form name="fvalida">
 					<div class="input-group input-group-lg">
-						<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Nombre" required>
-						<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Apellido" required>
+						<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Nombre" name="nombre" required>
+						<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Apellido" name="apellido" required>
 					</div>
 					<div class="input-group input-group-lg">
-						<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Móvil" required>
-						<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Correo Electrónico" required>
+						<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Móvil" name="movil" required>
+						<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Correo Electrónico" name="mail" required>
 					</div>
 					<textarea class="form-control" rows="6" placeholder="Escribe aquí tu mensaje" required></textarea>
 					<!--<input class="btn btn-dark my-4 btn-lg py-3 text-uppercase" value="Enviar">-->
-					<button class="btn btn-dark my-4 btn-lg py-3 text-uppercase" type="submit">Enviar</button>					
+					
+					<button class="btn btn-dark my-4 btn-lg py-3 text-uppercase" type="button" onclick="valida_envia()">Enviar</button>
+					<script type="text/javascript">
+						function valida_envia(){
+						   	//valido el nombre
+						   	if (document.fvalida.nombre.value.length==0){
+						      		alert("Tiene que escribir su nombre")
+						      		document.fvalida.nombre.focus()
+						      		return 0;
+						   	}
+						   	//valido el apellido
+						   	if (document.fvalida.apellido.value.length==0){
+						      		alert("Tiene que escribir su Apellido")
+						      		document.fvalida.apellido.focus()
+						      		return 0;
+						   	}
+						   	//valido el apellido
+						   	if (document.fvalida.movil.value.length==0){
+						      		alert("Tiene que escribir su Movil")
+						      		document.fvalida.movil.focus()
+						      		return 0;
+						   	}
+						   	if (document.fvalida.mail.value.length==0){
+						      		alert("Tiene que escribir su Email")
+						      		document.fvalida.mail.focus()
+						      		return 0;
+						   	}						   							   								
+						   	//el formulario se envia
+						   	alert("Muchas gracias por enviar el formulario");
+						   	document.fvalida.submit();
+						}								
+					</script>
 				</form>
 			</div>
 		</div>
@@ -456,4 +487,5 @@
 	<h6 style="margin:20px">Métodos Ágiles - IS287-2202-EA1B</h6>
 </footer>
 </html>
+
 
