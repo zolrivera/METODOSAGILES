@@ -8,6 +8,7 @@
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<script src="../assets/js/jquery.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 		crossorigin="anonymous"></script>
@@ -189,20 +190,20 @@
 				<br>
 				<h4 class="mb-3">Paga con</h4>
 				<a href="./agregar_pago.html">Agregar metodo de pago</a>
-				<form class="row g-3 needs-validation">
+				<form class="row g-3 needs-validation" id="formulario_pago">
 					<div class="my-3">
-						<select class="form-select" id="country" required>
-							<option value="">Elije...</option>
-							<option>Tarjeta 1</option>
-							<option>Tarjeta 2</option>
-							<option>Tarjeta 3</option>
+						<select class="form-select" id="cboTarjeta" required>
+							<option value="-1">Elije...</option>
+							<option value="1">Tarjeta 1</option>
+							<option value="2">Tarjeta 2</option>
+							<option value="3">Tarjeta 3</option>
 						  </select>
 					</div>
 		
 					<div class="row gy-3">
 						<div class="col-md-12">
 							<label for="cc-number" class="form-label">Número de tarjeta</label>
-							<input type="number" class="form-control" id="cc-number" required>
+							<input type="text" class="form-control" id="numero_tarjeta" readonly required>
 							<div class="invalid-feedback">
 								Credit card number is required
 							</div>
@@ -210,7 +211,7 @@
 		
 						<div class="col-md-4">
 							<label for="cc-expiration" class="form-label">Fecha Expiración</label>
-							<input type="number" class="form-control" id="cc-expiration" placeholder="MM/DD" required>
+							<input type="text" class="form-control" id="fecha_expiracion" placeholder="MM/DD" required readonly>
 							<div class="invalid-feedback">
 								Expiration date required
 							</div>
@@ -218,7 +219,7 @@
 		
 						<div class="col-md-4">
 							<label for="cc-cvv" class="form-label">CVV</label>
-							<input type="number" class="form-control" id="cc-cvv" placeholder="" required>
+							<input type="text" class="form-control" id="numero_ccv" placeholder="" required readonly>
 							<div class="invalid-feedback">
 								Security code required
 							</div>
@@ -253,7 +254,7 @@
 		
 					</div>
 					<hr class="my-4">
-					<button class="w-100 btn btn-primary btn-lg" type="submit">Continua con el pago</button>
+					<button class="w-100 btn btn-primary btn-lg" type="button" id="btn_pagar">Continua con el pago</button>
 				</form>
 				
 			</div>
@@ -286,10 +287,10 @@
 					  </div>
 					  <span class="text-muted">S/726.50</span>
 					</li>
-					<li class="list-group-item d-flex justify-content-between bg-light">
+					<li class="list-group-item d-flex justify-content-between bg-light" id="ocultame_pues" style="display: none !important; ">
 					  <div class="text-success">
 						<h6 class="my-0">Código del cupón</h6>
-						<small>EXAMPLECODE</small>
+						<small id="cupon_agregado"></small>
 					  </div>
 					  <span class="text-success">S/5.00</span>
 					</li>
@@ -299,10 +300,10 @@
 					</li>
 				  </ul>
 		  
-				  <form class="card p-2">
+				  <form class="card p-2" id="formulario_cupon">
 					<div class="input-group">
-					  <input type="text" class="form-control" placeholder="Código del cupón">
-					  <button type="submit" class="btn btn-secondary">Agregar</button>
+					  <input type="text" class="form-control" placeholder="Código del cupón" maxlength="25" minlength="25" required id="txt_cupon">
+					  <button type="button" class="btn btn-secondary" id="btn_cupon">Agregar</button>
 					</div>
 				  </form>
 	
@@ -325,5 +326,49 @@
 	<h6 style="margin:20px">Todos los derechos reservados.</h6>
 	<h6 style="margin:20px">Métodos Ágiles - IS287-2202-EA1B</h6>
 </footer>
+
+<script>
+	$("#cboTarjeta").on("change", function(){
+		let valor = $("#cboTarjeta").val();
+		if(valor == 1){
+			$("#numero_tarjeta").val("1234567890123456789012345");
+			$("#fecha_expiracion").val("25/12");
+			$("#numero_ccv").val("123");
+		}
+		if(valor == 2){
+			$("#numero_tarjeta").val("4567890123451234567890123");
+			$("#fecha_expiracion").val("11/12");
+			$("#numero_ccv").val("456");
+		}
+		if(valor == 3){
+			$("#numero_tarjeta").val("6789012345123456789501234");
+			$("#fecha_expiracion").val("05/12");
+			$("#numero_ccv").val("789");
+		}
+	});
+
+	$("#btn_pagar").on("click", function(){
+		let formulario = $("#formulario_pago");
+		if (!formulario[0].checkValidity()) {
+			document.getElementById("formulario_pago").reportValidity();
+		}
+		else {
+			alert("Pago realizado");
+			window.location = "historial_pagos.html";
+		}
+	});
+
+	$("#btn_cupon").on("click", function(){
+		let formulario = $("#formulario_cupon");
+		if (!formulario[0].checkValidity()) {
+			document.getElementById("formulario_cupon").reportValidity();
+		}
+		else {
+			let valor = $("#txt_cupon").val();
+			$("#cupon_agregado").html(valor);
+			$("#ocultame_pues").show();
+		}
+	});
+</script>
 
 </html>
