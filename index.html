@@ -343,6 +343,25 @@
                         <div class="col-md-3">
                             <label>Rango de precios</label>
                         </div>
+	                    <div class="row" style="padding-bottom: 15px;"> 
+							  <label>Pais:</label>
+							  <select class="form-control" id="cbpais">
+								<option value="2">Perú</option>
+								<option value="3">Chile</option>
+								<option value="4">Brazil</option>
+								<option value="5">República Dominicana</option>
+							  </select>					
+						</div>
+	                    <div class="row" style="padding-bottom: 15px;"> 
+							  <label>Ciudad:</label>
+							  <select class="form-control" id="cbciudad">
+								<option value="2">Cusco</option>
+								<option value="3">Santiago</option>
+								<option value="4">Sau Pablo</option>
+								<option value="5">Punta Cana</option>
+							  </select>					
+						</div>
+
                         <div class="col-md-9">
                             <div class="input-group">
                                 <span class="input-group-text">S/</span>
@@ -351,11 +370,6 @@
                                 <span class="input-group-text">S/</span>
                                 <input class="form-control" id="max" type="number" placeholder="Máximo">
                             </div>                            
-                            <!-- <label>-</label>
-                            <div class="input-group">
-                                <span class="input-group-text">S/</span>
-                                <input type="number" placeholder="Máximo">
-                            </div>                            -->
                         </div>
                     </div>
                     <div class="row" style="padding-bottom: 15px;">
@@ -513,6 +527,11 @@
                             document.getElementById("propiedad4").checked=false;
                             document.getElementById("propiedad5").checked=false;
                             document.getElementById("propiedad6").checked=false;
+                            document.getElementById("cbpais").value="";
+                            document.getElementById("cbciudad").value="";
+                            document.getElementById("cbHabitacion").value="";
+                            document.getElementById("cbCama").value="";
+                            document.getElementById("cbBanio").value="";
                         }
                     </script>
                 </div>
