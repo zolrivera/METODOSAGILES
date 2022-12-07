@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="es">
-
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -13,7 +12,6 @@
 		crossorigin="anonymous"></script>
 	<title>Earthbnb</title>
 </head>
-
 <body>
 	<!-- Inicio Menu ::: Luis Romero ::: No tocar -->
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -155,9 +153,9 @@
 			<div class="col-md-10">
 				<h3>Sitios disponibles</h3>
 			</div>
-			<div class="col-md-2">
-				<button type="button" class="btn btn-primary">Filtrar</button>
-			</div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sitioFilter">Filtrar</button>
+                </div>
 		</div>
 		<div class="row">  
 			<div class="row p-4 text-center">
@@ -331,7 +329,194 @@
 				</div>                    
 			</div>
 		</div>                        
-	</div>
+	</div> 
 </body>
-
+    <div class="modal fade" id="sitioFilter" tabindex="0" role="dialog" aria-labelledby="filtroLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filtroLabel">Filtros</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row" style="padding-bottom: 15px;">
+                        <div class="col-md-3">
+                            <label>Rango de precios</label>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-group">
+                                <span class="input-group-text">S/</span>
+                                <input class="form-control" id="min" type="number" placeholder="Mínimo">
+                                <label style="padding-left: 5px; padding-right: 5px;">-</label>
+                                <span class="input-group-text">S/</span>
+                                <input class="form-control" id="max" type="number" placeholder="Máximo">
+                            </div>                            
+                            <!-- <label>-</label>
+                            <div class="input-group">
+                                <span class="input-group-text">S/</span>
+                                <input type="number" placeholder="Máximo">
+                            </div>                            -->
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 15px;">
+                        <h4>Tipo de alojamiento</h4>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" id="chk1" class="form-check-input" id="alojamiento1">
+                                    <label class="form-check-label" for="alojamiento1">Piso</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" id="chk2" class="form-check-input" id="alojamiento2">
+                                    <label class="form-check-label" for="alojamiento2">Casa particular</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" id="chk3" class="form-check-input" id="alojamiento3">
+                                    <label class="form-check-label" for="alojamiento3">Loft</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" id="chk4" class="form-check-input" id="alojamiento4">
+                                    <label class="form-check-label" for="alojamiento4">Vivienda vacacional</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" id="chk5" class="form-check-input" id="alojamiento5">
+                                    <label class="form-check-label" for="alojamiento5">Apartamento con servicios</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" id="chk6" class="form-check-input" id="alojamiento6">
+                                    <label class="form-check-label" for="alojamiento6">Apartamento residencial</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 15px;">
+                        <h4>Tipo de propiedad</h4>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="propiedad1">
+                                    <label class="form-check-label" for="propiedad1">Apartamento</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="propiedad2">
+                                    <label class="form-check-label" for="propiedad2">Casa</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="propiedad3">
+                                    <label class="form-check-label" for="propiedad3">Vivienda anexa</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="propiedad4">
+                                    <label class="form-check-label" for="propiedad4">Alojamiento único</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="propiedad5">
+                                    <label class="form-check-label" for="propiedad5">Bed and breakfast</label>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="propiedad6">
+                                    <label class="form-check-label" for="propiedad6">Hotel boutique</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4>Habitaciones y camas</h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="cbHabitacion" class="form-label">Habitaciones</label>
+                                <select class="form-select" id="cbHabitacion" name="cbHabitacion">
+                                    <option>Cualquiera</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8+</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cbCama" class="form-label">Camas</label>
+                                <select class="form-select" id="cbCama" name="cbCama">
+                                    <option>Cualquiera</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8+</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="cbBanio" class="form-label">Baños</label>
+                                <select class="form-select" id="cbBanio" name="cbBanio">
+                                    <option>Cualquiera</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8+</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" onclick="limpiar()">Limpiar filtros</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        Mostrar alojamientos
+                    </button>
+                    <script>
+                        function limpiar(){
+                            document.getElementById("min").value="";
+                            document.getElementById("max").value="";
+                            document.getElementById("chk1").checked=false;
+                            document.getElementById("chk2").checked=false;
+                            document.getElementById("chk3").checked=false;
+                            document.getElementById("chk4").checked=false;
+                            document.getElementById("chk5").checked=false;
+                            document.getElementById("chk6").checked=false;
+                            document.getElementById("propiedad1").checked=false;
+                            document.getElementById("propiedad2").checked=false;
+                            document.getElementById("propiedad3").checked=false;
+                            document.getElementById("propiedad4").checked=false;
+                            document.getElementById("propiedad5").checked=false;
+                            document.getElementById("propiedad6").checked=false;
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
 </html>
