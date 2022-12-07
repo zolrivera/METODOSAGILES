@@ -180,7 +180,7 @@
 
 		<div class="container-fluid light-style flex-grow-1 container-p-y ">
 			<h4 class="font-weight-bold py-3 mb-4 titulo">
-				Agregar tarjeta
+				Agregar tarjeta débito o crédito
 			</h4>
 			<div class="card overflow-hidden">
 				<div class="row no-gutters row-bordered row-border-light">
@@ -218,7 +218,7 @@
 											<div class="row">
 											<div class="col-md-6">
 												<label class="form-label font-weight-bold">Nombre en la tarjeta</label>
-												<input type="text" class="form-control" value="" minlength="5" maxlength="20" required>
+												<input type="text" class="form-control" value="" minlength="5" maxlength="60" required>
 											</div>
 											<div class="col-md-6">
 												<label class="form-label font-weight-bold">Expira</label>
@@ -275,7 +275,7 @@
 					return;
 				}
 
-				if (confirm("Desea agregar agregar la tarjeta ingresada?")) {
+				if (confirm("¿ Desea agregar agregar la tarjeta ingresada?")) {
 					alert("Tarjeta fue agregada correctamente");
 					window.location.href = "realizar_pago.html";
 				} else {
