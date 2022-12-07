@@ -241,7 +241,7 @@
 													<button type="button"   onclick="history.back()"  id="btnCancelar">Cancelar</button>
 												</div>
 												<div class="col-md-6">
-													<button type="button" id="btnAgregarTarjeta" onclick="agregarTarjeta()">Agregar tarjeta</button>
+													<button type="button" id="btnAgregarTarjeta">Agregar tarjeta</button>
 												</div>
 											</div>
 										
@@ -273,19 +273,14 @@
 					document.getElementById("form-agregar-tarjeta").reportValidity();
 					return;
 				}
-				window.location.href = "index.html";
+
+				if (confirm("Desea agregar agregar la tarjeta ingresada?")) {
+					alert("Tarjeta fue agregada correctamente");
+					window.location.href = "realizar_pago.html";
+				} else {
+					return;
+				}
 		});
-
-		function agregarTarjeta() {
-			let text;
-			if (confirm("Desea agregar agregar la tarjeta ingresada?")) {
-				alert("Tarjeta fue agregada correctamente");
-
-				window.location.href = "realizar_pago.html";
-			} else {
-				return;
-			}
-		}
 
 	</script>
 	<footer id="footer" role="contentinfo" style="display: flex;justify-content: space-between;color: black; position: fixed; bottom: 0; width: 100%; height: 60px;">
