@@ -75,6 +75,130 @@
     <script src="assets/js/moment.js"></script>
     <!-- https://fullcalendar.io/docs/background-events-demo -->    
     <script src="assets/js/fullcalendar.min.js"></script>   
+
+    <script src="reserva_script.js"></script>
+
+    <!-- Inicio Style ::: Luis Romero ::: No tocar -->
+    <style>
+		.circle-image img{
+
+		border: 6px solid #fff;
+		border-radius: 100%;
+		padding: 0px;
+		top: -28px;
+		position: relative;
+		width: 70px;
+		height: 70px;
+		border-radius: 100%;
+		z-index: 1;
+		background: #e7d184;
+		cursor: pointer;
+
+		}
+
+
+		.dot {
+		height: 18px;
+		width: 18px;
+		background-color: blue;
+		border-radius: 50%;
+		display: inline-block;
+		position: relative;
+		border: 3px solid #fff;
+		top: -48px;
+		left: 186px;
+		z-index: 1000;
+		}
+
+		.name{
+		margin-top: -21px;
+		font-size: 18px;
+		}
+
+
+		.fw-500{
+		font-weight: 500 !important;
+		}
+
+
+		.start{
+
+		color: green;
+		}
+
+		.stop{
+		color: red;
+		}
+
+
+		.rate{
+
+		border-bottom-right-radius: 12px;
+		border-bottom-left-radius: 12px;
+
+		}
+
+
+
+		.rating {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: center
+		}
+
+		.rating>input {
+		display: none
+		}
+
+		.rating>label {
+		position: relative;
+		width: 1em;
+		font-size: 30px;
+		font-weight: 300;
+		color: #FFD600;
+		cursor: pointer
+		}
+
+		.rating>label::before {
+		content: "\2605";
+		position: absolute;
+		opacity: 0
+		}
+
+		.rating>label:hover:before,
+		.rating>label:hover~label:before {
+		opacity: 1 !important
+		}
+
+		.rating>input:checked~label:before {
+		opacity: 1
+		}
+
+		.rating:hover>input:checked~label:before {
+		opacity: 0.4
+		}
+
+
+		.buttons{
+		top: 36px;
+		position: relative;
+		}
+
+
+		.rating-submit{
+		border-radius: 15px;
+		color: #fff;
+			height: 49px;
+		}
+
+
+		.rating-submit:hover{
+
+		color: #fff;
+		}
+	</style>
+    <!-- Fin Style ::: Luis Romero ::: No tocar -->
+
     <title>Earthbnb</title>
 </head>
 <body>
@@ -110,15 +234,26 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="registro_usuario.html">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
-                                <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                                <path fill-rule="evenodd"
-                                    d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
-                            </svg>Registrar Usuario
-                        </a>
-                    </li>
+						<a class="nav-link" href="registro_anfitrion.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
+								<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+								<path fill-rule="evenodd"
+									d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+							</svg>Registrar Anfitrión
+						</a>
+					</li>
+
+					<li class="nav-item">
+						<a class="nav-link" href="registro_usuario.html">
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+								class="bi bi-person-plus-fill" viewBox="0 0 16 16" style="padding-right:5px">
+								<path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+								<path fill-rule="evenodd"
+									d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z" />
+							</svg>Registrar Cliente
+						</a>
+					</li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -510,47 +645,6 @@ MAPA
 FOOTER
 ======================================-->
 
-<footer class="container-fluid p-0">
-
-	<div class="grid-container">
-			
-		<div class="grid-item d-none d-lg-block pt-2"></div>
-
-		<div class="grid-item d-none d-lg-block pt-2">
-			
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat.</p>
-
-		</div>
-
-		<div class="grid-item pt-2">
-			
-			<ul class="py-1">
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white float-left mx-3"></i></a>
-				</li>
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-twitter lead text-white float-left mx-3"></i></a>
-				</li>
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-youtube lead text-white float-left mx-3"></i></a>
-				</li>
-
-
-				<li>
-					<a href="#" target="_blank"><i class="fab fa-instagram lead text-white float-left mx-3"></i></a>
-				</li>	
-			
-			</ul>	
-
-		</div>
-
-	</div>
-
-</footer>
-
 <!--=====================================
 VENTANA MODAL INGRESO
 ======================================-->
@@ -586,10 +680,668 @@ VENTANA MODAL INGRESO
 
 </div>
 
+    <div class="container">
+		<!-- TODOCODIGO AQUI -->
+		
+		<div class="col-12" style="display: inline-flex;">
+			<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#registroCalificacionModal">Calificar</button>
+			<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#libroReclamacionesModal">Libro de reclamaciones</button>
+		</div>
+		
+		<div class="col-12" style="margin: 10px;display: inline-flex;">
+			<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+				<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+			</svg>
+			<h4 style="margin:.5rem;">4.87 - 8 reseñas</h4>
+		</div>
+		
+		<div class="accordion accordion-flush" id="accordionFlushExample">
+			<div class="accordion-item">
+			  	<h2 class="accordion-header" id="flush-headingOne">
+					<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+				  		Filtros avanzados
+					</button>
+			  	</h2>
+			  	<div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+					<div class="accordion-body" style="display: inline-table;">
+						<div class="col-6" style="display: inline-flex;">
+							<div class="col-6">
+								<label class="control-label">Servicio al cliente</label>
+							</div>
+							<div class="col-6">
+								<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-6" style="display: inline-flex;">
+							<div class="col-6">
+								<label class="control-label">Limpieza</label>
+							</div>
+							<div class="col-6">
+								<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-6" style="display: inline-flex;">
+							<div class="col-6">
+								<label class="control-label">Precio</label>
+							</div>
+							<div class="col-6">
+								<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-6" style="display: inline-flex;">
+							<div class="col-6">
+								<label class="control-label">Ubicación</label>
+							</div>
+							<div class="col-6">
+								<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-6" style="display: inline-flex;">
+							<div class="col-6">
+								<label class="control-label">Llegada al hospedaje</label>
+							</div>
+							<div class="col-6">
+								<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-6" style="display: inline-flex;">
+							<div class="col-6">
+								<label class="control-label">Fiabilidad de lo rentado</label>
+							</div>
+							<div class="col-6">
+								<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+								</div>
+							</div>
+						</div>
+					</div>
+			  	</div>
+			</div>
+		</div>
+		
+		<div class="col-12" style="display: inline-flex;">
+			<div class="col-6" style="display: inline-flex;">
+				<div class="col-8">
+					<h5 style="margin:.5rem;">Servicio al cliente</h5>
+				</div>
+				<div class="col-3">
+					<div class="progress" style="margin: 0.6rem;">
+						<div class="progress-bar" role="progressbar" style="width: 94%;background-color: black;" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<div class="col-1">
+					<h5 style="margin:.5rem;">4.7</h5>
+				</div>
+			</div>
+			<div class="col-6" style="display: inline-flex;">
+				<div class="col-8">
+					<h5 style="margin:.5rem;">Limpieza</h5>
+				</div>
+				<div class="col-3">
+					<div class="progress" style="margin: 0.6rem;">
+						<div class="progress-bar" role="progressbar" style="width: 94%;background-color: black;" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<div class="col-1">
+					<h5 style="margin:.5rem;">4.7</h5>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12" style="display: inline-flex;">
+			<div class="col-6" style="display: inline-flex;">
+				<div class="col-8">
+					<h5 style="margin:.5rem;">Precio</h5>
+				</div>
+				<div class="col-3">
+					<div class="progress" style="margin: 0.6rem;">
+						<div class="progress-bar" role="progressbar" style="width: 100%;background-color: black;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<div class="col-1">
+					<h5 style="margin:.5rem;">5.0</h5>
+				</div>
+			</div>
+			<div class="col-6" style="display: inline-flex;">
+				<div class="col-8">
+					<h5 style="margin:.5rem;">Ubicación</h5>
+				</div>
+				<div class="col-3">
+					<div class="progress" style="margin: 0.6rem;">
+						<div class="progress-bar" role="progressbar" style="width: 100%;background-color: black;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<div class="col-1">
+					<h5 style="margin:.5rem;">5.0</h5>
+				</div>
+			</div>
+		</div>
+		<div class="col-12" style="display: inline-flex;">
+			<div class="col-6" style="display: inline-flex;">
+				<div class="col-8">
+					<h5 style="margin:.5rem;">Llegada al hospedaje</h5>
+				</div>
+				<div class="col-3">
+					<div class="progress" style="margin: 0.6rem;">
+						<div class="progress-bar" role="progressbar" style="width: 98%;background-color: black;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<div class="col-1">
+					<h5 style="margin:.5rem;">4.9</h5>
+				</div>
+			</div>
+			<div class="col-6" style="display: inline-flex;">
+				<div class="col-8">
+					<h5 style="margin:.5rem;">Fiabilidad de lo rentado</h5>
+				</div>
+				<div class="col-3">
+					<div class="progress" style="margin: 0.6rem;">
+						<div class="progress-bar" role="progressbar" style="width: 98%;background-color: black;" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+				<div class="col-1">
+					<h5 style="margin:.5rem;">4.9</h5>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-12" style="display: inline-flex;">
+			<div class="card col-6" style="margin: 10px;">
+				<div class="row g-0">
+					<div class="card-body col-3">
+						
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						<div class="col" style="display: inline-flex;">
+							<div class="col-6" style="align-content: center;display: grid;">
+								<h5 class="card-title" style="margin-bottom: 0;text-align: center;">5</h5>
+							</div>
+							<div class="col-6">
+								<div style="background-image: url(https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);width: 60px;height: 60px;background-position: center;background-size: cover;border-radius: 40px;" >
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						
+					</div>
+					<div class="card-body col-9">
+						<h5 class="card-title">Usuario XXXX</h5>
+						<h6 class="card-title">XX de xxxxxx del XXXX</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.</p>
+						<a href="#" class="btn btn-link" style="padding: 0;">Mostrar más > </a>
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#compartirComentarioModal" style="right: 0;position: absolute;">Compartir > </button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="card col-6" style="margin: 10px;">
+				<div class="row g-0">
+					<div class="card-body col-3">
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						<div class="col" style="display: inline-flex;">
+							<div class="col-6" style="align-content: center;display: grid;">
+								<h5 class="card-title" style="margin-bottom: 0;text-align: center;">3</h5>
+							</div>
+							<div class="col-6">
+								<div style="background-image: url(https://images.pexels.com/photos/1382731/pexels-photo-1382731.jpeg?auto=compress&cs=tinysrgb&w=1600);width: 60px;height: 60px;background-position: center;background-size: cover;border-radius: 40px;" >
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+					</div>
+					<div class="card-body col-9">
+						<h5 class="card-title">Usuario XXXX</h5>
+						<h6 class="card-title">XX de xxxxxx del XXXX</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.</p>
+						<a href="#" class="btn btn-link" style="padding: 0;">Mostrar más > </a>
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#compartirComentarioModal" style="right: 0;position: absolute;">Compartir > </button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-12" style="display: inline-flex;">
+			<div class="card col-6" style="margin: 10px;">
+				<div class="row g-0">
+					<div class="card-body col-3">
+						
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						<div class="col" style="display: inline-flex;">
+							<div class="col-6" style="align-content: center;display: grid;">
+								<h5 class="card-title" style="margin-bottom: 0;text-align: center;">1</h5>
+							</div>
+							<div class="col-6">
+								<div style="background-image: url(https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);width: 60px;height: 60px;background-position: center;background-size: cover;border-radius: 40px;" >
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						
+					</div>
+					<div class="card-body col-9">
+						<h5 class="card-title">Usuario XXXX</h5>
+						<h6 class="card-title">XX de xxxxxx del XXXX</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.</p>
+						<a href="#" class="btn btn-link" style="padding: 0;">Mostrar más > </a>
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#compartirComentarioModal" style="right: 0;position: absolute;">Compartir > </button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="card col-6" style="margin: 10px;">
+				<div class="row g-0">
+					<div class="card-body col-3">
+						
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						<div class="col" style="display: inline-flex;">
+							<div class="col-6" style="align-content: center;display: grid;">
+								<h5 class="card-title" style="margin-bottom: 0;text-align: center;">-1</h5>
+							</div>
+							<div class="col-6">
+								<div style="background-image: url(https://images.pexels.com/photos/2269872/pexels-photo-2269872.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);width: 60px;height: 60px;background-position: center;background-size: cover;border-radius: 40px;" >
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						
+					</div>
+					<div class="card-body col-9">
+						<h5 class="card-title">Usuario XXXX</h5>
+						<h6 class="card-title">XX de xxxxxx del XXXX</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.</p>
+						<a href="#" class="btn btn-link" style="padding: 0;">Mostrar más > </a>
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#compartirComentarioModal" style="right: 0;position: absolute;">Compartir > </button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="col-12" style="display: inline-flex;">
+			<div class="card col-6" style="margin: 10px;">
+				<div class="row g-0">
+					<div class="card-body col-3">
+						
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						<div class="col" style="display: inline-flex;">
+							<div class="col-6" style="align-content: center;display: grid;">
+								<h5 class="card-title" style="margin-bottom: 0;text-align: center;">0</h5>
+							</div>
+							<div class="col-6">
+								<div style="background-image: url(https://images.pexels.com/photos/943084/pexels-photo-943084.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);width: 60px;height: 60px;background-position: center;background-size: cover;border-radius: 40px;" >
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						
+					</div>
+					<div class="card-body col-9">
+						<h5 class="card-title">Usuario XXXX</h5>
+						<h6 class="card-title">XX de xxxxxx del XXXX</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.</p>
+						<a href="#" class="btn btn-link" style="padding: 0;">Mostrar más > </a>
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#compartirComentarioModal" style="right: 0;position: absolute;">Compartir > </button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="card col-6" style="margin: 10px;">
+				<div class="row g-0">
+					<div class="card-body col-3">
+						
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+										<path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						<div class="col" style="display: inline-flex;">
+							<div class="col-6" style="align-content: center;display: grid;">
+								<h5 class="card-title" style="margin-bottom: 0;text-align: center;">1</h5>
+							</div>
+							<div class="col-6">
+								<div style="background-image: url(https://images.pexels.com/photos/38554/girl-people-landscape-sun-38554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);width: 60px;height: 60px;background-position: center;background-size: cover;border-radius: 40px;" >
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="col-6">
+								<button type="button" class="btn btn-link" style="color: gray;">
+									<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+										<path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+									</svg>
+								</button>
+							</div>
+							<div class="col-6">
+							</div>
+						</div>
+						
+					</div>
+					<div class="card-body col-9">
+						<h5 class="card-title">Usuario XXXX</h5>
+						<h6 class="card-title">XX de xxxxxx del XXXX</h6>
+						<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, set eiusmod tempor incidunt et labore et dolore magna aliquam.</p>
+						<a href="#" class="btn btn-link" style="padding: 0;">Mostrar más > </a>
+						<button type="button" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#compartirComentarioModal" style="right: 0;position: absolute;">Compartir > </button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<button type="button" class="btn btn-secondary" style="margin-left: 10px;margin-bottom: 20px;">Mostrar las XX reseñas</button>
+
+		<div class="modal fade" id="libroReclamacionesModal" tabindex="-1" aria-labelledby="libroReclamacionesModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+				  		<h5 class="modal-title" id="libroReclamacionesModal">Libro de reclamaciones</h5>
+				  		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="row g-3 needs-validation">
+							<div class="col-12">
+								<h5 style="text-align:center;">Siempre buscamos mejorar nuestro servicio</h5>
+								<h5 style="text-align:center;">COMPLETA EL FORMULARIO</h5>
+							</div>
+							<div class="col-4">
+								<label for="fecha-libro" class="col-form-label">Fecha</label>
+							  	<input class="form-control" id="fecha-libro" type="date" required>
+								<div class="invalid-feedback">
+									Ingrese una fecha.
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="nombre-libro" class="col-form-label">Nombre</label>
+							  	<input class="form-control" id="nombre-libro" type="text" required maxlength="100">
+								<div class="invalid-feedback">
+									Ingrese un nombre.
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="domicilio-libro" class="col-form-label">Domicilio</label>
+							  	<input class="form-control" id="domicilio-libro" type="text" required maxlength="100">
+								<div class="invalid-feedback">
+									Ingrese un domicilio.
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="email-libro" class="col-form-label">Email</label>
+							  	<input class="form-control" id="email-libro" type="email" required maxlength="30">
+								<div class="invalid-feedback">
+									Ingrese un email.
+								</div>
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-4">
+									<label for="tipo-doc-libro" class="col-form-label">Tipo Doc.</label>
+									<select class="form-select" aria-label="--Seleccione--" id="tipo-doc-libro" required>
+										<option selected disabled value="">--Seleccione--</option>
+										<option value="1">DNI</option>
+										<option value="2">RUC</option>
+										<option value="3">Carnet de Extranjeria</option>
+									</select>
+									<div class="invalid-feedback">
+										Seleccione un tipo de documento.
+									</div>
+								</div>
+								<div class="col-2">
+								</div>
+								<div class="col-6">
+									<label for="nro-documento-libro" class="col-form-label">Nro. Documento</label>
+									<input class="form-control" id="nro-documento-libro" type="text" pattern="\d*" required maxlength="11">
+									<div class="invalid-feedback">
+										Ingrese un número de documento.
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+								<label for="telefono-libro" class="col-form-label">Teléfono</label>
+							  	<input class="form-control" id="telefono-libro" type="text" pattern="\d*" required maxlength="9" minlength="9">
+								<div class="invalid-feedback">
+									Ingrese un teléfono.
+								</div>
+							</div>
+							<div class="col-12">
+							  	<label for="desc-reclamo-libro" class="col-form-label">Descripción del reclamo</label>
+							  	<textarea class="form-control" id="desc-reclamo-libro" required maxlength="1000"></textarea>
+								<div class="invalid-feedback">
+									Ingrese la descripción del reclamo.
+								</div>
+							</div>
+							<div class="modal-footer">
+								  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+								  <button type="submit" class="btn btn-primary">Guardar</button>
+							</div>
+						</form>
+					</div>
+			  	</div>
+			</div>
+		</div>
+
+		<div class="modal fade" id="registroCalificacionModal" tabindex="-1" aria-labelledby="registroCalificacionModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+				  		<h5 class="modal-title" id="registroCalificacionModal">Registrar calificación</h5>
+				  		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="row g-3 needs-validation">
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-6">
+									<label class="control-label">Servicio al cliente</label>
+								</div>
+								<div class="col-6">
+									<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-6">
+									<label class="control-label">Limpieza</label>
+								</div>
+								<div class="col-6">
+									<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-6">
+									<label class="control-label">Precio</label>
+								</div>
+								<div class="col-6">
+									<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-6">
+									<label class="control-label">Ubicación</label>
+								</div>
+								<div class="col-6">
+									<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-6">
+									<label class="control-label">Llegada al hospedaje</label>
+								</div>
+								<div class="col-6">
+									<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12" style="display: inline-flex;">
+								<div class="col-6">
+									<label class="control-label">Fiabilidad de lo rentado</label>
+								</div>
+								<div class="col-6">
+									<div class="rating"> <input type="radio" name="rating" value="5" id="5"><label for="5">☆</label> <input type="radio" name="rating" value="4" id="4"><label for="4">☆</label> <input type="radio" name="rating" value="3" id="3"><label for="3">☆</label> <input type="radio" name="rating" value="2" id="2"><label for="2">☆</label> <input type="radio" name="rating" value="1" id="1"><label for="1">☆</label>
+									</div>
+								</div>
+							</div>
+							<div class="col-12">
+							  	<label for="comentario-calificacion" class="col-form-label">Comentarios</label>
+							  	<textarea class="form-control has-validation" id="comentario-calificacion" required maxlength="2000"></textarea>
+								<div class="invalid-tooltip">
+									Please choose a unique and valid username.
+								</div>
+							</div>
+							<div class="modal-footer">
+								  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+								  <button type="submit" class="btn btn-primary">Guardar</button>
+							</div>
+							
+							
+						</form>
+					</div>
+			  	</div>
+			</div>
+		</div>
+
+		
+		<div class="modal fade" id="compartirComentarioModal" tabindex="-1" aria-labelledby="compartirComentarioModal" aria-hidden="true">
+			<div class="modal-dialog modal-md modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+				  		<h5 class="modal-title" id="compartirComentarioModal">Compartir comentario</h5>
+				  		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="row g-3 needs-validation">
+							
+							<div class="col-12">
+								<label for="nombre-libro" class="col-form-label">Enlace</label>
+							  	<input class="form-control" id="nombre-libro" type="text" value="https://www.earthbnb.com/bsagdasghd81y3dh1wbhbdhsabda8yd1dbvsad"  disabled readonly>
+								
+							</div>
+							<div class="modal-footer">
+								  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+								  <button type="button" class="btn btn-primary">Copiar al portapapeles</button>
+							</div>
+						</form>
+					</div>
+			  	</div>
+			</div>
+		</div>
 
 
-<script src="reserva_script.js"></script>
+
+	</div>
 	
 </body>
+<footer id="footer" role="contentinfo" style="display: flex;justify-content: space-between;color: black;">
+	<h6 style="margin:20px">© 2022 Earthbnb, Inc.</h6>
+	<h6 style="margin:20px">Todos los derechos reservados.</h6>
+	<h6 style="margin:20px">Métodos Ágiles - IS287-2202-EA1B</h6>
+</footer>
 </html>
 
